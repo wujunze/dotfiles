@@ -1,4 +1,8 @@
 [alias]
+	aa = add --all
+	cs = commit --signoff
+	ca = cs --amend
+	dc = diff --cached
 	s = status
 	ss = status --short
 	sv = status --verbose
