@@ -59,4 +59,8 @@
 
 	正确设置 ssh 相关的东西之后便可以初始化本仓库了，在整理了已有的配置文件之后便可以准备提交了，不过在第一次提交之前要准备好 `README.md` 文档把之前的过程记录下来（也就是现在看到的这些）。那么为了编写文档，还得安装 Vim，啊不，以后改换 [Neovim](https://neovim.io) 了。`brew install neovim/neovim/neovim` 是正确的安装命令（蛋疼的名字？组织名／仓库名／配方名而已）。
 
-6. 嗯，先到这儿吧，以后慢慢更新……
+6. 安装 iTerm2
+
+	最近 iTerm2 的开发很活跃，推荐使用 Homebrew Cask 安装 `iterm2-beta`。和 Terminal.app 用过的 Material Theme 对应的主题在这里：[Material Theme for iTerm2](https://github.com/MartinSeeler/iterm2-material-colors/blob/master/material-design-colors.itermcolors)。
+
+_To Be Continued..._
