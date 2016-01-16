@@ -1,7 +1,9 @@
 cnoreabbrev <expr> ev getcmdtype() == ":" && getcmdline() == "ev" ? "edit ~/.config/nvim/init.vim" : "ev"
 
-:let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-:let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+if has("nvim")
+  :let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+  :let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+endif
 
 " NOT AVAILABLE IN NEOVIM
 "
