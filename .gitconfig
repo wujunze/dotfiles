@@ -1,0 +1,22 @@
+[branch]
+	autosetuprebase = always
+[core]
+	autocrlf = input
+	safecrlf = true
+[credential]
+	helper = osxkeychain
+[github]
+	user = nightire
+[http]
+	proxy = 127.0.0.1:8123
+[hub]
+	protocol = https
+[pull]
+	rebase = true
+[push]
+	default = simple
+[status]
+	branch = true
+[user]
+	name = Albert
+	email = dev.yufan@gmail.com
