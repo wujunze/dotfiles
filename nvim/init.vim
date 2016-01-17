@@ -78,30 +78,30 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab shiftround smartindent
 if has('statusline')
   set laststatus=2
 
-  set statusline=%<                                       " status begins
+  set statusline=%<                                       " 状态栏开始
 
   if exists('*SyntasticStatuslineFlag')
-    set statusline+=%#ErrorMsg#                           " syntastic
+    set statusline+=%#ErrorMsg#                           " 插件
     set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*\                                   " restore highlight
+    set statusline+=%*\                                   " 恢复高亮
   endif
 
-  set statusline+=%.40f                                   " relative filename
-  set statusline+=%y                                      " file type
-  set statusline+=[%{&ff}]                                " file format
-  set statusline+=[%{strlen(&fenc)?&fenc:'none'}]         " file encoding
-  set statusline+=%m                                      " modified flag
-  set statusline+=%h                                      " help file flag
-  set statusline+=%r                                      " read only flag
+  set statusline+=%.40f                                   " 相对路径的当前文件
+  set statusline+=%y                                      " 文件类型
+  set statusline+=[%{&ff}]                                " 文件格式
+  set statusline+=[%{strlen(&fenc)?&fenc:'none'}]         " 文件编码
+  set statusline+=%m                                      " 更改状态
+  set statusline+=%h                                      " 帮助标识
+  set statusline+=%r                                      " 只读标识
   if exists(':Pencil')
-    set statusline+=%<\ %{PencilMode()}                   " for pencil plugin
+    set statusline+=%<\ %{PencilMode()}                   " 插件
   endif
 
-  set statusline+=%*                                      " restore highlight
-  set statusline+=%=                                      " right part
+  set statusline+=%*                                      " 恢复高亮
+  set statusline+=%=                                      " 状态栏右边
   set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
-  set statusline+=%4l\ %02c\                              " line & column
-  set statusline+=%3p%%\ in\ %-4L                         " % of total
+  set statusline+=%4l\ %02c\                              " 行号／列号
+  set statusline+=%3p%%\ in\ %-4L                         " 内容长度
 endif
 
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
