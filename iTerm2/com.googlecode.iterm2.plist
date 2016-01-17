@@ -300,7 +300,7 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 769 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 970 1417 0 0 2560 1417 </string>
+	<string>0 0 1026 1417 0 0 2560 1417 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -924,7 +924,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<true/>
+			<integer>1</integer>
 			<key>Transparency</key>
 			<real>0.13500000000000001</real>
 			<key>Triggers</key>
@@ -948,7 +948,7 @@
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
-			<true/>
+			<false/>
 			<key>Window Type</key>
 			<integer>6</integer>
 			<key>Working Directory</key>
