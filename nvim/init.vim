@@ -1,3 +1,4 @@
+cnoreabbrev <expr> so getcmdtype() == ":" && getcmdline() == "so" ? "source %" : "so"
 cnoreabbrev <expr> ev getcmdtype() == ":" && getcmdline() == "ev" ? "tabedit ~/.config/nvim/init.vim" : "ev"
 
 if has("nvim")
