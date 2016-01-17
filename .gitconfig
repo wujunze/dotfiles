@@ -2,6 +2,7 @@
 	aa = add --all
 	cs = commit --signoff
 	ca = cs --amend
+	co = cs --all
 	dc = diff --cached
 	s = status
 	ss = status --short
