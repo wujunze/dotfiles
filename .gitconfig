@@ -1,31 +1,33 @@
 [alias]
-	aa = add --all
-	cs = commit --signoff
-	ca = cs --amend
-	co = cs --all
-	dc = diff --cached
-	s = status
-	ss = status --short
-	sv = status --verbose
+  aa = add --all
+  cs = commit --signoff
+  ca = cs --amend
+  co = cs --all
+  dc = diff --cached
+  ps = push
+  pl = pull
+  s = status
+  ss = status --short
+  sv = status --verbose
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
 [core]
-	autocrlf = input
-	safecrlf = true
+  autocrlf = input
+  safecrlf = true
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [github]
-	user = nightire
+  user = nightire
 [http]
-	proxy = 127.0.0.1:8123
+  proxy = 127.0.0.1:8123
 [hub]
-	protocol = https
+  protocol = https
 [pull]
-	rebase = true
+  rebase = true
 [push]
-	default = simple
+  default = simple
 [status]
-	branch = true
+  branch = true
 [user]
-	name = Albert Yu
-	email = dev.yufan@gmail.com
+  name = Albert Yu
+  email = dev.yufan@gmail.com
