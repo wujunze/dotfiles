@@ -1,4 +1,4 @@
-cnoreabbrev <expr> ev getcmdtype() == ":" && getcmdline() == "ev" ? "edit ~/.config/nvim/init.vim" : "ev"
+cnoreabbrev <expr> ev getcmdtype() == ":" && getcmdline() == "ev" ? "tabedit ~/.config/nvim/init.vim" : "ev"
 
 if has("nvim")
   :let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
