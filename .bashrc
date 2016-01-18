@@ -15,7 +15,13 @@ fi
 eval "$(rbenv init -)"
 
 # GOROOT based install location
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# Add Erlang man pages
+MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man
+
+export PATH
+export MANPATH
 
 function parse_git_branch() {
   BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
