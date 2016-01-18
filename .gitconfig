@@ -3,12 +3,13 @@
   cs = commit --signoff
   ca = cs --amend
   co = cs --all
-  dc = diff --cached
+  di = diff
+  ds = di --staged
   ps = push
   pl = pull
-  s = status
-  ss = status --short
-  sv = status --verbose
+  st = status
+  ss = st --short
+  sv = st --verbose
 [branch]
   autosetuprebase = always
 [core]
