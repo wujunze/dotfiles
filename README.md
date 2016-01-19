@@ -40,7 +40,7 @@
 
 	Homebrew 可以直接安装 Polipo，但是需要做一些工作让它和 Shadowsocks 协同干活。首先 Polipo 作为终端下的服务是需要启动／停止的，这里有两个选择：一）手动；二）开机自动。手动的话推荐使用 [Homebrew Services](https://github.com/caskroom/homebrew-versions) 来简化操作，执行 `brew tap homebrew/services` 之后就可以使用 `brew services start|stop|restart SERVICE_NAME` 这样的命令来操作一切终端服务了（以后会安装类似 Polipo 的软件，比如 MongoDB MySQL PostgreSQL 等等都可以用这个来操作）；此外还有一个 GUI 版本的服务管理器叫 [LaunchRocket](https://github.com/jimbojsb/launchrocket) 可以推荐一下，不过我是习惯一切都在命令行下搞定的。
 
-	至于开机自启动嘛，`brew info polipo` 就会告诉你该怎么做，唯一的问题是我们需要 Polipo 在启动的时候要设定 `socksParentProxy` 选项。网上很多教程都是让去修改 `/usr/local/opt/polipo/homebrew.mxcl.polipo.plist` 文件（参考：http://qichunren.github.io/tool/2014/07/15/Convert-shadowsocks-into-http-proxy-on-mac/），但这个方法太二了，万一以后升级了 Polipo 还得再改吗？其实人家 Polipo 支持配置文件的嘛！在 `~/.polipo` 文件里加一句 `socksParentProxy = "localhost:1080"` 就好了。
+	至于开机自启动嘛，`brew info polipo` 就会告诉你该怎么做，唯一的问题是我们需要 Polipo 在启动的时候要设定 `socksParentProxy` 选项。网上很多教程都是让去修改 `/usr/local/opt/polipo/homebrew.mxcl.polipo.plist` 文件（参考：http://qichunren.github.io/tool/2014/07/15/Convert-shadowsocks-into-http-proxy-on-mac/ ），但这个方法太二了，万一以后升级了 Polipo 还得再改吗？其实人家 Polipo 支持配置文件的嘛！在 `~/.polipo` 文件里加一句 `socksParentProxy = "localhost:1080"` 就好了。
 
 	最后在 `~/.bash_profile` 里加两句：
 
@@ -62,5 +62,9 @@
 6. 安装 iTerm2
 
 	最近 iTerm2 的开发很活跃，推荐使用 Homebrew Cask 安装 `iterm2-beta`。和 Terminal.app 用过的 Material Theme 对应的主题在这里：[Material Theme for iTerm2](https://github.com/MartinSeeler/iterm2-material-colors/blob/master/material-design-colors.itermcolors)。
+
+7. 关于 Neovim
+
+	添加了 [关于 Neovim](/neovim.md) 文件，持续更新关于 Neovim 的各种知识和技巧。
 
 _To Be Continued..._
