@@ -32,3 +32,5 @@
 [user]
   name = Albert Yu
   email = dev.yufan@gmail.com
+[url "https://"]
+	insteadOf = git://
