@@ -104,7 +104,25 @@ if has('statusline')
   set statusline+=%3p%%\ in\ %-4L                         " 内容长度
 endif
 
+" 映射 Option(Alt) + h/j/k/l 在窗口之间跳转
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+
+" 映射 Option(Alt) + Shift + h/l 在标签页之间跳转
+nnoremap <A-S-h> gT
+nnoremap <A-S-l> gt
+tnoremap <C-\><C-n><A-S-h> gT
+tnoremap <C-\><C-n><A-S-l> gt
+
+" 缩写 :so -> :source % 用于重新加载当前文件
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
+" 缩写 :ev -> :tabedit PATH/TO/init.vim 用于新开标签页编辑 init.vim 文件
 cnoreabbrev <expr> ev getcmdtype() == ':' && getcmdline() == 'ev' ? 'tabedit ~/.config/nvim/init.vim' : 'ev'
 
 " 自动安装插件
