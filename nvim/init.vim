@@ -104,6 +104,9 @@ if has('statusline')
   set statusline+=%3p%%\ in\ %-4L                         " 内容长度
 endif
 
+" 映射 Enter -> :nohlsearch（仅常规模式）
+nnoremap <silent> <CR> :nohlsearch<CR>
+
 " 映射 Option(Alt) + h/j/k/l 在窗口之间跳转
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
