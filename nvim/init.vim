@@ -138,7 +138,11 @@ endif
 call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                    " Google Material 主题
 
-Plug 'thinca/vim-ref'                                 " 通用文档查看插件
+" investigate.vim 应该是更好的选择，留此备用
+" Plug 'thinca/vim-ref'                                 " 通用文档查看插件
+Plug 'keith/investigate.vim'                          " 多功能文档查看器
+let g:investigate_use_dash = 1                        " Mac OS X 下使用 Dash
+let g:investigate_dash_for_elixir = 'ex'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir'                         " 官方语法高亮／缩进
