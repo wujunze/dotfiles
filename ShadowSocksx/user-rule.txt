@@ -1,0 +1,8 @@
+! Put user rules line by line in this file.
+! See https://adblockplus.org/en/filter-cheatsheet
+
+||flowtype.org
+||gravatar.com
+||urls.api.twitter.com
+||wistia.com
+||wp.com
