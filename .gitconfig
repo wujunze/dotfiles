@@ -1,8 +1,9 @@
 [alias]
   aa = add --all
-  cs = commit --signoff
   ca = cs --amend
   co = cs --all
+  cm = cs --message
+  cs = commit --signoff
   di = diff
   ds = di --staged
   ps = push
@@ -33,4 +34,4 @@
   name = Albert Yu
   email = dev.yufan@gmail.com
 [url "https://"]
-	insteadOf = git://
+  insteadOf = git://
