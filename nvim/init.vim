@@ -1,3 +1,6 @@
+" 显式设置当前脚本的编码方式以支持多字节字符
+scriptencoding utf-8
+
 " 开启 NVIM 专用选项
 if has('nvim')
   " 允许真彩显示
