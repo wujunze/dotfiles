@@ -38,7 +38,7 @@
 
 	作为开发者不会科学上网是万万不行的。这不，安装 Google Chrome 的时候就碰壁了……此时已经可以安装和配置基于 Shadowsocks 的科学上网环境了。
 
-	先使用 Homebrew Cask 安装 Shadowsocksx 客户端（不要问我代理服务器上哪儿找，请自力更生）解决操作系统层面下的科学上网问题，不过命令行环境下会稍有一些棘手，因为 Shadowsocks 的代理无法直接设置给终端使用。没关系，祭出 [Polipo](http://www.pps.univ-paris-diderot.fr/~jch/software/polipo/) 的时候到了。
+	先使用 Homebrew Cask 安装 ShadowSocksx 客户端（不要问我代理服务器上哪儿找，请自力更生）解决操作系统层面下的科学上网问题，不过命令行环境下会稍有一些棘手，因为 Shadowsocks 的代理无法直接设置给终端使用。没关系，祭出 [Polipo](http://www.pps.univ-paris-diderot.fr/~jch/software/polipo/) 的时候到了。
 
 	Homebrew 可以直接安装 Polipo，但是需要做一些工作让它和 Shadowsocks 协同干活。首先 Polipo 作为终端下的服务是需要启动／停止的，这里有两个选择：一）手动；二）开机自动。手动的话推荐使用 [Homebrew Services](https://github.com/caskroom/homebrew-versions) 来简化操作，执行 `brew tap homebrew/services` 之后就可以使用 `brew services start|stop|restart SERVICE_NAME` 这样的命令来操作一切终端服务了（以后会安装类似 Polipo 的软件，比如 MongoDB MySQL PostgreSQL 等等都可以用这个来操作）；此外还有一个 GUI 版本的服务管理器叫 [LaunchRocket](https://github.com/jimbojsb/launchrocket) 可以推荐一下，不过我是习惯一切都在命令行下搞定的。
 
@@ -52,6 +52,8 @@
 	```
 
 	终端下的 HTTP 代理就此搞定，现在可以愉快的安装 Google Chrome Dev 了。
+
+	另外，[`ShadowSocksx/user-rule.txt`](/ShadowSocksx/user-rule.txt) 是我自己使用的自定义过滤列表（出现在表内的项会在自动代理模式下也通过 ss 代理），它不一定符合你的网络状况，所以请有选择使用。如果你要直接用的话需要执行：`~ $ ln -s .config/ShadowSocksx/user-rule.txt .ShadowSocksx/user-rule.txt`。同时要注意，每次修改了这个文件都要执行 `从 GFWList 更新 Pac` 的菜单选项以便重新载入用户配置文件（在 ShadowSocksx 客户端的菜单内）。
 
 5. 使用 Homebrew 安装／更新 Bash(w/ Homebrew-ish completions), Python2/3, rbenv(Ruby), git, hub...
 
