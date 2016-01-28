@@ -21,6 +21,11 @@ MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man
 export PATH
 export MANPATH
 
+# NVM Initialization
+export NVM_DIR="/Users/nightire/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -r "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
 # Alias Configurations
 alias la="ls -AGhl"
 
