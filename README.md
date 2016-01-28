@@ -71,4 +71,20 @@
 
 	添加了 [关于 Neovim](/neovim.md) 文件，持续更新关于 Neovim 的各种知识和技巧。
 
+8. 关于 NVM
+
+	**使用 NVM 的理由（而不使用 n 或其他版本管理器）**
+
+	我知道相比 NVM 而言，n 更加的轻量而且不会改变 Shell 变量，但是 NVM 提供了一个在安装新版本后直接导入旧版本全局安装的 npm 模块的功能，对我这种没事穷折腾的人来说还是挺无脑的。虽然我也知道写一点简单的脚本可以让 n 也这样无脑，可谁让我习惯了撒……
+
+	但坑爹的是不久前 NVM 不再支持从 Homebrew 直接安装了，这就迫使我需要单独记忆多一种东西的安装和升级🙀
+
+	这里我就不打算事无巨细捋一遍了（谁知道将来还会不会变？），还是直接看 Github Repo 更靠谱（可以直接 `$ brew home nvm` 快捷打开）。不过我需要讲一下升级的要点：
+
+	- 第一步：进入 `$NVM_DIR` 路径，`$ cd "$NVM_DIR"`
+
+	- 第二步：更新代码，`$ git pull origin master`；注意因为是 Detached HEAD，所以 branch tracking 是不行的，老老实实写全咯
+
+	- 第三步：检出最新的 Tag，`$ git checkout $(git describe --abbrev=0 --tags)`；这条命令还是蛮有用的，建议整个快捷方式
+
 _To Be Continued..._
