@@ -155,3 +155,8 @@ call plug#end()
 
 set background=dark
 colorscheme material-theme
+
+augroup WRITING
+  autocmd!
+  autocmd FileType markdown setlocal noexpandtab textwidth=0 colorcolumn=0
+augroup END
