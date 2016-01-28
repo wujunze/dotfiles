@@ -7,9 +7,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom
 source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
 # Homebrew Completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  source `brew --prefix`/etc/bash_completion
-fi
+[ -r "$(brew --prefix)/etc/bash_completion" ] && source $(brew --prefix)/etc/bash_completion
 
 # rbenv Initialization
 eval "$(rbenv init -)"
@@ -23,6 +21,19 @@ MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man
 export PATH
 export MANPATH
 
+# Alias Configurations
+alias la="ls -AGhl"
+
+[ "$(type -t hub)" = "file" ] && alias git="hub"
+
+if [ "$(type -t nvim)" = "file" ]; then
+  alias xvi="vi"
+  alias xvim="vim"
+  alias vi="nvim"
+  alias vim="nvim"
+fi
+
+# I'm not happy with this solution yet, don't use this!
 function parse_git_branch() {
   BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
   if [ ! "${BRANCH}" == "" ]; then
@@ -68,17 +79,3 @@ function parse_git_dirty {
 }
 
 export PS1="\[\e[34m\][\[\e[m\]\[\e[34m\]\w\[\e[m\]\[\e[34m\]]\[\e[m\]\[\e[36m\]\`parse_git_branch\`\[\e[m\] \[\e[35m\]\\$\[\e[m\] "
-
-# Alias Configurations
-alias la="ls -AGhl"
-
-if [ "$(type -t hub)" = "file" ]; then
-  alias git="hub"
-fi
-
-if [ "$(type -t nvim)" = "file" ]; then
-  alias xvi="vi"
-  alias xvim="vim"
-  alias vi="nvim"
-  alias vim="nvim"
-fi
