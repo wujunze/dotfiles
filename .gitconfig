@@ -1,5 +1,6 @@
 [alias]
   aa = add --all
+  ae = add --edit
   ca = cs --amend
   co = cs --all
   cm = cs --message
