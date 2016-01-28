@@ -7,6 +7,7 @@
   cs = commit --signoff
   di = diff
   ds = di --staged
+  lt = describe --abbrev=0 --tags
   ps = push
   pl = pull
   st = status
