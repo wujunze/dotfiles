@@ -1,6 +1,9 @@
+" 开启 NVIM 专用选项
 if has('nvim')
-  :let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-  :let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
+  " 允许真彩显示
+  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+  " 允许光标变化
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 endif
 
 " 设置查找文件时使用的路径
