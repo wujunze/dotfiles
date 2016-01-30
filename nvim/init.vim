@@ -159,6 +159,9 @@ Plug 'Shougo/neopairs.vim'                           " 自动匹配成对字符
 
 Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
+" TODO: FURTHER INVESTIGATION NEEDED
+Plug 'benekastah/neomake'                            " 异步语法检查工具
+
 " Elixir
 Plug 'elixir-lang/vim-elixir'                        " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim'                           " 代码补全／编译运行
