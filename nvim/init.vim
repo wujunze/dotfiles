@@ -150,7 +150,7 @@ Plug 'keith/investigate.vim'                         " 多功能文档查看器
 let g:investigate_use_dash = 1                       " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
 
-" TODO: read deoplete for recommended external plugins
+" TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
 Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
 
