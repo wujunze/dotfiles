@@ -142,21 +142,21 @@ if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.config/nvim/plugins')
-Plug 'jdkanani/vim-material-theme'                    " Google Material 主题
+Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 
-" investigate.vim 应该是更好的选择，留此备用
-" Plug 'thinca/vim-ref'                                 " 通用文档查看插件
-Plug 'keith/investigate.vim'                          " 多功能文档查看器
-let g:investigate_use_dash = 1                        " Mac OS X 下使用 Dash
+" investigate.vim 应该是更好的选择，此处仅为备用
+" Plug 'thinca/vim-ref'                                " 通用文档查看插件
+Plug 'keith/investigate.vim'                         " 多功能文档查看器
+let g:investigate_use_dash = 1                       " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
 
 " Elixir
-Plug 'elixir-lang/vim-elixir'                         " 官方语法高亮／缩进
-Plug 'awetzel/elixir.nvim'                            " 自动补全／编译运行
 let g:elixir_maxmenu = 70                             " 文档预览宽度
 let g:elixir_docpreview = 1                           " 自动打开文档预览
-let g:elixir_showerror = 1                            " 编译完成提示错误
-let g:elixir_autobuild = 0                            " 保存／失焦时自动保存
+Plug 'elixir-lang/vim-elixir'                        " 语法高亮／缩进
+Plug 'awetzel/elixir.nvim'                           " 代码补全／编译运行
+let g:elixir_showerror = 1                             " 编译完成提示错误
+let g:elixir_autobuild = 0                             " 保存／失焦时自动保存
 call plug#end()
 
 set background=dark
