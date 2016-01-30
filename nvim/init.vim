@@ -150,6 +150,13 @@ Plug 'keith/investigate.vim'                         " 多功能文档查看器
 let g:investigate_use_dash = 1                       " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
 
+" TODO: read deoplete for recommended external plugins
+Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
+let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
+
+Plug 'Shougo/neopairs.vim'                           " 自动匹配成对字符
+Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
+
 " Elixir
 Plug 'elixir-lang/vim-elixir'                        " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim'                           " 代码补全／编译运行
