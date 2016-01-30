@@ -87,4 +87,19 @@
 
 	- 第三步：检出最新的 Tag，`$ git checkout $(git describe --abbrev=0 --tags)`；这条命令还是蛮有用的，建议整个快捷方式
 
+9. 关于字体
+
+	我发现我漏了谈谈关于字体的事情。长久以来我都是 [Input](http://input.fontbureau.com/) 的忠实粉丝，主要是应为它可以方便的定制字体的细节因此极大满足了我的龟毛心理。不过问题也就随之而来了：每一次都想重新调整一番，次数多了就开始觉得不值得浪费时间在这上面，所以这一次我决定放弃 Input 了！
+
+	新的选择是 [Hack](http://sourcefoundry.org/hack/)，一度是我的第一备选，知道前不久有了 Homebrew 配方我突然意识到：其实字体也可以不用下载的嘛～安装细节说一下：
+
+	```shell
+	$ brew tap caskroom/fonts  # 于是就有很多字体可装
+	$ brew cask install font-hack
+	```
+
+	That's it!
+
+---
+
 _To Be Continued..._
