@@ -174,6 +174,12 @@ endif
 call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 
+" TODO: LEARN HOW TO CUSTOMIZE THIS
+Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
+Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
+Plug 'tpope/vim-commentary'                          " 提供简单的快捷注释功能
+Plug 'tpope/vim-unimpaired'                          " 补充成对操作的键位映射
+
 " investigate.vim 应该是更好的选择，此处仅为备用
 " Plug 'thinca/vim-ref'                                " 通用文档查看插件
 Plug 'keith/investigate.vim'                         " 多功能文档查看器
