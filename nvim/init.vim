@@ -110,6 +110,30 @@ if has('statusline')
   set statusline+=%3p%%\ in\ %-4L                         " 内容长度
 endif
 
+" 映射 leader 和 localleader
+nnoremap <SPACE> <nop>
+let mapleader = "\<SPACE>"
+let maplocalleader = "\\"
+
+" 完善有缺陷的默认映射
+nnoremap Y y$
+nnoremap 0 g0
+vnoremap 0 g0
+nnoremap ^ g^
+vnoremap ^ g^
+nnoremap $ g$
+vnoremap $ g$
+nnoremap j gj
+vnoremap j gj
+nnoremap k gk
+vnoremap k gk
+nnoremap * *N
+nnoremap # #N
+
+" 映射一些个人偏好（可选）
+inoremap <C-f> <C-o>a
+inoremap <C-b> <Esc>i
+
 " 映射 Enter -> :nohlsearch（仅常规模式）
 nnoremap <silent> <CR> :nohlsearch<CR>
 
@@ -128,6 +152,12 @@ nnoremap <A-S-h> gT
 nnoremap <A-S-l> gt
 tnoremap <C-\><C-n><A-S-h> gT
 tnoremap <C-\><C-n><A-S-l> gt
+
+" 映射更高效的菜单选择（注释掉的是不好的写法）
+" inoremap <C-j> <C-r>=pumvisible() ? "\<lt>C-n>" : "\<lt>C-j>"<CR>
+" inoremap <C-k> <C-r>=pumvisible() ? "\<lt>C-p>" : "\<lt>C-k>"<CR>
+inoremap <expr> <C-j> pumvisible() ? "<C-n>" : "<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "<C-p>" : "<C-k>"
 
 " 缩写 :so -> :source % 用于重新加载当前文件
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
