@@ -154,7 +154,9 @@ let g:investigate_dash_for_elixir = 'ex'
 Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
 
+" NOTE: currently I just don't know how it works...
 Plug 'Shougo/neopairs.vim'                           " 自动匹配成对字符
+
 Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
 " Elixir
