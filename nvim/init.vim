@@ -151,8 +151,6 @@ let g:investigate_use_dash = 1                       " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
 
 " Elixir
-let g:elixir_maxmenu = 70                             " 文档预览宽度
-let g:elixir_docpreview = 1                           " 自动打开文档预览
 Plug 'elixir-lang/vim-elixir'                        " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim'                           " 代码补全／编译运行
 let g:elixir_showerror = 1                             " 编译完成提示错误
