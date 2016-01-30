@@ -2,6 +2,7 @@
 ! See https://adblockplus.org/en/filter-cheatsheet
 
 ||flowtype.org
+||githubusercontent.com
 ||gravatar.com
 ||urls.api.twitter.com
 ||wistia.com
