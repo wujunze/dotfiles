@@ -173,6 +173,7 @@ endif
 
 call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
+Plug 'mkarmona/materialbox'                          " 配套浅色主题
 
 " TODO: LEARN HOW TO CUSTOMIZE THIS
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
