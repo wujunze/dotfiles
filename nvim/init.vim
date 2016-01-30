@@ -132,7 +132,7 @@ tnoremap <C-\><C-n><A-S-l> gt
 " 缩写 :so -> :source % 用于重新加载当前文件
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
 " 缩写 :ev -> :tabedit PATH/TO/init.vim 用于新开标签页编辑 init.vim 文件
-cnoreabbrev <expr> ev getcmdtype() == ':' && getcmdline() == 'ev' ? 'tabedit ~/.config/nvim/init.vim' : 'ev'
+cnoreabbrev <expr> ev getcmdtype() == ':' && getcmdline() == 'ev' ? 'tabedit $MYVIMRC' : 'ev'
 
 " 自动安装插件
 if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
@@ -162,7 +162,12 @@ call plug#end()
 set background=dark
 colorscheme material-theme
 
-augroup WRITING
+augroup RELOAD_CONFIGURATION
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
+
+augroup TEXT_WRITING
   autocmd!
   autocmd FileType markdown setlocal noexpandtab textwidth=0 colorcolumn=0
 augroup END
