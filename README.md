@@ -100,6 +100,14 @@
 
 	That's it!
 
+10. Material Design 系统色板
+
+	挺有用的小玩意儿，可以安装在 Mac OS X 的系统取色器里，于是在任何应用里都可以使用统一的配色方案了。
+
+	![material-design-system-colorpicker](https://raindrop.io/files/drop15536861/15536861_2016-01-31-4.png)
+
+	> 注：文件在 `/misc` 路径下
+
 ---
 
 _To Be Continued..._
