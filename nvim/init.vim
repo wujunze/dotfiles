@@ -40,7 +40,6 @@ set colorcolumn=80
 " 自定义拼写检查
 set spell spelllang=en_us
 set spellsuggest=best,5
-set spellfile=~$HOME/.config/nvim/spell.custom.utf-8.add
 
 " 在右边打开新的窗口（垂直分割）
 set splitright
