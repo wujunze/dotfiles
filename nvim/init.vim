@@ -195,6 +195,11 @@ Plug 'Shougo/neopairs.vim'                           " 自动匹配成对字符
 
 Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
+" TODO: RTFM 😹
+Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
+nmap <Leader>a <Plug>(EasyAlign)
+vmap <CR> <Plug>(EasyAlign)
+
 " TODO: FURTHER INVESTIGATION NEEDED
 Plug 'benekastah/neomake'                            " 异步语法检查工具
 
