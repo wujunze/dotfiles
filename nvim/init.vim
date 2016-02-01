@@ -232,6 +232,12 @@ Plug 'othree/html5.vim', {'for': 'html'}             " 语法高亮
 
 " JavaScript
 Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
+                                                     " 语法缩进
+Plug 'jiangmiao/simple-javascript-indenter', {'for': 'javascript'}
+let g:SimpleJsIndenter_BriefMode = 1                 " 只缩进一级的 shiftwidth
+" NOTE: I'm hold these two below for future candidates
+" Plug 'jason0x43/vim-js-indent'
+" Plug 'gavocanov/vim-js-indent'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
