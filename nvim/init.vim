@@ -174,6 +174,28 @@ call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 Plug 'mkarmona/materialbox'                          " 配套浅色主题
 
+" NOTE: 尽量不要依赖这种以视觉查找为主的插件，效率杀手！
+"       我一般在向别人讲解项目结构或者可视化的演示使用
+Plug 'scrooloose/nerdtree'                           " 树形文件查看插件
+let NERDTreeIgnore              = ['.sass-cache$', 'tmp$']
+let NERDTreeSortOrder           = ['\/$', '*']
+let NERDTreeWinPos              = 'left'
+let NERDTreeWinSize             = 30
+let NERDTreeChDirMode           = 2
+let NERDTreeDirArrows           = 1
+let NERDTreeMinimalUI           = 1
+let NERDTreeMouseMode           = 2
+let NERDTreeShowHidden          = 0
+let NERDTreeQuitOnOpen          = 1
+let NERDTreeHijackNetrw         = 1
+let NERDTreeSortHiddenFirst     = 1
+let NERDTreeAutoDeleteBuffer    = 1
+let NERDTreeCaseSensitiveSort   = 1
+let NERDTreeHighlightCursorline = 1
+nnoremap <F1>         :NERDTreeToggle<CR>
+nnoremap <Leader><F1> :NERDTreeFind<CR>
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " TODO: LEARN HOW TO CUSTOMIZE THIS
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
 Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
