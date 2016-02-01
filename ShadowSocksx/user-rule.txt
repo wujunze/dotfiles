@@ -5,6 +5,7 @@
 ||flowtype.org
 ||githubusercontent.com
 ||gravatar.com
+||img.shields.io
 ||urls.api.twitter.com
 ||wistia.com
 ||wp.com
