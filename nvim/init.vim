@@ -238,6 +238,9 @@ let g:js_indent_flat_switch = 0                       " 展平 switch 结构
 " NOTE: I'm hold these two below for future candidates
 " Plug 'gavocanov/vim-js-indent'
 
+" JSON
+Plug 'elzr/vim-json'
+
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim', {'for': 'elixir'}        " 代码补全／编译运行
