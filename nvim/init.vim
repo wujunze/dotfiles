@@ -207,7 +207,7 @@ Plug 'tpope/vim-unimpaired'                          " 补充成对操作的键�
 " Plug 'thinca/vim-ref'                                " 通用文档查看插件
 
 Plug 'keith/investigate.vim'                         " 多功能文档查看器
-let g:investigate_use_dash        = 1                  " Mac OS X 下使用 Dash
+let g:investigate_use_dash        = 1                 " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
 
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
@@ -232,18 +232,17 @@ Plug 'othree/html5.vim', {'for': 'html'}             " 语法高亮
 
 " JavaScript
 Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
-                                                     " 语法缩进
-Plug 'jiangmiao/simple-javascript-indenter', {'for': 'javascript'}
-let g:SimpleJsIndenter_BriefMode = 1                 " 只缩进一级的 shiftwidth
+Plug 'jason0x43/vim-js-indent'                       " 语法缩进
+let g:js_indent_typescript  = 1                       " 同时用于 TypeScript
+let g:js_indent_flat_switch = 0                       " 展平 switch 结构
 " NOTE: I'm hold these two below for future candidates
-" Plug 'jason0x43/vim-js-indent'
 " Plug 'gavocanov/vim-js-indent'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim', {'for': 'elixir'}        " 代码补全／编译运行
-let g:elixir_showerror = 1                             " 编译完成提示错误
-let g:elixir_autobuild = 0                             " 保存／失焦时自动保存
+let g:elixir_showerror = 1                            " 编译完成提示错误
+let g:elixir_autobuild = 0                            " 保存／失焦时自动保存
 call plug#end()
 
 set background=dark
