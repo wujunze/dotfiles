@@ -228,14 +228,14 @@ vmap <CR>      <Plug>(EasyAlign)
 Plug 'benekastah/neomake'                            " 异步语法检查工具
 
 " HTML
-Plug 'othree/html5.vim'                              " HTML5 语法高亮
+Plug 'othree/html5.vim', {'for': 'html'}             " 语法高亮
 
 " JavaScript
 Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
 
 " Elixir
-Plug 'elixir-lang/vim-elixir'                        " 语法高亮／缩进
-Plug 'awetzel/elixir.nvim'                           " 代码补全／编译运行
+Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
+Plug 'awetzel/elixir.nvim', {'for': 'elixir'}        " 代码补全／编译运行
 let g:elixir_showerror = 1                             " 编译完成提示错误
 let g:elixir_autobuild = 0                             " 保存／失焦时自动保存
 call plug#end()
