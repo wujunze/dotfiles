@@ -155,8 +155,9 @@ tnoremap <C-\><C-n><A-S-l> gt
 " 映射更高效的菜单选择（注释掉的是不好的写法）
 " inoremap <C-j> <C-r>=pumvisible() ? "\<lt>C-n>" : "\<lt>C-j>"<CR>
 " inoremap <C-k> <C-r>=pumvisible() ? "\<lt>C-p>" : "\<lt>C-k>"<CR>
-inoremap <expr> <C-j> pumvisible() ? "<C-n>" : "<C-j>"
-inoremap <expr> <C-k> pumvisible() ? "<C-p>" : "<C-k>"
+inoremap <expr> <CR>    pumvisible() ? "<C-y>" : "<CR>"
+inoremap <expr> <Tab>   pumvisible() ? "<C-n>" : "<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "<C-p>" : "<S-Tab>"
 
 " 缩写 :so -> :source % 用于重新加载当前文件
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
@@ -204,8 +205,9 @@ Plug 'tpope/vim-unimpaired'                          " 补充成对操作的键�
 
 " investigate.vim 应该是更好的选择，此处仅为备用
 " Plug 'thinca/vim-ref'                                " 通用文档查看插件
+
 Plug 'keith/investigate.vim'                         " 多功能文档查看器
-let g:investigate_use_dash = 1                       " Mac OS X 下使用 Dash
+let g:investigate_use_dash        = 1                  " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
 
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
