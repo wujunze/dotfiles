@@ -230,6 +230,9 @@ Plug 'benekastah/neomake'                            " 异步语法检查工具
 " HTML
 Plug 'othree/html5.vim'                              " HTML5 语法高亮
 
+" JavaScript
+Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
+
 " Elixir
 Plug 'elixir-lang/vim-elixir'                        " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim'                           " 代码补全／编译运行
