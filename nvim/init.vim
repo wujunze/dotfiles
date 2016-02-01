@@ -222,7 +222,7 @@ Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换�
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
 nmap <Leader>a <Plug>(EasyAlign)
-vmap <CR> <Plug>(EasyAlign)
+vmap <CR>      <Plug>(EasyAlign)
 
 " TODO: FURTHER INVESTIGATION NEEDED
 Plug 'benekastah/neomake'                            " 异步语法检查工具
