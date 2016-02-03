@@ -270,3 +270,8 @@ augroup STYLESHEETS
   autocmd!
   autocmd FileType css,scss setlocal iskeyword+=-
 augroup END
+
+augroup CUSTOM_HIGHLIGHTS
+  autocmd!
+  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|NOTE\|FIXME', -1)
+augroup END
