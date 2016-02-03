@@ -178,7 +178,24 @@ call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 Plug 'mkarmona/materialbox'                          " 配套浅色主题
 
-Plug 'Shougo/unite.vim'                              " 多功能查找器
+Plug 'ctrlpvim/ctrlp.vim'                            " 多功能模糊搜索器
+Plug 'sgur/ctrlp-extensions.vim'                     " 扩展集合包
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -g "" --nocolor --nogroup --follow --hidden --smart-case'
+else
+  let g:ctrlp_user_command = 'cd %s && git ls-files --exclude-standard --others | sort'
+endif
+let g:ctrlp_cmd = 'exe "CtrlP".get(["", "Buffer", "BookmarkDir", "Cmdline", "Menu", "Yankring"], v:count)'
+let g:ctrlp_extensions = ['bookmarkdir', 'changes', 'cmdline', 'menu', 'mixed', 'rtscript', 'yankring']
+let g:ctrlp_arg_map             = 1
+let g:ctrlp_match_window        = 'bottom,order:btt,min:1,max:30'
+let g:ctrlp_mruf_exclude        = '\.git/\*\|\.txt\|\.vimrc'
+let g:ctrlp_open_new_file       = 't'
+let g:ctrlp_switch_buffer       = 'EtVH'
+let g:ctrlp_tabpage_position    = 'al'
+let g:ctrlp_working_path_mode   = 'rw'
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_open_multiple_files = '2tjr'
 
 " NOTE: 尽量不要依赖这种以视觉查找为主的插件，效率杀手！
 "       我一般在向别人讲解项目结构或者可视化的演示使用
