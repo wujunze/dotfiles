@@ -79,6 +79,9 @@ set matchtime=1
 " 设置缩进相关选项
 set tabstop=2 shiftwidth=2 softtabstop=2 expandtab shiftround smartindent
 
+" 允许保存 undo 状态
+set undofile
+
 " 自定义状态栏配置
 if has('statusline')
   set laststatus=2
