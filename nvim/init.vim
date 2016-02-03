@@ -230,6 +230,10 @@ Plug 'benekastah/neomake'                            " 异步语法检查工具
 " HTML
 Plug 'othree/html5.vim', {'for': 'html'}             " 语法高亮
 
+" CSS
+Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'scss']}
+Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
+
 " JavaScript
 Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
 Plug 'jason0x43/vim-js-indent'                       " 语法缩进
