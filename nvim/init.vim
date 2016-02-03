@@ -264,3 +264,8 @@ augroup TEXT_WRITING
   autocmd!
   autocmd FileType markdown setlocal noexpandtab textwidth=0 colorcolumn=0
 augroup END
+
+augroup STYLESHEETS
+  autocmd!
+  autocmd FileType css,scss setlocal iskeyword+=-
+augroup END
