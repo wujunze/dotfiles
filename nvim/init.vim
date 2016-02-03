@@ -260,8 +260,9 @@ augroup RELOAD_CONFIGURATION
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
-augroup TEXT_WRITING
+augroup MARKUP_LANGUAGES
   autocmd!
+  autocmd FileType html     setlocal textwidth=0 colorcolumn=0
   autocmd FileType markdown setlocal noexpandtab textwidth=0 colorcolumn=0
 augroup END
 
