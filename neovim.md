@@ -38,28 +38,7 @@ Vim 下有一些很不错的针对 Elixir 的插件，不过都没有专为 Neov
 
 #### Neomake 和 ESLint
 
-作为老牌 Linting 插件，Syntastic 最大的问题是什么？卡～
-
-同步的嘛，可以理解。那么从 Vim 换到 Neovim 有一个很重要的原因就是 [Neomake](https://github.com/benekastah/neomake)，异步的嘛，你知道的！
-
-不过 Neomake 默认给 ESLint 的配置是有问题的，具体的分析就免了，我把正确的配置放出就是：
-
-1. 你需要全局安装 `npm install --global eslint babel-eslint`，后面那个可选——不过我觉得现在可以说是必选了吧？
-
-2. 在 `init.vim` 文件内的配置如下：
-
-	```viml
-	Plug 'benekastah/neomake'                            " 异步语法检查工具
-	let g:neomake_javascript_enabled_makers = ['eslint']
-	let g:neomake_javascript_eslint_maker = {
-	      \ 'args': ['--no-color', '--format', 'compact'],
-	      \ 'errorformat': '%f: line %l\, col %c\, %m'
-	      \ }
-	```
-
-	这是必须的，除非 Neomake 更新了。
-
-3. 需要开启保存时自动 linting 以及输入（及内容改变）时自动 linting 的话，添加以下设置：
+开启保存时自动 linting 以及输入（和内容改变）时自动 linting 的话，添加以下设置：
 
 	```viml
 	augroup JAVASCRIPT
@@ -68,5 +47,3 @@ Vim 下有一些很不错的针对 Elixir 的插件，不过都没有专为 Neov
 	  autocmd InsertLeave,TextChanged *.js update | Neomake
 	augroup END
 	```
-
-Done!

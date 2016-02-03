@@ -36,10 +36,14 @@ rules:
   # 文件末尾需要空行
   eol-last: 1
 
-  # 键值对之间允许超过一个的空格（用于对齐）
-  key-spacing:
-    - 1
-    - align: "value"
+  # 键值对之间在冒号后必须有一个空格
+  key-spacing: 1
+
+  # 允许使用 console
+  no-console: 1
+
+  # 警告使用 debugger
+  no-debugger: 1
 
   # 变量声明和模块导入声明允许超过一个的空格（用于对齐）
   no-multi-spaces:
@@ -51,5 +55,5 @@ rules:
 
   # 该有分号的地方必须有
   semi:
-    - 2
+    - 1
     - "always"

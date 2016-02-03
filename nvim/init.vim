@@ -178,6 +178,8 @@ call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 Plug 'mkarmona/materialbox'                          " 配套浅色主题
 
+Plug 'Shougo/unite.vim'                              " 多功能查找器
+
 " NOTE: 尽量不要依赖这种以视觉查找为主的插件，效率杀手！
 "       我一般在向别人讲解项目结构或者可视化的演示使用
 Plug 'scrooloose/nerdtree'                           " 树形文件查看插件
@@ -229,11 +231,6 @@ vmap <CR>      <Plug>(EasyAlign)
 
 " TODO: FURTHER INVESTIGATION NEEDED
 Plug 'benekastah/neomake'                            " 异步语法检查工具
-let g:neomake_javascript_enabled_makers = ['eslint']
-let g:neomake_javascript_eslint_maker = {
-      \ 'args': ['--no-color', '--format', 'compact'],
-      \ 'errorformat': '%f: line %l\, col %c\, %m'
-      \ }
 
 " HTML
 Plug 'othree/html5.vim', {'for': 'html'}             " 语法高亮
