@@ -190,7 +190,6 @@ let g:ctrlp_extensions = ['bookmarkdir', 'changes', 'cmdline', 'menu', 'mixed', 
 let g:ctrlp_arg_map             = 1
 let g:ctrlp_match_window        = 'bottom,order:btt,min:1,max:30'
 let g:ctrlp_mruf_exclude        = '\.git/\*\|\.txt\|\.vimrc'
-let g:ctrlp_open_new_file       = 't'
 let g:ctrlp_switch_buffer       = 'EtVH'
 let g:ctrlp_tabpage_position    = 'al'
 let g:ctrlp_working_path_mode   = 'rw'
