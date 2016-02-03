@@ -229,6 +229,11 @@ vmap <CR>      <Plug>(EasyAlign)
 
 " TODO: FURTHER INVESTIGATION NEEDED
 Plug 'benekastah/neomake'                            " 异步语法检查工具
+let g:neomake_javascript_enabled_makers = ['eslint']
+let g:neomake_javascript_eslint_maker = {
+      \ 'args': ['--no-color', '--format', 'compact'],
+      \ 'errorformat': '%f: line %l\, col %c\, %m'
+      \ }
 
 " HTML
 Plug 'othree/html5.vim', {'for': 'html'}             " 语法高亮
@@ -263,18 +268,24 @@ augroup RELOAD_CONFIGURATION
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
-augroup MARKUP_LANGUAGES
+augroup MARKUP_LANGUAGE
   autocmd!
   autocmd FileType html     setlocal textwidth=0 colorcolumn=0
   autocmd FileType markdown setlocal noexpandtab textwidth=0 colorcolumn=0
 augroup END
 
-augroup STYLESHEETS
+augroup STYLESHEET
   autocmd!
   autocmd FileType css,scss setlocal iskeyword+=-
 augroup END
 
-augroup CUSTOM_HIGHLIGHTS
+augroup JAVASCRIPT
+  autocmd!
+  autocmd BufWritePost *.js Neomake
+  autocmd InsertLeave,TextChanged *.js update | Neomake
+augroup END
+
+augroup CUSTOM_HIGHLIGHT
   autocmd!
   autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|NOTE\|FIXME', -1)
 augroup END
