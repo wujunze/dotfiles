@@ -87,13 +87,6 @@ if has('statusline')
   set laststatus=2
 
   set statusline=%<                                       " 状态栏开始
-
-  if exists('*SyntasticStatuslineFlag')
-    set statusline+=%#ErrorMsg#                           " 插件
-    set statusline+=%{SyntasticStatuslineFlag()}
-    set statusline+=%*\                                   " 恢复高亮
-  endif
-
   set statusline+=%.40f                                   " 相对路径的当前文件
   set statusline+=%y                                      " 文件类型
   set statusline+=[%{&ff}]                                " 文件格式
@@ -295,7 +288,9 @@ augroup END
 augroup JAVASCRIPT
   autocmd!
   autocmd BufWritePost *.js Neomake
-  autocmd InsertLeave,TextChanged *.js update | Neomake
+  " NOTE: currently there's a bug on TextChanged event
+  " autocmd InsertLeave,TextChanged *.js update | Neomake
+  " autocmd InsertLeave *.js update | Neomake
 augroup END
 
 augroup CUSTOM_HIGHLIGHT
