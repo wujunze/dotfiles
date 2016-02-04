@@ -1,20 +1,28 @@
 [alias]
   aa = add --all
   ae = add --edit
-  ca = cs --amend
-  co = cs --all
+  ba = br --all
+  bd = br --delete
+  bf = bd --force
+  bl = br --list
+  br = branch
+  cb = ch -b
+  ch = checkout
+  ca = cs --all
   cm = cs --message
   cs = commit --signoff
   di = diff
   ds = di --staged
-  lt = describe --abbrev=0 --tags
   ps = push
   pl = pull
   st = status
   ss = st --short
   sv = st --verbose
+  td = tag --delete
+  tl = describe --abbrev=0 --tags
+  tm = tag --annotate --message
 [branch]
-  autosetuprebase = always
+  autoSetupRebase = always
 [core]
   autocrlf = input
   safecrlf = true
@@ -32,8 +40,7 @@
   rebase = true
 [push]
   default = simple
-[status]
-  branch = true
+  followTags = true
 [user]
   name = Albert Yu
   email = dev.yufan@gmail.com
