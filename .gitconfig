@@ -15,6 +15,7 @@
   ds = di --staged
   ps = push
   pl = pull
+  ri = rebase --interactive
   st = status
   ss = st --short
   sv = st --verbose
