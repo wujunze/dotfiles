@@ -242,7 +242,11 @@ vmap <CR>      <Plug>(EasyAlign)
 Plug 'benekastah/neomake'                            " 异步语法检查工具
 
 " HTML
-Plug 'othree/html5.vim', {'for': 'html'}             " 语法高亮
+Plug 'othree/html5.vim', {'for': ['html', 'html.handlebars']}
+
+" Handlebars
+Plug 'mustache/vim-mustache-handlebars', {'for': ['html', 'html.handlebars']}
+let g:mustache_abbreviations = 1                     " 内置缩写展开
 
 " CSS
 Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'scss']}
@@ -276,8 +280,8 @@ augroup END
 
 augroup MARKUP_LANGUAGE
   autocmd!
-  autocmd FileType html     setlocal textwidth=0 colorcolumn=0
   autocmd FileType markdown setlocal noexpandtab textwidth=0 colorcolumn=0
+  autocmd FileType html,html.handlebars,mustache setlocal textwidth=0 colorcolumn=0
 augroup END
 
 augroup STYLESHEET
