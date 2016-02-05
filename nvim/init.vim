@@ -35,7 +35,7 @@ set fillchars=diff:⣿,fold:-,vert:│
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
 " 设置行宽的视觉提示
-set colorcolumn=80
+set colorcolumn=0
 
 " 自定义拼写检查
 set nospell spelllang=en_us
@@ -295,7 +295,7 @@ augroup END
 
 augroup STYLESHEET
   autocmd!
-  autocmd FileType css,scss setlocal iskeyword+=-
+  autocmd FileType css,scss setlocal colorcolumn=80 iskeyword+=-
 augroup END
 
 augroup JAVASCRIPT
@@ -304,6 +304,7 @@ augroup JAVASCRIPT
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
+  autocmd FileType javascript setlocal colorcolumn=80 iskeyword+=$
 augroup END
 
 augroup OMNIFUNCS
