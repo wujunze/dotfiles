@@ -302,7 +302,7 @@ colorscheme material-theme
 augroup NVIM_SETTINGS
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
-  autocmd Filetype vim setlocal foldmethod=marker
+  autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
 augroup MARKUP_LANGUAGE
@@ -311,12 +311,12 @@ augroup MARKUP_LANGUAGE
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
-  autocmd FileType html,html.handlebars,mustache setlocal textwidth=0
+  autocmd FileType html,html.handlebars setlocal textwidth=0 foldmethod=indent
 augroup END
 
 augroup STYLESHEET
   autocmd!
-  autocmd FileType css,scss setlocal colorcolumn=80 iskeyword+=-
+  autocmd FileType css,scss setlocal colorcolumn=80 iskeyword+=- foldmethod=syntax
 augroup END
 
 augroup JAVASCRIPT
@@ -325,16 +325,17 @@ augroup JAVASCRIPT
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
-  autocmd FileType javascript setlocal colorcolumn=80 iskeyword+=$
+  autocmd FileType javascript setlocal colorcolumn=80 iskeyword+=$ foldmethod=syntax
 augroup END
 
 augroup OMNIFUNCS
   autocmd!
-  autocmd FileType css        setlocal omnifunc=csscomplete#CompleteCSS
-  autocmd FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-  autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
-  autocmd FileType xml        setlocal omnifunc=xmlcomplete#CompleteTags
+  autocmd FileType css             setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html            setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType html.handlebars setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript      setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType ruby            setlocal omnifunc=rubycomplete#Complete
+  autocmd FileType xml             setlocal omnifunc=xmlcomplete#CompleteTags
 augroup END
 
 augroup CUSTOM_HIGHLIGHT
