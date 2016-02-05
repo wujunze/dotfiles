@@ -149,11 +149,9 @@ tnoremap <C-\><C-n><A-h> gT
 tnoremap <C-\><C-n><A-l> gt
 
 " 映射更高效的菜单选择（注释掉的是不好的写法）
-" inoremap <C-j> <C-r>=pumvisible() ? "\<lt>C-n>" : "\<lt>C-j>"<CR>
-" inoremap <C-k> <C-r>=pumvisible() ? "\<lt>C-p>" : "\<lt>C-k>"<CR>
-inoremap <expr> <CR>    pumvisible() ? "<C-y>" : "<CR>"
-inoremap <expr> <Tab>   pumvisible() ? "<C-n>" : "<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "<C-p>" : "<S-Tab>"
+inoremap <expr> <CR>  pumvisible() ? "<C-y>" : "<CR>"
+inoremap <expr> <C-j> pumvisible() ? "<C-n>" : "<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "<C-p>" : "<C-k>"
 
 " 缩写 :so -> :source % 用于重新加载当前文件
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
@@ -230,6 +228,14 @@ let g:investigate_dash_for_elixir = 'ex'
 Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
 
+Plug 'SirVer/ultisnips'                              " 智能代码片断工具
+let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
+let g:UltiSnipsExpandTrigger       = '<TAB>'
+let g:UltiSnipsListSnippets        = '<C-TAB>'
+let g:UltiSnipsJumpForwardTrigger  = '<TAB>'
+let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
+let g:UltiSnipsMappingsToIgnore    = ["deoplete"]
+
 " NOTE: currently I just don't know how it works...
 Plug 'Shougo/neopairs.vim'                           " 自动匹配成对字符
 
@@ -259,6 +265,7 @@ Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
 Plug 'jason0x43/vim-js-indent'                       " 语法缩进
 let g:js_indent_typescript  = 1                       " 同时用于 TypeScript
 let g:js_indent_flat_switch = 0                       " 展平 switch 结构
+Plug 'grvcoelho/vim-javascript-snippets'             " JavaScript片断包
 " NOTE: I'm hold these two below for future candidates
 " Plug 'gavocanov/vim-js-indent'
 
@@ -297,6 +304,15 @@ augroup JAVASCRIPT
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
+augroup END
+
+augroup OMNIFUNCS
+  autocmd!
+  autocmd FileType css        setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html       setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType ruby       setlocal omnifunc=rubycomplete#Complete
+  autocmd FileType xml        setlocal omnifunc=xmlcomplete#CompleteTags
 augroup END
 
 augroup CUSTOM_HIGHLIGHT
