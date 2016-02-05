@@ -1,6 +1,8 @@
 # HTTP Proxy Configurations
-export http_proxy=http://127.0.0.1:8123
-export https_proxy=http://127.0.0.1:8123
+export NO_PROXY=localhost,127.0.0.1
+export ALL_PROXY=http://127.0.0.1:8123
+export HTTP_PROXY=http://127.0.0.1:8123
+export HTTPS_PROXY=http://127.0.0.1:8123
 
 # Homebrew Configurations
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
