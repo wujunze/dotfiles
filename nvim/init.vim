@@ -243,6 +243,7 @@ let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
 
 Plug 'SirVer/ultisnips'                              " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
+" let g:UltiSnipsSnippetDirectories  = ["UltiSnips", $HOME.'/.config/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger       = '<TAB>'
 let g:UltiSnipsListSnippets        = '<C-TAB>'
 let g:UltiSnipsJumpForwardTrigger  = '<TAB>'
