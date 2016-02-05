@@ -57,10 +57,10 @@ set textwidth=80
 set formatoptions=cjmqrtB
 
 " 设置自动补全选项
-set complete=.,w,b,u,U,i,d,t
+set omnifunc=syntaxcomplete#Complete
+set complete=.,w,b,u,U,d,t
 set completeopt=longest,menuone,preview
 set completefunc=syntaxcomplete#Complete
-set omnifunc=syntaxcomplete#Complete
 
 " 自动补全候选窗口最大高度
 set pumheight=10
@@ -211,7 +211,7 @@ let NERDTreeCaseSensitiveSort   = 1
 let NERDTreeHighlightCursorline = 1
 nnoremap <F1>         :NERDTreeToggle<CR>
 nnoremap <Leader><F1> :NERDTreeFind<CR>
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin'                   " 为 NERDTree 添加 Git 状态
 
 " TODO: LEARN HOW TO CUSTOMIZE THIS
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
