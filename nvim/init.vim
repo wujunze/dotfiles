@@ -1,3 +1,4 @@
+" 设置 {{{
 " 显式设置当前脚本的编码方式以支持多字节字符
 scriptencoding utf-8
 
@@ -81,7 +82,9 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab shiftround smartindent
 
 " 允许保存 undo 状态
 set undofile
+" }}}
 
+" 状态栏 {{{
 " 自定义状态栏配置
 if has('statusline')
   set laststatus=2
@@ -104,7 +107,9 @@ if has('statusline')
   set statusline+=%4l\ %02c\                              " 行号／列号
   set statusline+=%3p%%\ in\ %-4L                         " 内容长度
 endif
+" }}}
 
+" 映射 {{{
 " 映射 leader 和 localleader
 nnoremap <SPACE> <nop>
 let mapleader = "\<SPACE>"
@@ -152,15 +157,18 @@ tnoremap <C-\><C-n><A-l> gt
 inoremap <expr> <CR>  pumvisible() ? "<C-y>" : "<CR>"
 inoremap <expr> <C-j> pumvisible() ? "<C-n>" : "<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "<C-p>" : "<C-k>"
+" }}}
 
+" 缩写 {{{
 " 缩写 :so -> :source % 用于重新加载当前文件
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
 " 缩写 :ev -> :tabedit PATH/TO/init.vim 用于新开标签页编辑 init.vim 文件
 cnoreabbrev <expr> ev getcmdtype() == ':' && getcmdline() == 'ev' ? 'tabedit $MYVIMRC' : 'ev'
 " 缩写 :ww -> :w !sudo tee % 用于获取 Admin 权限写入文件
 cnoreabbrev <expr> ww getcmdtype() == ':' && getcmdline() == 'ww' ? 'w !sudo tee %' : 'ww'
+" }}}
 
-" 自动安装插件
+" 插件 {{{
 if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
   silent !curl -fLo $HOME/.config/nvim/autoload/plug.vim --create-dirs
         \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -278,13 +286,18 @@ Plug 'awetzel/elixir.nvim', {'for': 'elixir'}        " 代码补全／编译运�
 let g:elixir_showerror = 1                            " 编译完成提示错误
 let g:elixir_autobuild = 0                            " 保存／失焦时自动保存
 call plug#end()
+" }}}
 
+" 主题 {{{
 set background=dark
 colorscheme material-theme
+" }}}
 
-augroup RELOAD_CONFIGURATION
+" 自动命令 {{{
+augroup NVIM_SETTINGS
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd Filetype vim setlocal foldmethod=marker
 augroup END
 
 augroup MARKUP_LANGUAGE
@@ -320,3 +333,4 @@ augroup CUSTOM_HIGHLIGHT
   autocmd!
   autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|NOTE\|FIXME', -1)
 augroup END
+" }}}
