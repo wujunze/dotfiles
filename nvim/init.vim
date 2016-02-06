@@ -279,12 +279,15 @@ Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
 Plug 'jason0x43/vim-js-indent'                       " 语法缩进
 let g:js_indent_typescript  = 1                       " 同时用于 TypeScript
 let g:js_indent_flat_switch = 0                       " 展平 switch 结构
-Plug 'grvcoelho/vim-javascript-snippets'             " JavaScript片断包
+Plug 'grvcoelho/vim-javascript-snippets'             " JavaScript 片断包
 " NOTE: I'm hold these two below for future candidates
 " Plug 'gavocanov/vim-js-indent'
 
 " JSON
 Plug 'elzr/vim-json'
+
+" React JSX
+" Plug 'mxw/vim-jsx'                                   " React JSX 语法高亮
 
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
@@ -322,10 +325,11 @@ augroup END
 
 augroup JAVASCRIPT
   autocmd!
-  autocmd BufWritePost *.js Neomake
+  autocmd BufWritePost *.js,*.jsx Neomake
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
+  autocmd BufNewFile,BufRead *.jsx setlocal filetype=javascript
   autocmd FileType javascript setlocal colorcolumn=80 iskeyword+=$ foldmethod=syntax
 augroup END
 

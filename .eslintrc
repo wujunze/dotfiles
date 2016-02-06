@@ -22,6 +22,9 @@ env:
   webextensions: true
   worker: true
 
+ecmaFeatures:
+  jsx: true
+
 rules:
   # 多行分割时要求保留最后一项的分割逗号
   comma-dangle:
