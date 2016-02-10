@@ -265,6 +265,11 @@ vmap <CR>      <Plug>(EasyAlign)
 
 " TODO: FURTHER INVESTIGATION NEEDED
 Plug 'benekastah/neomake'                            " 异步语法检查工具
+let g:neomake_error_sign   = {'text': '❌ '}
+let g:neomake_warning_sign = {'text': '🚫 '}
+
+" XML
+Plug 'othree/xml.vim'
 
 " HTML
 Plug 'othree/html5.vim', {'for': ['html', 'html.handlebars']}
