@@ -275,19 +275,21 @@ Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'scss']}
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
 
 " JavaScript
-Plug 'othree/yajs.vim', {'for': 'javascript'}        " 语法高亮
-Plug 'jason0x43/vim-js-indent'                       " 语法缩进
-let g:js_indent_typescript  = 1                       " 同时用于 TypeScript
-let g:js_indent_flat_switch = 0                       " 展平 switch 结构
-Plug 'grvcoelho/vim-javascript-snippets'             " JavaScript 片断包
+Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
+Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx']}
+let g:js_indent_typescript  = 1                      " 同时用于 TypeScript
+let g:js_indent_flat_switch = 0                      " 展平 switch 结构
+Plug 'othree/es.next.syntax.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'grvcoelho/vim-javascript-snippets', {'for': ['javascript', 'javascript.jsx']}
 " NOTE: I'm hold these two below for future candidates
 " Plug 'gavocanov/vim-js-indent'
 
 " JSON
-Plug 'elzr/vim-json'
+Plug 'elzr/vim-json', {'for': 'json'}
 
 " React JSX
-" Plug 'mxw/vim-jsx'                                   " React JSX 语法高亮
+Plug 'mxw/vim-jsx', {'for': 'javascript.jsx'}        " React JSX 语法高亮
 
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
@@ -329,8 +331,10 @@ augroup JAVASCRIPT
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
-  autocmd BufNewFile,BufRead *.jsx setlocal filetype=javascript
-  autocmd FileType javascript setlocal colorcolumn=80 iskeyword+=$ foldmethod=syntax
+  " autocmd BufNewFile,BufRead *.jsx setlocal filetype=javascript
+  autocmd FileType javascript,javascript.jsx setlocal iskeyword+=$
+        \                                             colorcolumn=80
+        \                                             foldmethod=syntax
 augroup END
 
 augroup OMNIFUNCS
