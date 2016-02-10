@@ -82,6 +82,9 @@ set tabstop=2 shiftwidth=2 softtabstop=2 expandtab shiftround smartindent
 
 " 允许保存 undo 状态
 set undofile
+
+" 允许在未保存时切换 buffers
+set hidden
 " }}}
 
 " 状态栏 {{{
