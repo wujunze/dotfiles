@@ -234,7 +234,7 @@ Plug 'reedes/vim-textobj-sentence'                   " 支持更加自然的句�
 " Plug 'thinca/vim-ref'                                " 通用文档查看插件
 
 Plug 'keith/investigate.vim'                         " 多功能文档查看器
-let g:investigate_use_dash        = 1                 " Mac OS X 下使用 Dash
+let g:investigate_use_dash        = 1                " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
 
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
@@ -294,8 +294,8 @@ Plug 'mxw/vim-jsx', {'for': 'javascript.jsx'}        " React JSX 语法高亮
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim', {'for': 'elixir'}        " 代码补全／编译运行
-let g:elixir_showerror = 1                            " 编译完成提示错误
-let g:elixir_autobuild = 0                            " 保存／失焦时自动保存
+let g:elixir_showerror = 1                           " 编译完成提示错误
+let g:elixir_autobuild = 0                           " 保存／失焦时自动保存
 call plug#end()
 " }}}
 
