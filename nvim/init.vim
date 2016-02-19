@@ -232,6 +232,7 @@ Plug 'kana/vim-textobj-user'                         " 允许用户定义文本�
 Plug 'reedes/vim-pencil'                             " 文本写作辅助工具
 Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号字符
 Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
+Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
 
 " investigate.vim 应该是更好的选择，此处仅为备用
 " Plug 'thinca/vim-ref'                                " 通用文档查看插件
