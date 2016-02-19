@@ -156,10 +156,10 @@ nnoremap <A-l> gt
 tnoremap <C-\><C-n><A-h> gT
 tnoremap <C-\><C-n><A-l> gt
 
-" 映射更高效的菜单选择（注释掉的是不好的写法）
-inoremap <expr> <CR>  pumvisible() ? "<C-y>" : "<CR>"
-inoremap <expr> <C-j> pumvisible() ? "<C-n>" : "<C-j>"
-inoremap <expr> <C-k> pumvisible() ? "<C-p>" : "<C-k>"
+" 映射更高效的菜单选择
+inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 " }}}
 
 " 缩写 {{{
