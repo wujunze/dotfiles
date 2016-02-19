@@ -278,6 +278,9 @@ Plug 'othree/html5.vim', {'for': ['html', 'html.handlebars']}
 Plug 'mustache/vim-mustache-handlebars', {'for': ['html', 'html.handlebars']}
 let g:mustache_abbreviations = 1                     " 内置缩写展开
 
+" Pug (formly known as Jade)
+Plug 'digitaltoad/vim-pug'
+
 " CSS
 Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'scss']}
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
