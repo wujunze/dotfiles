@@ -1,7 +1,11 @@
 ---
 parser: "babel-eslint"
 
-extends: "eslint:recommended"
+parserOptions:
+  sourceType: "module"
+  ecmaVersion: 6
+  ecmaFeatures:
+    jsx: true
 
 env:
   amd: true
@@ -12,6 +16,7 @@ env:
   jasmine: true
   jest: true
   jquery: true
+  meteor: true
   mocha: true
   mongo: true
   node: true
@@ -22,8 +27,10 @@ env:
   webextensions: true
   worker: true
 
-ecmaFeatures:
-  jsx: true
+extends: "eslint:recommended"
+
+plugins:
+  - "react"
 
 rules:
   # 多行分割时要求保留最后一项的分割逗号
@@ -62,8 +69,3 @@ rules:
       vars: "local"
       args: "after-used"
       argsIgnorePattern: "^(_)|(e(rr|vt)?$)"
-
-  # 该有分号的地方必须有
-  semi:
-    - 1
-    - "always"
