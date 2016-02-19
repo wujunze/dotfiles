@@ -324,7 +324,7 @@ augroup END
 
 augroup MARKUP_LANGUAGE
   autocmd!
-  autocmd FileType markdown setlocal noexpandtab textwidth=72
+  autocmd FileType markdown setlocal textwidth=72
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
