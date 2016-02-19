@@ -230,8 +230,8 @@ Plug 'tpope/vim-unimpaired'                          " 补充成对操作的键�
 
 Plug 'kana/vim-textobj-user'                         " 允许用户定义文本对象
 Plug 'reedes/vim-pencil'                             " 文本写作辅助工具
-Plug 'reedes/vim-textobj-quote'                      " 支持排版格式的引号字符
-Plug 'reedes/vim-textobj-sentence'                   " 支持更加自然的句子对象
+Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号字符
+Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
 
 " investigate.vim 应该是更好的选择，此处仅为备用
 " Plug 'thinca/vim-ref'                                " 通用文档查看插件
@@ -246,7 +246,6 @@ let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
 
 Plug 'SirVer/ultisnips'                              " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
-" let g:UltiSnipsSnippetDirectories  = ["UltiSnips", $HOME.'/.config/nvim/UltiSnips']
 let g:UltiSnipsExpandTrigger       = '<TAB>'
 let g:UltiSnipsListSnippets        = '<C-TAB>'
 let g:UltiSnipsJumpForwardTrigger  = '<TAB>'
@@ -342,7 +341,6 @@ augroup JAVASCRIPT
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
-  " autocmd BufNewFile,BufRead *.jsx setlocal filetype=javascript
   autocmd FileType javascript,javascript.jsx setlocal iskeyword+=$
         \                                             colorcolumn=80
         \                                             foldmethod=syntax
