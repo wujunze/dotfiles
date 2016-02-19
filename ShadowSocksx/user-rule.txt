@@ -1,11 +1,17 @@
 ! Put user rules line by line in this file.
 ! See https://adblockplus.org/en/filter-cheatsheet
 
+||amazonaws.com
 ||atlassian.com
+||edgefonts.net
+||fastly.net
 ||flowtype.org
 ||githubusercontent.com
 ||gravatar.com
+||i.imgur.com
+||s.mzstatic.com
 ||img.shields.io
+||speakerdeck.com
 ||urls.api.twitter.com
 ||wistia.com
 ||wp.com
