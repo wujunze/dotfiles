@@ -362,4 +362,9 @@ augroup CUSTOM_HIGHLIGHT
   autocmd!
   autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|NOTE\|FIXME', -1)
 augroup END
+
+augroup MISC
+  autocmd!
+  autocmd FileType conf setlocal foldmethod=marker
+augroup END
 " }}}
