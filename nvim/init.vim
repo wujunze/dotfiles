@@ -351,6 +351,8 @@ augroup JAVASCRIPT
   " autocmd InsertLeave *.js update | Neomake
   autocmd FileType javascript,javascript.jsx setlocal iskeyword+=$
         \                                             colorcolumn=80
+        \                                             foldlevel=1
+        \                                             foldnestmax=2
         \                                             foldmethod=syntax
 augroup END
 
