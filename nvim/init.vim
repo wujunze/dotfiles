@@ -263,6 +263,10 @@ Plug 'Shougo/neopairs.vim'                           " 自动匹配成对字符
 
 Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
+Plug 'editorconfig/editorconfig-vim'                 " Editor Config 配置插件
+let g:EditorConfig_exec_path        = '/usr/local/bin/editorconfig'
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
 nmap <Leader>a <Plug>(EasyAlign)
