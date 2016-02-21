@@ -220,7 +220,6 @@ let NERDTreeCaseSensitiveSort   = 1
 let NERDTreeHighlightCursorline = 1
 nnoremap <F1>         :NERDTreeToggle<CR>
 nnoremap <Leader><F1> :NERDTreeFind<CR>
-Plug 'Xuyuanp/nerdtree-git-plugin'                   " 为 NERDTree 添加 Git 状态
 
 " TODO: LEARN HOW TO CUSTOMIZE THIS
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
