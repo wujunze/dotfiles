@@ -233,6 +233,12 @@ Plug 'reedes/vim-pencil'                             " 文本写作辅助工具
 Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号字符
 Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
 Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
+" NOTE: Don't know why not works in terminal
+" Plug 'junegunn/limelight.vim'                        " 提供当前行／段高对比
+" let g:limelight_conceal_ctermfg = 'gray'
+" let g:limelight_conceal_ctermfg = 240
+" let g:limelight_conceal_guifg   = 'DarkGray'
+" let g:limelight_conceal_guifg   = '#777777'
 
 " investigate.vim 应该是更好的选择，此处仅为备用
 " Plug 'thinca/vim-ref'                                " 通用文档查看插件
@@ -324,6 +330,8 @@ augroup END
 
 augroup MARKUP_LANGUAGE
   autocmd!
+  " autocmd User GoyoEnter Limelight
+  " autocmd User GoyoLeave Limelight!
   autocmd FileType markdown setlocal textwidth=72
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
