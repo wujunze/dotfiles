@@ -7,6 +7,7 @@
 ||fastly.net
 ||flowtype.org
 ||githubusercontent.com
+||goodbits.io
 ||gravatar.com
 ||i.imgur.com
 ||s.mzstatic.com
