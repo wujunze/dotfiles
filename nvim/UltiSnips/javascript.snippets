@@ -1,6 +1,18 @@
-snippet reco "React Component"
-import React, {Component, PropTypes} from 'react';
+snippet imp "ES2015 import"
+import $1 from '$2';
+endsnippet
 
+snippet exp "ES2015 export"
+export $0
+endsnippet
+
+snippet c "ES2015 class"
+class ${VISUAL:ClassName} extends $1 {
+	$0
+}
+endsnippet
+
+snippet reco "React Component"
 export default class $1 extends Component {
 	static propTypes = {
 		$2,
@@ -14,4 +26,12 @@ export default class $1 extends Component {
 		return $0;
 	}
 }
+endsnippet
+
+snippet rept "React.PropTypes.{xxx}"
+$0: PropTypes.$1,
+endsnippet
+
+snippet reptr "React.PropTypes.{xxx}.isRequired"
+$0: PropTypes.$1.isRequired,
 endsnippet

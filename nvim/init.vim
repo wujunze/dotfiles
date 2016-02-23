@@ -165,10 +165,12 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 " 缩写 {{{
 " 缩写 :so -> :source % 用于重新加载当前文件
 cnoreabbrev <expr> so getcmdtype() == ':' && getcmdline() == 'so' ? 'source %' : 'so'
+" 缩写 :sw -> :w !sudo tee % 用于获取 Admin 权限写入文件
+cnoreabbrev <expr> sw getcmdtype() == ':' && getcmdline() == 'sw' ? 'w !sudo tee %' : 'sw'
 " 缩写 :ev -> :tabedit PATH/TO/init.vim 用于新开标签页编辑 init.vim 文件
 cnoreabbrev <expr> ev getcmdtype() == ':' && getcmdline() == 'ev' ? 'tabedit $MYVIMRC' : 'ev'
-" 缩写 :ww -> :w !sudo tee % 用于获取 Admin 权限写入文件
-cnoreabbrev <expr> ww getcmdtype() == ':' && getcmdline() == 'ww' ? 'w !sudo tee %' : 'ww'
+" 缩写 :ue -> :UltiSnipsEdit 用于编辑 UltiSnips
+cnoreabbrev <expr> ue getcmdtype() == ':' && getcmdline() == 'ue' ? 'UltiSnipsEdit' : 'ue'
 " }}}
 
 " 插件 {{{
