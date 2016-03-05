@@ -45,7 +45,10 @@ set spellsuggest=best,5
 " 在右边打开新的窗口（垂直分割）
 set splitright
 
-" 按键提示（在状态栏下方）
+" 模式切换（在状态栏左下方）
+set noshowmode
+
+" 按键提示（在状态栏右下方）
 set showcmd
 
 " 显示行号／列号等附加信息（在状态栏右方）
@@ -223,6 +226,12 @@ let NERDTreeHighlightCursorline = 1
 nnoremap <F1>         :NERDTreeToggle<CR>
 nnoremap <Leader><F1> :NERDTreeFind<CR>
 
+Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
+" TODO: LEARN HOW TO CUSTOMIZE THIS
+let g:lightline = {
+      \             'colorscheme': 'seoul256',
+      \           }
+
 " TODO: LEARN HOW TO CUSTOMIZE THIS
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
 Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
@@ -329,7 +338,7 @@ colorscheme material-theme
 " 自动命令 {{{
 augroup NVIM_SETTINGS
   autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
   autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
@@ -357,8 +366,7 @@ augroup JAVASCRIPT
   " autocmd InsertLeave *.js update | Neomake
   autocmd FileType javascript,javascript.jsx setlocal iskeyword+=$
         \                                             colorcolumn=80
-        \                                             foldlevel=1
-        \                                             foldnestmax=2
+        \                                             foldnestmax=1
         \                                             foldmethod=syntax
 augroup END
 
