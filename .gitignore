@@ -1,6 +1,8 @@
 .DS_Store
 hub
 
+configstore/
+
 nvim/.init.vim-rplugin~
 nvim/autoload/
 nvim/plugins/
