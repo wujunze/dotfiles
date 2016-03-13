@@ -134,7 +134,9 @@ vnoremap j gj
 nnoremap k gk
 vnoremap k gk
 nnoremap * *N
+vnoremap * *N
 nnoremap # #N
+vnoremap # #N
 
 " 映射一些个人偏好（可选）
 inoremap <C-f> <C-o>a
@@ -163,6 +165,13 @@ tnoremap <C-\><C-n><A-l> gt
 inoremap <expr> <CR>  pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
+" 开启内置 Terminal 模式
+nnoremap <silent> <Leader>: :below 10sp term://$SHELL<CR>A
+
+" NERDTree 映射
+nnoremap <Leader><F1> :NERDTreeFind<CR>
+nnoremap <F1>         :NERDTreeToggle<CR>
 " }}}
 
 " 缩写 {{{
@@ -223,8 +232,6 @@ let NERDTreeSortHiddenFirst     = 1
 let NERDTreeAutoDeleteBuffer    = 1
 let NERDTreeCaseSensitiveSort   = 1
 let NERDTreeHighlightCursorline = 1
-nnoremap <F1>         :NERDTreeToggle<CR>
-nnoremap <Leader><F1> :NERDTreeFind<CR>
 
 Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
 " TODO: LEARN HOW TO CUSTOMIZE THIS
@@ -243,15 +250,6 @@ Plug 'reedes/vim-pencil'                             " 文本写作辅助工具
 Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号字符
 Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
 Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
-" NOTE: Don't know why not works in terminal
-" Plug 'junegunn/limelight.vim'                        " 提供当前行／段高对比
-" let g:limelight_conceal_ctermfg = 'gray'
-" let g:limelight_conceal_ctermfg = 240
-" let g:limelight_conceal_guifg   = 'DarkGray'
-" let g:limelight_conceal_guifg   = '#777777'
-
-" investigate.vim 应该是更好的选择，此处仅为备用
-" Plug 'thinca/vim-ref'                                " 通用文档查看插件
 
 Plug 'keith/investigate.vim'                         " 多功能文档查看器
 let g:investigate_use_dash        = 1                " Mac OS X 下使用 Dash
@@ -284,25 +282,26 @@ nmap <Leader>a <Plug>(EasyAlign)
 vmap <CR>      <Plug>(EasyAlign)
 
 " TODO: FURTHER INVESTIGATION NEEDED
-Plug 'benekastah/neomake'                            " 异步语法检查工具
-let g:neomake_error_sign   = {'text': '❌ '}
-let g:neomake_warning_sign = {'text': '🚫 '}
+Plug 'benekastah/neomake'
+let g:neomake_error_sign   = {'text': '😡 '}
+let g:neomake_warning_sign = {'text': '😠 '}
 
 " XML
-Plug 'othree/xml.vim'
+Plug 'othree/xml.vim', {'for': ['html', 'html.handlebars']}
 
 " HTML
 Plug 'othree/html5.vim', {'for': ['html', 'html.handlebars']}
 
 " Handlebars
-Plug 'mustache/vim-mustache-handlebars', {'for': ['html', 'html.handlebars']}
+Plug 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1                     " 内置缩写展开
 
 " Pug (formly known as Jade)
 Plug 'digitaltoad/vim-pug'
 
 " CSS
-Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'scss']}
+Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'less', 'scss']}
+Plug 'genoma/vim-less', {'for': 'less'}              " Lass 语法增强
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
 
 " JavaScript
@@ -355,7 +354,8 @@ augroup END
 
 augroup STYLESHEET
   autocmd!
-  autocmd FileType css,scss setlocal colorcolumn=80 iskeyword+=- foldmethod=syntax
+  autocmd FileType css,less,scss setlocal colorcolumn=80 iskeyword+=-
+        \                                 foldmethod=syntax
 augroup END
 
 augroup JAVASCRIPT
@@ -364,10 +364,8 @@ augroup JAVASCRIPT
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
-  autocmd FileType javascript,javascript.jsx setlocal iskeyword+=$
-        \                                             colorcolumn=80
-        \                                             foldnestmax=1
-        \                                             foldmethod=syntax
+  autocmd FileType javascript setlocal colorcolumn=80 iskeyword+=$
+        \                              foldmethod=syntax foldnestmax=1
 augroup END
 
 augroup OMNIFUNCS
@@ -382,7 +380,7 @@ augroup END
 
 augroup CUSTOM_HIGHLIGHT
   autocmd!
-  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO\|NOTE\|FIXME', -1)
+  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO:\s\|NOTE:\s\|FIXME:\s', -1)
 augroup END
 
 augroup MISC
