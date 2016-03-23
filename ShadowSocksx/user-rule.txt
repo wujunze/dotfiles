@@ -19,3 +19,4 @@
 ||urls.api.twitter.com
 ||wistia.com
 ||wp.com
+||www.cdn.whatsapp.net
