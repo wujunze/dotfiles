@@ -8,4 +8,6 @@ nvim/.init.vim-rplugin~
 nvim/autoload/
 nvim/plugins/
 
+ShadowSocksx/gfwlist.js
+
 ssh/
