@@ -3,6 +3,7 @@
 
 ||amazonaws.com
 ||atlassian.com
+||cform.io
 ||edgefonts.net
 ||fastly.net
 ||flowtype.org
