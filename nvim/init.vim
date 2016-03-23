@@ -306,15 +306,9 @@ Plug 'genoma/vim-less', {'for': 'less'}              " Lass 语法增强
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
 
 " JavaScript
-Plug 'othree/yajs.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'jason0x43/vim-js-indent', {'for': 'javascript'}
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
-Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx']}
-let g:js_indent_typescript  = 1                      " 同时用于 TypeScript
-let g:js_indent_flat_switch = 0                      " 展平 switch 结构
 Plug 'othree/es.next.syntax.vim', {'for': ['javascript', 'javascript.jsx']}
-Plug 'grvcoelho/vim-javascript-snippets', {'for': ['javascript', 'javascript.jsx']}
-" NOTE: I'm hold these two below for future candidates
-" Plug 'gavocanov/vim-js-indent'
 
 " JSON
 Plug 'elzr/vim-json', {'for': 'json'}
