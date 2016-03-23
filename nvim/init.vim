@@ -30,7 +30,7 @@ set sidescroll=1
 set sidescrolloff=3
 
 " 设置状态栏、代码折叠、垂直分割的视觉提示
-set fillchars=diff:⣿,fold:-,vert:│
+" set fillchars=diff:⣿,fold:-,vert:│
 
 " 设置空白字符的视觉提示（eol:¬,nbsp:˽,）
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
@@ -92,27 +92,27 @@ set hidden
 
 " 状态栏 {{{
 " 自定义状态栏配置
-if has('statusline')
-  set laststatus=2
+" if has('statusline')
+"   set laststatus=2
 
-  set statusline=%<                                       " 状态栏开始
-  set statusline+=%.40f                                   " 相对路径的当前文件
-  set statusline+=%y                                      " 文件类型
-  set statusline+=[%{&ff}]                                " 文件格式
-  set statusline+=[%{strlen(&fenc)?&fenc:'none'}]         " 文件编码
-  set statusline+=%m                                      " 更改状态
-  set statusline+=%h                                      " 帮助标识
-  set statusline+=%r                                      " 只读标识
-  if exists(':Pencil')
-    set statusline+=%<\ %{PencilMode()}                   " 插件
-  endif
+"   set statusline=%<                                       " 状态栏开始
+"   set statusline+=%.40f                                   " 相对路径的当前文件
+"   set statusline+=%y                                      " 文件类型
+"   set statusline+=[%{&ff}]                                " 文件格式
+"   set statusline+=[%{strlen(&fenc)?&fenc:'none'}]         " 文件编码
+"   set statusline+=%m                                      " 更改状态
+"   set statusline+=%h                                      " 帮助标识
+"   set statusline+=%r                                      " 只读标识
+"   if exists(':Pencil')
+"     set statusline+=%<\ %{PencilMode()}                   " 插件
+"   endif
 
-  set statusline+=%*                                      " 恢复高亮
-  set statusline+=%=                                      " 状态栏右边
-  set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
-  set statusline+=%4l\ %02c\                              " 行号／列号
-  set statusline+=%3p%%\ in\ %-4L                         " 内容长度
-endif
+"   set statusline+=%*                                      " 恢复高亮
+"   set statusline+=%=                                      " 状态栏右边
+"   set statusline+=%{exists('g:loaded_fugitive')?fugitive#statusline():''}
+"   set statusline+=%4l\ %02c\                              " 行号／列号
+"   set statusline+=%3p%%\ in\ %-4L                         " 内容长度
+" endif
 " }}}
 
 " 映射 {{{
@@ -258,6 +258,7 @@ let g:investigate_dash_for_elixir = 'ex'
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
 Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
+Plug 'Konfekt/FastFold'                              " 配合加速代码折叠
 
 Plug 'SirVer/ultisnips'                              " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
@@ -337,8 +338,8 @@ colorscheme material-theme
 " 自动命令 {{{
 augroup NVIM_SETTINGS
   autocmd!
-  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
   autocmd FileType vim setlocal foldmethod=marker
+  autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 augroup END
 
 augroup MARKUP_LANGUAGE
@@ -349,13 +350,14 @@ augroup MARKUP_LANGUAGE
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
-  autocmd FileType html,html.handlebars setlocal textwidth=0 foldmethod=indent
+  autocmd FileType html,html.handlebars setlocal textwidth=0
+        \                               foldmethod=indent foldlevelstart=0 foldnestmax=2
 augroup END
 
 augroup STYLESHEET
   autocmd!
   autocmd FileType css,less,scss setlocal colorcolumn=80 iskeyword+=-
-        \                                 foldmethod=syntax
+        \                        foldmethod=syntax foldlevelstart=0 foldnestmax=2
 augroup END
 
 augroup JAVASCRIPT
@@ -364,8 +366,8 @@ augroup JAVASCRIPT
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
-  autocmd FileType javascript setlocal colorcolumn=80 iskeyword+=$
-        \                              foldmethod=syntax foldnestmax=1
+  autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
+        \                                    foldmethod=syntax foldlevelstart=0 foldnestmax=2
 augroup END
 
 augroup OMNIFUNCS
