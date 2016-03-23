@@ -104,7 +104,7 @@ export NVM_DIR="/Users/nightire/.nvm"
 [ -r "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 
 # z Initialization
-source `brew --prefix`/etc/profile.d/z.sh
+[ -f `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
 
 # Alias Configurations
 alias la="ls -AGhl"
