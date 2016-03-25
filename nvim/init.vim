@@ -345,13 +345,11 @@ augroup MARKUP_LANGUAGE
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
   autocmd FileType html,html.handlebars setlocal textwidth=0
-        \                               foldmethod=indent foldlevelstart=0 foldnestmax=2
 augroup END
 
 augroup STYLESHEET
   autocmd!
   autocmd FileType css,less,scss setlocal colorcolumn=80 iskeyword+=-
-        \                        foldmethod=syntax foldlevelstart=0 foldnestmax=2
 augroup END
 
 augroup JAVASCRIPT
@@ -361,7 +359,6 @@ augroup JAVASCRIPT
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
-        \                                    foldmethod=syntax foldlevelstart=0 foldnestmax=2
 augroup END
 
 augroup OMNIFUNCS
