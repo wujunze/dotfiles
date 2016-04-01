@@ -332,6 +332,7 @@ colorscheme material-theme
 " 自动命令 {{{
 augroup NVIM_SETTINGS
   autocmd!
+  autocmd BufEnter * silent! lcd %:p:h
   autocmd FileType vim setlocal foldmethod=marker
   autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 augroup END
