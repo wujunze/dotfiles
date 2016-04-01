@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
-	<true/>
+	<false/>
 	<key>AllowClipboardAccess</key>
 	<false/>
 	<key>AnimateDimming</key>
@@ -268,7 +268,7 @@
 	<key>FlashTabBarInFullscreen</key>
 	<false/>
 	<key>FocusFollowsMouse</key>
-	<true/>
+	<false/>
 	<key>FsTabDelay</key>
 	<real>1</real>
 	<key>HiddenAFRStrokeThickness</key>
@@ -360,13 +360,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>921 241 603 346 0 0 2560 1440 </string>
+	<string>255 194 767 315 0 0 1280 800 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>1021 685 606 456 0 0 2560 1440 </string>
+	<string>297 463 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 787 620 392 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1280 1440 0 0 2560 1440 </string>
+	<string>0 2 1282 1436 0 0 2560 1440 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -549,6 +549,19 @@
 			<false/>
 			<key>Background Image Location</key>
 			<string></string>
+			<key>Badge Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>0.5</real>
+				<key>Blue Component</key>
+				<real>0.0</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.0</real>
+				<key>Red Component</key>
+				<real>1</real>
+			</dict>
 			<key>Blend</key>
 			<real>0.30000001192092896</real>
 			<key>Blink Allowed</key>
@@ -584,6 +597,19 @@
 				<real>0.91671288013458252</real>
 				<key>Red Component</key>
 				<real>0.91654461622238159</real>
+			</dict>
+			<key>Cursor Guide Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>0.25</real>
+				<key>Blue Component</key>
+				<real>1</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.91000000000000003</real>
+				<key>Red Component</key>
+				<real>0.65000000000000002</real>
 			</dict>
 			<key>Cursor Text Color</key>
 			<dict>
@@ -1044,6 +1070,19 @@
 					<key>Text</key>
 					<string></string>
 				</dict>
+			</dict>
+			<key>Link Color</key>
+			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
+				<key>Blue Component</key>
+				<real>0.67800000000000005</real>
+				<key>Color Space</key>
+				<string>Calibrated</string>
+				<key>Green Component</key>
+				<real>0.27000000000000002</real>
+				<key>Red Component</key>
+				<real>0.023</real>
 			</dict>
 			<key>Log Directory</key>
 			<string></string>
@@ -1963,11 +2002,11 @@
 			<key>Name</key>
 			<string>Galaxy</string>
 			<key>Non Ascii Font</key>
-			<string>PingFangSC-Regular 16</string>
+			<string>PingFangSC-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 16</string>
+			<string>Hack-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2168,146 +2207,146 @@
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.40253299474716187</real>
+				<string>0</string>
 				<key>Green Component</key>
-				<real>0.35616019368171692</real>
+				<string>0</string>
 				<key>Red Component</key>
-				<real>0.26286587119102478</real>
+				<string>0</string>
 			</dict>
 			<key>Ansi 1 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.25575384497642517</real>
+				<string>0</string>
 				<key>Green Component</key>
-				<real>0.22098405659198761</real>
+				<string>0</string>
 				<key>Red Component</key>
-				<real>0.9871404767036438</real>
+				<string>0.8</string>
 			</dict>
 			<key>Ansi 10 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.74659085273742676</real>
+				<string>0.2039216</string>
 				<key>Green Component</key>
-				<real>0.96712285280227661</real>
+				<string>0.8862745</string>
 				<key>Red Component</key>
-				<real>0.67800694704055786</real>
+				<string>0.5411764999999999</string>
 			</dict>
 			<key>Ansi 11 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.42511638998985291</real>
+				<string>0.3098039</string>
 				<key>Green Component</key>
-				<real>0.88262283802032471</real>
+				<string>0.9137255</string>
 				<key>Red Component</key>
-				<real>0.99765938520431519</real>
+				<string>0.9882353</string>
 			</dict>
 			<key>Ansi 12 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.99898606538772583</real>
+				<string>0.8117647</string>
 				<key>Green Component</key>
-				<real>0.81066548824310303</real>
+				<string>0.6235294</string>
 				<key>Red Component</key>
-				<real>0.43880558013916016</real>
+				<string>0.4470588</string>
 			</dict>
 			<key>Ansi 13 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.60766077041625977</real>
+				<string>0.6588235</string>
 				<key>Green Component</key>
-				<real>0.40164706110954285</real>
+				<string>0.4980392</string>
 				<key>Red Component</key>
-				<real>0.9887651801109314</real>
+				<string>0.6784314</string>
 			</dict>
 			<key>Ansi 14 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.90182536840438843</real>
+				<string>0.8862745</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<string>0.8862745</string>
 				<key>Red Component</key>
-				<real>0.60292786359786987</real>
+				<string>0.2039216</string>
 			</dict>
 			<key>Ansi 15 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.99999129772186279</real>
+				<string>0.9254902</string>
 				<key>Green Component</key>
-				<real>0.99997437000274658</real>
+				<string>0.9333333</string>
 				<key>Red Component</key>
-				<real>1</real>
+				<string>0.9333333</string>
 			</dict>
 			<key>Ansi 2 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.62042194604873657</real>
+				<string>0.02352941</string>
 				<key>Green Component</key>
-				<real>0.94388872385025024</real>
+				<string>0.6039215999999999</string>
 				<key>Red Component</key>
-				<real>0.36202818155288696</real>
+				<string>0.3058824</string>
 			</dict>
 			<key>Ansi 3 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.19727933406829834</real>
+				<string>0</string>
 				<key>Green Component</key>
-				<real>0.81672251224517822</real>
+				<string>0.627451</string>
 				<key>Red Component</key>
-				<real>0.99627053737640381</real>
+				<string>0.7686275</string>
 			</dict>
 			<key>Ansi 4 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.99871528148651123</real>
+				<string>0.6431373</string>
 				<key>Green Component</key>
-				<real>0.7149810791015625</real>
+				<string>0.3960784</string>
 				<key>Red Component</key>
-				<real>0.215079665184021</real>
+				<string>0.2039216</string>
 			</dict>
 			<key>Ansi 5 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.43182668089866638</real>
+				<string>0.4823529</string>
 				<key>Green Component</key>
-				<real>0.13310989737510681</real>
+				<string>0.3137255</string>
 				<key>Red Component</key>
-				<real>0.986469566822052</real>
+				<string>0.4588235</string>
 			</dict>
 			<key>Ansi 6 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.82062870264053345</real>
+				<string>0.6039215999999999</string>
 				<key>Green Component</key>
-				<real>1</real>
+				<string>0.5960785</string>
 				<key>Red Component</key>
-				<real>0.34860008955001831</real>
+				<string>0.02352941</string>
 			</dict>
 			<key>Ansi 7 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.99999129772186279</real>
+				<string>0.8117647</string>
 				<key>Green Component</key>
-				<real>0.99997437000274658</real>
+				<string>0.8431373</string>
 				<key>Red Component</key>
-				<real>1</real>
+				<string>0.827451</string>
 			</dict>
 			<key>Ansi 8 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.72321081161499023</real>
+				<string>0.3254902</string>
 				<key>Green Component</key>
-				<real>0.69167852401733398</real>
+				<string>0.3411765</string>
 				<key>Red Component</key>
-				<real>0.63061976432800293</real>
+				<string>0.3333333</string>
 			</dict>
 			<key>Ansi 9 Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.42818409204483032</real>
+				<string>0.1607843</string>
 				<key>Green Component</key>
-				<real>0.45310419797897339</real>
+				<string>0.1607843</string>
 				<key>Red Component</key>
-				<real>0.98958194255828857</real>
+				<string>0.9372549</string>
 			</dict>
 			<key>Application Keypad Allowed</key>
 			<false/>
@@ -2318,11 +2357,11 @@
 			<key>Background Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.16608485579490662</real>
+				<string>1</string>
 				<key>Green Component</key>
-				<real>0.14745020866394043</real>
+				<string>1</string>
 				<key>Red Component</key>
-				<real>0.11278382688760757</real>
+				<string>1</string>
 			</dict>
 			<key>Background Image Is Tiled</key>
 			<false/>
@@ -2354,11 +2393,11 @@
 			<key>Bold Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.91648769378662109</real>
+				<string>0</string>
 				<key>Green Component</key>
-				<real>0.91671288013458252</real>
+				<string>0</string>
 				<key>Red Component</key>
-				<real>0.91654461622238159</real>
+				<string>0</string>
 			</dict>
 			<key>Bound Hosts</key>
 			<array/>
@@ -2367,17 +2406,17 @@
 			<key>Close Sessions On End</key>
 			<true/>
 			<key>Columns</key>
-			<integer>80</integer>
+			<integer>127</integer>
 			<key>Command</key>
 			<string></string>
 			<key>Cursor Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.91648769378662109</real>
+				<string>0</string>
 				<key>Green Component</key>
-				<real>0.91671288013458252</real>
+				<string>0</string>
 				<key>Red Component</key>
-				<real>0.91654461622238159</real>
+				<string>0</string>
 			</dict>
 			<key>Cursor Guide Color</key>
 			<dict>
@@ -2395,11 +2434,11 @@
 			<key>Cursor Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<string>1</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<string>1</string>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<string>1</string>
 			</dict>
 			<key>Cursor Type</key>
 			<integer>2</integer>
@@ -2420,14 +2459,14 @@
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.93115901947021484</real>
+				<string>0</string>
 				<key>Green Component</key>
-				<real>0.92142927646636963</real>
+				<string>0</string>
 				<key>Red Component</key>
-				<real>0.90730977058410645</real>
+				<string>0</string>
 			</dict>
 			<key>Guid</key>
-			<string>56F3FC58-2512-4169-BD72-E9FED9206371</string>
+			<string>6A114955-253A-4968-B127-CF8F3966D719</string>
 			<key>Hide After Opening</key>
 			<false/>
 			<key>Horizontal Spacing</key>
@@ -2874,11 +2913,11 @@
 			<key>Name</key>
 			<string>Presentation</string>
 			<key>Non Ascii Font</key>
-			<string>PingFangSC-Regular 20</string>
+			<string>PingFangSC-Regular 24</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 20</string>
+			<string>Hack-Regular 24</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2898,20 +2937,20 @@
 			<key>Selected Text Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.93115901947021484</real>
+				<string>0</string>
 				<key>Green Component</key>
-				<real>0.92142927646636963</real>
+				<string>0</string>
 				<key>Red Component</key>
-				<real>0.90730977058410645</real>
+				<string>0</string>
 			</dict>
 			<key>Selection Color</key>
 			<dict>
 				<key>Blue Component</key>
-				<real>0.47096589207649231</real>
+				<string>1</string>
 				<key>Green Component</key>
-				<real>0.41462835669517517</real>
+				<string>0.8353</string>
 				<key>Red Component</key>
-				<real>0.30659490823745728</real>
+				<string>0.7098</string>
 			</dict>
 			<key>Semantic History</key>
 			<dict>
@@ -3029,7 +3068,7 @@
 			<false/>
 			<key>Tags</key>
 			<array>
-				<string>dark</string>
+				<string>light</string>
 				<string>work</string>
 			</array>
 			<key>Terminal Type</key>
@@ -3063,7 +3102,7 @@
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
 	<key>NoSyncLastTipTime</key>
-	<real>480568569.27083999</real>
+	<real>481098562.65291202</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3107,6 +3146,12 @@
 		<string>0023</string>
 		<string>0024</string>
 		<string>0025</string>
+		<string>0026</string>
+		<string>0027</string>
+		<string>0028</string>
+		<string>0029</string>
+		<string>0030</string>
+		<string>0031</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -3180,7 +3225,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-03-25T03:56:41Z</date>
+	<date>2016-03-30T10:48:51Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -3245,7 +3290,7 @@
 				<key>Is Hotkey Window</key>
 				<false/>
 				<key>Saved Window Type</key>
-				<integer>6</integer>
+				<integer>0</integer>
 				<key>Screen</key>
 				<integer>0</integer>
 				<key>Selected Tab Index</key>
@@ -3545,7 +3590,7 @@
 														<real>0.90730977058410645</real>
 													</dict>
 													<key>Guid</key>
-													<string>7B721BE5-F86C-4218-83D0-05C7D44DE69B</string>
+													<string>06B9845D-6947-4E63-ABCB-436D175E572F</string>
 													<key>Hide After Opening</key>
 													<false/>
 													<key>Horizontal Spacing</key>
@@ -3992,13 +4037,15 @@
 													<key>Name</key>
 													<string>Galaxy</string>
 													<key>Non Ascii Font</key>
-													<string>PingFangSC-Regular 16</string>
+													<string>PingFangSC-Regular 14</string>
 													<key>Non-ASCII Anti Aliased</key>
 													<true/>
 													<key>Normal Font</key>
-													<string>Hack-Regular 16</string>
+													<string>Hack-Regular 14</string>
 													<key>Option Key Sends</key>
 													<integer>2</integer>
+													<key>Original Guid</key>
+													<string>7B721BE5-F86C-4218-83D0-05C7D44DE69B</string>
 													<key>Prompt Before Closing 2</key>
 													<integer>2</integer>
 													<key>Right Option Key Sends</key>
@@ -4200,13 +4247,13 @@
 													<string>Command</string>
 												</dict>
 												<key>Rows</key>
-												<integer>50</integer>
+												<integer>55</integer>
 												<key>Server PID</key>
-												<integer>45163</integer>
+												<integer>98505</integer>
 												<key>Session Default Name</key>
 												<string>Galaxy</string>
 												<key>Session GUID</key>
-												<string>1C80C710-FD98-4DD8-923B-861D8991E1A3</string>
+												<string>8A607643-DACC-40C8-920F-94A81F45CECE</string>
 												<key>Session Name</key>
 												<string>Galaxy</string>
 												<key>Session Window Title</key>
@@ -4216,16 +4263,16 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/nightire/Code/q.cform.io</string>
+												<string>/Users/nightire/Code</string>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>1157</real>
+												<real>1161</real>
 												<key>width</key>
-												<real>849</real>
+												<real>681</real>
 												<key>x</key>
 												<real>0.0</real>
 												<key>y</key>
@@ -4517,7 +4564,7 @@
 														<real>0.90730977058410645</real>
 													</dict>
 													<key>Guid</key>
-													<string>7B721BE5-F86C-4218-83D0-05C7D44DE69B</string>
+													<string>DB213268-FD5D-4803-A91F-5930CCFB3F54</string>
 													<key>Hide After Opening</key>
 													<false/>
 													<key>Horizontal Spacing</key>
@@ -4964,11 +5011,11 @@
 													<key>Name</key>
 													<string>Galaxy</string>
 													<key>Non Ascii Font</key>
-													<string>PingFangSC-Regular 16</string>
+													<string>PingFangSC-Regular 14</string>
 													<key>Non-ASCII Anti Aliased</key>
 													<true/>
 													<key>Normal Font</key>
-													<string>Hack-Regular 16</string>
+													<string>Hack-Regular 14</string>
 													<key>Option Key Sends</key>
 													<integer>2</integer>
 													<key>Prompt Before Closing 2</key>
@@ -5150,7 +5197,7 @@
 												<key>Bookmark Name</key>
 												<string>Galaxy</string>
 												<key>Columns</key>
-												<integer>42</integer>
+												<integer>83</integer>
 												<key>Commands</key>
 												<array/>
 												<key>Directories</key>
@@ -5158,7 +5205,7 @@
 												<key>Environment</key>
 												<dict>
 													<key>PWD</key>
-													<string>/Users/nightire/Code/q.cform.io</string>
+													<string>/Users/nightire/Code</string>
 												</dict>
 												<key>Hosts</key>
 												<array/>
@@ -5170,13 +5217,13 @@
 													<string>Shell Launcher</string>
 												</dict>
 												<key>Rows</key>
-												<integer>50</integer>
+												<integer>13</integer>
 												<key>Server PID</key>
-												<integer>67266</integer>
+												<integer>99029</integer>
 												<key>Session Default Name</key>
 												<string>Galaxy</string>
 												<key>Session GUID</key>
-												<string>9AD5D2A7-7212-4D45-8DF8-A8703D25A03C</string>
+												<string>211358F7-F85F-41E0-9E9E-0071C05E4E5E</string>
 												<key>Session Name</key>
 												<string>Galaxy</string>
 												<key>Session Window Title</key>
@@ -5186,20 +5233,20 @@
 												<key>Substitutions</key>
 												<dict/>
 												<key>Working Directory</key>
-												<string>/Users/nightire/Code/q.cform.io</string>
+												<string>/Users/nightire/Code</string>
 											</dict>
 											<key>View Type</key>
 											<string>SessionView</string>
 											<key>frame</key>
 											<dict>
 												<key>height</key>
-												<real>1157</real>
+												<real>278</real>
 												<key>width</key>
-												<real>430</real>
+												<real>681</real>
 												<key>x</key>
-												<real>850</real>
-												<key>y</key>
 												<real>0.0</real>
+												<key>y</key>
+												<real>1162</real>
 											</dict>
 										</dict>
 									</array>
@@ -5208,16 +5255,16 @@
 									<key>frame</key>
 									<dict>
 										<key>height</key>
-										<real>1157</real>
+										<real>1440</real>
 										<key>width</key>
-										<real>1280</real>
+										<real>681</real>
 										<key>x</key>
 										<real>0.0</real>
 										<key>y</key>
 										<real>0.0</real>
 									</dict>
 									<key>isVertical</key>
-									<true/>
+									<false/>
 								</dict>
 								<dict>
 									<key>Is Active</key>
@@ -5504,7 +5551,7 @@
 												<real>0.90730977058410645</real>
 											</dict>
 											<key>Guid</key>
-											<string>7B721BE5-F86C-4218-83D0-05C7D44DE69B</string>
+											<string>1B42B9E9-E4A0-4D68-8CDA-C00D7C1259A7</string>
 											<key>Hide After Opening</key>
 											<false/>
 											<key>Horizontal Spacing</key>
@@ -5951,11 +5998,11 @@
 											<key>Name</key>
 											<string>Galaxy</string>
 											<key>Non Ascii Font</key>
-											<string>PingFangSC-Regular 16</string>
+											<string>PingFangSC-Regular 14</string>
 											<key>Non-ASCII Anti Aliased</key>
 											<true/>
 											<key>Normal Font</key>
-											<string>Hack-Regular 16</string>
+											<string>Hack-Regular 14</string>
 											<key>Option Key Sends</key>
 											<integer>2</integer>
 											<key>Prompt Before Closing 2</key>
@@ -6137,7 +6184,7 @@
 										<key>Bookmark Name</key>
 										<string>Galaxy</string>
 										<key>Columns</key>
-										<integer>127</integer>
+										<integer>41</integer>
 										<key>Commands</key>
 										<array/>
 										<key>Directories</key>
@@ -6145,7 +6192,7 @@
 										<key>Environment</key>
 										<dict>
 											<key>PWD</key>
-											<string>/Users/nightire/Code/q.cform.io</string>
+											<string>/Users/nightire</string>
 										</dict>
 										<key>Hosts</key>
 										<array/>
@@ -6157,13 +6204,13 @@
 											<string>Shell Launcher</string>
 										</dict>
 										<key>Rows</key>
-										<integer>12</integer>
+										<integer>68</integer>
 										<key>Server PID</key>
-										<integer>45482</integer>
+										<integer>98753</integer>
 										<key>Session Default Name</key>
 										<string>Galaxy</string>
 										<key>Session GUID</key>
-										<string>40E3633B-B7B1-484C-B6AA-439A7ED1F989</string>
+										<string>A5E98A9F-4E2F-405D-8E89-775E46F8B649</string>
 										<key>Session Name</key>
 										<string>Galaxy</string>
 										<key>Session Window Title</key>
@@ -6173,20 +6220,20 @@
 										<key>Substitutions</key>
 										<dict/>
 										<key>Working Directory</key>
-										<string>/Users/nightire/Code/q.cform.io</string>
+										<string>/Users/nightire/Code</string>
 									</dict>
 									<key>View Type</key>
 									<string>SessionView</string>
 									<key>frame</key>
 									<dict>
 										<key>height</key>
-										<real>282</real>
+										<real>1440</real>
 										<key>width</key>
-										<real>1280</real>
+										<real>344</real>
 										<key>x</key>
-										<real>0.0</real>
+										<real>682</real>
 										<key>y</key>
-										<real>1158</real>
+										<real>0.0</real>
 									</dict>
 								</dict>
 							</array>
@@ -6197,21 +6244,21 @@
 								<key>height</key>
 								<real>1440</real>
 								<key>width</key>
-								<real>1280</real>
+								<real>1026</real>
 								<key>x</key>
 								<real>0.0</real>
 								<key>y</key>
 								<real>0.0</real>
 							</dict>
 							<key>isVertical</key>
-							<false/>
+							<true/>
 						</dict>
 					</dict>
 				</array>
 				<key>TerminalGuid</key>
-				<string>pty-C19114E4-52A7-4420-B9A2-E194ECA064B0</string>
+				<string>pty-05D6E175-02D5-40B9-8E31-D56DD508A7B3</string>
 				<key>Width</key>
-				<real>1280</real>
+				<real>1026</real>
 				<key>Window Type</key>
 				<integer>6</integer>
 				<key>X Origin</key>
