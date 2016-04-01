@@ -7,10 +7,9 @@
 ||edgefonts.net
 ||fastly.net
 ||flowtype.org
-||gemnasium.com
+||assets.gemnasium.com
 ||githubusercontent.com
 ||goodbits.io
-||fonts.googleapis.com/css
 ||gravatar.com
 ||i.imgur.com
 ||s.mzstatic.com
