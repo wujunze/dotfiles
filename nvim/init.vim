@@ -306,15 +306,15 @@ Plug 'genoma/vim-less', {'for': 'less'}              " Lass 语法增强
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
 
 " JavaScript
-Plug 'jason0x43/vim-js-indent', {'for': 'javascript'}
-Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
-Plug 'othree/es.next.syntax.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'pangloss/vim-javascript', {'for': 'javascript'}
+Plug 'othree/es.next.syntax.vim', {'for': 'javascript'}
 
 " JSON
 Plug 'elzr/vim-json', {'for': 'json'}
 
 " React JSX
-Plug 'mxw/vim-jsx', {'for': 'javascript.jsx'}        " React JSX 语法高亮
+Plug 'mxw/vim-jsx', {'for': 'javascript'}            " React JSX 语法高亮
+let g:jsx_ext_required = 0
 
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
