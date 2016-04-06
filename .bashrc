@@ -81,7 +81,6 @@ export HTTPS_PROXY=http://127.0.0.1:8123
 
 # Homebrew Configurations
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
-source $(brew --repository)/Library/Contributions/brew_bash_completion.sh
 
 # Homebrew Completion
 [ -r "$(brew --prefix)/etc/bash_completion" ] && source $(brew --prefix)/etc/bash_completion
@@ -102,6 +101,9 @@ export MANPATH
 export NVM_DIR="/Users/nightire/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -r "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
+# Fix apm install error, see: https://github.com/atom/apm/issues/322#issuecomment-96430856
+export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
 
 # z Initialization
 [ -f `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
