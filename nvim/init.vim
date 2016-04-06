@@ -332,8 +332,7 @@ colorscheme material-theme
 " 自动命令 {{{
 augroup NVIM_SETTINGS
   autocmd!
-  autocmd BufEnter * silent! lcd %:p:h
-  autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType conf,vim setlocal foldmethod=marker
   autocmd BufWritePost $MYVIMRC nested source $MYVIMRC
 augroup END
 
@@ -379,6 +378,17 @@ augroup END
 
 augroup MISC
   autocmd!
-  autocmd FileType conf setlocal foldmethod=marker
+  " 总是在新标签页打开帮助文档，见：HelpInNewTab()
+  autocmd FileType help call HelpInNewTab()
+
+  " 插入模式下切换只当前文件路径以便自动路径补全
+  autocmd InsertEnter * let saved_cwd = getcwd() | set autochdir
+  autocmd InsertLeave * set noautochdir | execute 'cd' fnameescape(saved_cwd)
 augroup END
+" }}}
+
+" 辅助函数 {{{
+function! HelpInNewTab()
+  if &buftype == 'help' | execute "normal \<C-w>T" | endif
+endfunction
 " }}}
