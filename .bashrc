@@ -108,6 +108,14 @@ export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dis
 # z Initialization
 [ -f `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
 
+# GPG Agent Initialization
+if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
+  source ~/.gnupg/.gpg-agent-info
+  export GPG_AGENT_INFO
+else
+  eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+fi
+
 # Alias Configurations
 alias la="ls -AGhl"
 

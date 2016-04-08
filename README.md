@@ -108,6 +108,39 @@
 
 	> 注：文件在 `/misc` 路径下
 
+11. 关于 Git/Github 与 GPG
+
+	不久前，[Github 正式支持了 GPG 签名校验](https://github.com/blog/2144-gpg-signature-verification)，这是一件好事。我曾经参与过一个要求 GPG Signing 的开源项目有过一点经验，所以准备过程还算顺利。
+
+	一位同行在第一时间发布了[一份 step by step 的教程](https://github.com/pstadler/keybase-gpg-github)，不过这份教程牵涉到了一个 [keybase.io](https://keybase.io/) 的第三方服务，keybase 有点坑爹，我大半年前就开始申请 private beta 测试了，到现在还没轮到……
+
+	以下是不牵涉 keybase.io 的流程，和上面的教程其实差不太多，只是个别命令有差异：
+
+	- 第一步：确认 `git --version` >= 2.0.0，否则用 `brew install git` 升级；
+
+	- 第二步：`brew install gpg`，然后 `gpg --list-keys` 看看有没有现存的秘钥。通常没用过 GPG 的话应该是没有的，若有的话直接跳到第四步；
+
+	- 第三步：`gpg --gen-key` 生成一份秘钥，类型用默认的，秘钥大小选 `4096`，有效期自便。后面写 ID 的部分要注意：姓名、昵称、电子邮件三项是分三步填写的，不注意看的话会以为一次写全，于是你就永远也完成不了；另外如果该秘钥用于 Github，那么电子邮件一定要用 Github 上验证过的，否则无法在 Github 上有效使用。passphrase 的部分，和 SSH 一回事儿，自己看着办；
+
+	- 第四步：`gpg --list-keys` 把刚才创建好的秘钥显示出来，你会看到类似下面的结果：
+
+		```shell
+		$ gpg --list-keys
+		/Users/hubot/.gnupg/pubring.gpg
+		------------------------------------
+		sec   4096R/A8F99211 2016-04-05
+		uid                  Hubot 
+		ssb   4096R/Z832QR89 2016-04-05
+		```
+
+		`sec` 那一行是接下来我们需要的，`A8F99211` 就是你的 _public GPG key_。
+
+	- 第五步：`git config --global user.signingkey A8F99211`，告诉 Git 关于你的 GPG 秘钥的信息。还有一个可选的步骤：`git config --global commit.gpgsign true`，这个会在提交的时候默认使用 GPG 签名，就不用 `-S` 了；
+
+	- 第六步：`open https://github.com/settings/keys`，打开自己的 Github 设置页面，就像配置 SSH 那样添加一个新的 GPG 秘钥设置，里面的内容这样获取：`gpg --armor --export A8F99211 | pbcopy` 然后粘贴进去即可；
+
+	- 第七步（可选）：每次带 GPG 签名都会问你要密码会很烦，解决的办法见之前提到的教程。
+
 ---
 
 _To Be Continued..._
