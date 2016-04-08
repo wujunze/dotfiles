@@ -3,11 +3,10 @@
 
 ||amazonaws.com
 ||atlassian.com
-||cform.io
 ||edgefonts.net
 ||fastly.net
 ||flowtype.org
-||assets.gemnasium.com
+||assets-cdn.github.com
 ||githubusercontent.com
 ||goodbits.io
 ||gravatar.com
