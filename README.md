@@ -141,6 +141,10 @@
 
 	- 第七步（可选）：每次带 GPG 签名都会问你要密码会很烦，解决的办法见之前提到的教程。
 
+12. 关于 Sourcetree 于 GPG
+
+	`brew cask install gpgtools` and then choose GPG binary from `/usr/local/MacGPG2/bin` instead of `/use/local/Cellar/gpg/bin`
+
 ---
 
 _To Be Continued..._

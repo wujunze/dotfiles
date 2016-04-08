@@ -15,6 +15,7 @@ set path=.,$HOME/.local/include,/usr/local/include,/usr/include,,
 
 " 让 .\ 在 'tags' 选项里表示相对于当前路径而不是相对于当前文件
 set cpoptions+=d
+" set cpoptions+=n
 
 " 插入模式自动补全标签显示更多信息
 set showfulltag
@@ -23,7 +24,7 @@ set showfulltag
 set nowrap
 
 " 设置回绕行的视觉提示
-set showbreak=↪
+" set showbreak=↪
 
 " 让水平滚动更加自然
 set sidescroll=1
@@ -355,10 +356,10 @@ augroup END
 augroup JAVASCRIPT
   autocmd!
   autocmd BufWritePost *.js,*.jsx Neomake
+  autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js update | Neomake
   " autocmd InsertLeave *.js update | Neomake
-  autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
 augroup END
 
 augroup OMNIFUNCS
