@@ -4,11 +4,13 @@
 ||amazonaws.com
 ||atlassian.com
 ||edgefonts.net
+||facebook.net
 ||fastly.net
 ||flowtype.org
 ||assets-cdn.github.com
 ||githubusercontent.com
 ||goodbits.io
+||google-analytics.com
 ||gravatar.com
 ||i.imgur.com
 ||s.mzstatic.com
