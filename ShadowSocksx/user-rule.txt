@@ -14,6 +14,8 @@
 ||gravatar.com
 ||i.imgur.com
 ||s.mzstatic.com
+||cdn.optimizely.com
+||pixel.rubiconproject.com
 ||img.shields.io
 ||speakerdeck.com
 ||urls.api.twitter.com
