@@ -297,7 +297,8 @@ let g:mustache_abbreviations = 1                     " 内置缩写展开
 Plug 'digitaltoad/vim-pug'
 
 " CSS
-Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'less', 'scss']}
+Plug 'JulesWang/css.vim', {'for': ['css', 'less', 'scss']}
+Plug 'stephenway/postcss.vim', {'for': 'css'}        " PostCss 语法支持
 Plug 'genoma/vim-less', {'for': 'less'}              " Lass 语法增强
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
 
