@@ -331,8 +331,8 @@ augroup END
 
 augroup MARKUP_LANGUAGE
   autocmd!
-  " autocmd User GoyoEnter Limelight
-  " autocmd User GoyoLeave Limelight!
+  autocmd User GoyoEnter Limelight
+  autocmd User GoyoLeave Limelight!
   autocmd FileType markdown setlocal textwidth=72
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
@@ -347,7 +347,7 @@ augroup END
 
 augroup JAVASCRIPT
   autocmd!
-  autocmd BufWritePost *.js,*.jsx Neomake
+  autocmd BufWritePost *.js,*.jsx update | Neomake
   " NOTE: currently there's a bug on TextChanged event
   " autocmd InsertLeave,TextChanged *.js,*.jsx update | Neomake
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
