@@ -237,10 +237,9 @@ let NERDTreeHighlightCursorline = 1
 Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
 " TODO: LEARN HOW TO CUSTOMIZE THIS
 let g:lightline = {
-      \             'colorscheme': 'seoul256',
-      \           }
+      \   'colorscheme': 'seoul256',
+      \ }
 
-" TODO: LEARN HOW TO CUSTOMIZE THIS
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
 Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
 Plug 'tpope/vim-commentary'                          " 提供简单的快捷注释功能
@@ -269,9 +268,6 @@ let g:UltiSnipsJumpForwardTrigger  = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsMappingsToIgnore    = ["deoplete"]
 
-" NOTE: currently I just don't know how it works...
-Plug 'Shougo/neopairs.vim'                           " 自动匹配成对字符
-
 Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
 Plug 'editorconfig/editorconfig-vim'                 " Editor Config 配置插件
@@ -283,7 +279,6 @@ Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能�
 nmap <Leader>a <Plug>(EasyAlign)
 vmap <CR>      <Plug>(EasyAlign)
 
-" TODO: FURTHER INVESTIGATION NEEDED
 Plug 'benekastah/neomake'
 let g:neomake_error_sign   = {'text': '😡 '}
 let g:neomake_warning_sign = {'text': '😠 '}
@@ -309,13 +304,10 @@ Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
 " JavaScript
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'othree/es.next.syntax.vim', {'for': 'javascript'}
+Plug 'mxw/vim-jsx'                                   " React JSX 语法高亮
 
 " JSON
 Plug 'elzr/vim-json', {'for': 'json'}
-
-" React JSX
-Plug 'mxw/vim-jsx', {'for': 'javascript'}            " React JSX 语法高亮
-let g:jsx_ext_required = 0
 
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
@@ -356,10 +348,9 @@ augroup END
 augroup JAVASCRIPT
   autocmd!
   autocmd BufWritePost *.js,*.jsx Neomake
-  autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
   " NOTE: currently there's a bug on TextChanged event
-  " autocmd InsertLeave,TextChanged *.js update | Neomake
-  " autocmd InsertLeave *.js update | Neomake
+  " autocmd InsertLeave,TextChanged *.js,*.jsx update | Neomake
+  autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
 augroup END
 
 augroup OMNIFUNCS
@@ -374,7 +365,7 @@ augroup END
 
 augroup CUSTOM_HIGHLIGHT
   autocmd!
-  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO:\s\|NOTE:\s\|FIXME:\s', -1)
+  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO:\s\|NOTE:\s\|FIXME:\s|ISSUE:\s', -1)
 augroup END
 
 augroup MISC
