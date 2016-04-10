@@ -248,6 +248,8 @@ Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号�
 Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
 Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
 
+Plug 'mhinz/vim-signify'                             " Git 状态标记
+
 Plug 'keith/investigate.vim'                         " 多功能文档查看器
 let g:investigate_use_dash        = 1                " Mac OS X 下使用 Dash
 let g:investigate_dash_for_elixir = 'ex'
