@@ -235,10 +235,7 @@ let NERDTreeCaseSensitiveSort   = 1
 let NERDTreeHighlightCursorline = 1
 
 Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
-" TODO: LEARN HOW TO CUSTOMIZE THIS
-let g:lightline = {
-      \   'colorscheme': 'seoul256',
-      \ }
+let g:lightline = {'colorscheme': 'seoul256'}
 
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
 Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
@@ -258,7 +255,6 @@ let g:investigate_dash_for_elixir = 'ex'
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
 Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
-Plug 'Konfekt/FastFold'                              " 配合加速代码折叠
 
 Plug 'SirVer/ultisnips'                              " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
@@ -267,8 +263,6 @@ let g:UltiSnipsListSnippets        = '<C-TAB>'
 let g:UltiSnipsJumpForwardTrigger  = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsMappingsToIgnore    = ["deoplete"]
-
-Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
 Plug 'editorconfig/editorconfig-vim'                 " Editor Config 配置插件
 let g:EditorConfig_exec_path        = '/usr/local/bin/editorconfig'
@@ -283,6 +277,8 @@ Plug 'benekastah/neomake'
 let g:neomake_error_sign   = {'text': '😡 '}
 let g:neomake_warning_sign = {'text': '😠 '}
 
+Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
+
 " XML
 Plug 'othree/xml.vim', {'for': ['html', 'html.handlebars']}
 
@@ -293,9 +289,6 @@ Plug 'othree/html5.vim', {'for': ['html', 'html.handlebars']}
 Plug 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1                     " 内置缩写展开
 
-" Pug (formly known as Jade)
-Plug 'digitaltoad/vim-pug'
-
 " CSS
 Plug 'JulesWang/css.vim', {'for': ['css', 'less', 'scss']}
 Plug 'stephenway/postcss.vim', {'for': 'css'}        " PostCss 语法支持
@@ -303,9 +296,16 @@ Plug 'genoma/vim-less', {'for': 'less'}              " Lass 语法增强
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
 
 " JavaScript
-Plug 'pangloss/vim-javascript', {'for': 'javascript'}
-Plug 'othree/es.next.syntax.vim', {'for': 'javascript'}
-Plug 'mxw/vim-jsx'                                   " React JSX 语法高亮
+Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
+Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx']}
+Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug 'othree/es.next.syntax.vim', {'for': ['javascript', 'javascript.jsx']}
+Plug '1995eaton/vim-better-javascript-completion', {'for': ['javascript', 'javascript.jsx']}
+let g:vimjs#chromeapis    = 1
+let g:vimjs#smartcomplete = 1
+
+" JSX
+Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
 
 " JSON
 Plug 'elzr/vim-json', {'for': 'json'}
@@ -350,7 +350,7 @@ augroup JAVASCRIPT
   autocmd!
   autocmd BufWritePost *.js,*.jsx update | Neomake
   " NOTE: currently there's a bug on TextChanged event
-  " autocmd InsertLeave,TextChanged *.js,*.jsx update | Neomake
+  autocmd InsertLeave,TextChanged *.js,*.jsx update | Neomake
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
 augroup END
 
@@ -359,7 +359,8 @@ augroup OMNIFUNCS
   autocmd FileType css             setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html            setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType html.handlebars setlocal omnifunc=htmlcomplete#CompleteTags
-  autocmd FileType javascript      setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType javascript      setlocal omnifunc=js#CompleteJS
+  autocmd FileType javascript.jsx  setlocal omnifunc=js#CompleteJS
   autocmd FileType ruby            setlocal omnifunc=rubycomplete#Complete
   autocmd FileType xml             setlocal omnifunc=xmlcomplete#CompleteTags
 augroup END
