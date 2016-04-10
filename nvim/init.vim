@@ -234,6 +234,9 @@ let NERDTreeAutoDeleteBuffer    = 1
 let NERDTreeCaseSensitiveSort   = 1
 let NERDTreeHighlightCursorline = 1
 
+Plug 'rking/ag.vim'                                  " the_silver_searcher
+let g:ag_working_path_mode="r"
+
 Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
 let g:lightline = {'colorscheme': 'seoul256'}
 
