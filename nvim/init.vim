@@ -353,9 +353,9 @@ augroup END
 
 augroup JAVASCRIPT
   autocmd!
-  autocmd BufWritePost *.js,*.jsx update | Neomake
   " NOTE: currently there's a bug on TextChanged event
-  autocmd InsertLeave,TextChanged *.js,*.jsx update | Neomake
+  autocmd TextChanged *.js,*.jsx Neomake
+  autocmd BufWritePost *.js,*.jsx update | Neomake
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
 augroup END
 
