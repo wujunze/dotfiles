@@ -13,6 +13,7 @@
 ||google-analytics.com
 ||gravatar.com
 ||i.imgur.com
+||medium.com
 ||s.mzstatic.com
 ||cdn.optimizely.com
 ||pixel.rubiconproject.com
