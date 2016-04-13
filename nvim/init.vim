@@ -13,7 +13,7 @@ endif
 " 设置查找文件时使用的路径
 set path=.,$HOME/.local/include,/usr/local/include,/usr/include,,
 
-" 让 .\ 在 'tags' 选项里表示相对于当前路径而不是相对于当前文件
+" 让 ./ 在 'tags' 选项里表示相对于当前路径而不是相对于当前文件
 set cpoptions+=d
 " set cpoptions+=n
 
@@ -23,15 +23,9 @@ set showfulltag
 " 禁止过长的行回绕（超过屏幕宽度）
 set nowrap
 
-" 设置回绕行的视觉提示
-" set showbreak=↪
-
 " 让水平滚动更加自然
 set sidescroll=1
 set sidescrolloff=3
-
-" 设置状态栏、代码折叠、垂直分割的视觉提示
-" set fillchars=diff:⣿,fold:-,vert:│
 
 " 设置空白字符的视觉提示（eol:¬,nbsp:˽,）
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
@@ -252,6 +246,7 @@ Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子�
 Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
 
 Plug 'mhinz/vim-signify'                             " Git 状态标记
+let g:signify_disable_by_default = 1
 
 Plug 'keith/investigate.vim'                         " 多功能文档查看器
 let g:investigate_use_dash        = 1                " Mac OS X 下使用 Dash
