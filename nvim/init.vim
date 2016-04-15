@@ -140,19 +140,25 @@ inoremap <C-b> <Esc>i
 " 映射 Enter -> :nohlsearch（仅常规模式）
 nnoremap <silent> <CR> :nohlsearch<CR>
 
-" 映射 Control(Ctrl) + h/j/k/l 在窗口之间跳转
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
+" 映射 Options(Alt) + h/j/k/l 在窗口之间跳转
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
+tnoremap <A-h> <C-\><C-n><C-w>h
+tnoremap <A-j> <C-\><C-n><C-w>j
+tnoremap <A-k> <C-\><C-n><C-w>k
+tnoremap <A-l> <C-\><C-n><C-w>l
+
+" 映射 Control(Ctrl) + j/k x3 倍速上下移动
+nnoremap <C-j> 3j
+nnoremap <C-k> 3k
+vnoremap <C-j> 3j
+vnoremap <C-k> 3k
 
 " 映射 Option(Alt) + h/l 在标签页之间跳转
-nnoremap <A-h> gT
-nnoremap <A-l> gt
+nnoremap <A-[> gT
+nnoremap <A-]> gt
 tnoremap <C-\><C-n><A-h> gT
 tnoremap <C-\><C-n><A-l> gt
 
