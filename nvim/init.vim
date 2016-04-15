@@ -248,10 +248,6 @@ Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作�
 Plug 'mhinz/vim-signify'                             " Git 状态标记
 let g:signify_disable_by_default = 1
 
-Plug 'keith/investigate.vim'                         " 多功能文档查看器
-let g:investigate_use_dash        = 1                " Mac OS X 下使用 Dash
-let g:investigate_dash_for_elixir = 'ex'
-
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
 Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
@@ -291,6 +287,7 @@ let g:mustache_abbreviations = 1                     " 内置缩写展开
 
 " CSS
 Plug 'JulesWang/css.vim', {'for': ['css', 'less', 'scss']}
+Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'scss']}
 Plug 'stephenway/postcss.vim', {'for': 'css'}        " PostCss 语法支持
 Plug 'genoma/vim-less', {'for': 'less'}              " Lass 语法增强
 Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
