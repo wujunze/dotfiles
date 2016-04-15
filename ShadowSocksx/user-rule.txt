@@ -17,10 +17,11 @@
 ||i.imgur.com
 ||medium.com
 ||s.mzstatic.com
-||cdn.optimizely.com
+||optimizely.com
 ||pixel.rubiconproject.com
 ||img.shields.io
 ||speakerdeck.com
+||strongloop.com
 ||urls.api.twitter.com
 ||tiny.cc
 ||wistia.com
