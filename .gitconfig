@@ -24,6 +24,8 @@
   tm = tag --annotate --message
 [branch]
   autoSetupRebase = always
+[commit]
+  gpgsign = true
 [core]
   autocrlf = input
   safecrlf = true
@@ -42,8 +44,9 @@
 [push]
   default = simple
   followTags = true
+[url "https://"]
+  insteadOf = git://
 [user]
   name = Albert Yu
   email = dev.yufan@gmail.com
-[url "https://"]
-  insteadOf = git://
+  signingkey = 7A2A50BA
