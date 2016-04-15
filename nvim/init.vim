@@ -293,10 +293,11 @@ let g:mustache_abbreviations = 1                     " 内置缩写展开
 
 " CSS
 Plug 'JulesWang/css.vim', {'for': ['css', 'less', 'scss']}
-Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'scss']}
-Plug 'stephenway/postcss.vim', {'for': 'css'}        " PostCss 语法支持
-Plug 'genoma/vim-less', {'for': 'less'}              " Lass 语法增强
-Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}    " Sass 语法增强
+Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'less', 'scss']}
+Plug 'othree/csscomplete.vim', {'for': ['css', 'less', 'scss']}
+Plug 'genoma/vim-less', {'for': ['css', 'less']}
+Plug 'cakebaker/scss-syntax.vim', {'for': ['css', 'scss']}
+Plug 'stephenway/postcss.vim', {'for': 'css'}
 
 " JavaScript
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
@@ -346,6 +347,7 @@ augroup END
 
 augroup STYLESHEET
   autocmd!
+  autocmd BufNewFile,BufRead *.css setlocal filetype=scss
   autocmd FileType css,less,scss setlocal colorcolumn=80 iskeyword+=-
 augroup END
 
@@ -360,6 +362,7 @@ augroup END
 augroup OMNIFUNCS
   autocmd!
   autocmd FileType css             setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType scss            setlocal omnifunc=csscomplete#CompleteCSS
   autocmd FileType html            setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType html.handlebars setlocal omnifunc=htmlcomplete#CompleteTags
   autocmd FileType javascript      setlocal omnifunc=js#CompleteJS
