@@ -379,7 +379,8 @@ augroup END
 " }}}
 
 " 辅助函数 {{{
+" 使用新的 Tab 打开帮助文档
 function! HelpInNewTab()
-  if &buftype == 'help' | execute "normal \<C-w>T" | endif
+  if &buftype == 'help' | execute "silent normal \<C-w>T" | endif
 endfunction
 " }}}
