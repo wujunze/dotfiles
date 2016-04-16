@@ -207,6 +207,7 @@ endif
 let g:ctrlp_cmd = 'exe "CtrlP".get(["", "Buffer", "BookmarkDir", "Cmdline", "Menu", "Yankring"], v:count)'
 let g:ctrlp_extensions = ['bookmarkdir', 'changes', 'cmdline', 'menu', 'mixed', 'rtscript', 'yankring']
 let g:ctrlp_arg_map             = 1
+let g:ctrlp_line_prefix         = ' 🎐 '
 let g:ctrlp_match_window        = 'bottom,order:btt,min:1,max:30'
 let g:ctrlp_mruf_exclude        = '\.git/\*\|\.txt\|\.vimrc'
 let g:ctrlp_switch_buffer       = 'EtVH'
@@ -250,6 +251,7 @@ Plug 'reedes/vim-pencil'                             " 文本写作辅助工具
 Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号字符
 Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
 Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
+Plug 'junegunn/limelight.vim'                        " 配合 Goyo 提供行聚焦
 
 Plug 'mhinz/vim-signify'                             " Git 状态标记
 let g:signify_disable_by_default = 1
@@ -301,9 +303,8 @@ Plug 'stephenway/postcss.vim', {'for': 'css'}
 
 " JavaScript
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
-Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx']}
+let g:javascript_enable_domhtmlcss = 1
 Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
-Plug 'othree/es.next.syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug '1995eaton/vim-better-javascript-completion', {'for': ['javascript', 'javascript.jsx']}
 let g:vimjs#chromeapis    = 1
 let g:vimjs#smartcomplete = 1
@@ -338,7 +339,7 @@ augroup MARKUP_LANGUAGE
   autocmd!
   autocmd User GoyoEnter Limelight
   autocmd User GoyoLeave Limelight!
-  autocmd FileType markdown setlocal textwidth=72
+  autocmd FileType markdown setlocal textwidth=72 formatoptions+=a
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
@@ -353,8 +354,6 @@ augroup END
 
 augroup JAVASCRIPT
   autocmd!
-  " NOTE: currently there's a bug on TextChanged event
-  " autocmd TextChanged *.js,*.jsx update | Neomake eslint
   autocmd BufWritePost *.js,*.jsx update | Neomake eslint
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
 augroup END
