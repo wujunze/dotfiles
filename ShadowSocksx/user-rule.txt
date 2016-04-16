@@ -2,28 +2,20 @@
 ! See https://adblockplus.org/en/filter-cheatsheet
 
 ||amazonaws.com
-||atlassian.com
 ||clountfront.net
 ||edgefonts.net
 ||facebook.net
 ||facebook.github.io
 ||fastly.net
 ||flowtype.org
-||assets-cdn.github.com
-||githubusercontent.com
-||goodbits.io
 ||google-analytics.com
 ||gravatar.com
-||i.imgur.com
-||medium.com
-||s.mzstatic.com
+||imgur.com
 ||optimizely.com
-||pixel.rubiconproject.com
-||img.shields.io
 ||speakerdeck.com
-||strongloop.com
-||urls.api.twitter.com
+||sstatic.net
+||twitter.com
 ||tiny.cc
 ||wistia.com
 ||wp.com
-||www.cdn.whatsapp.net
+||whatsapp.net
