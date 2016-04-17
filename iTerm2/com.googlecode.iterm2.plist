@@ -358,13 +358,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1323 116 445 274 0 0 2560 1417 </string>
+	<string>1057 601 445 140 0 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>273 777 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 769 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1026 1440 0 0 2560 1440 </string>
+	<string>0 8 1298 1424 0 0 2560 1440 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -2002,11 +2002,11 @@
 			<key>Name</key>
 			<string>Galaxy</string>
 			<key>Non Ascii Font</key>
-			<string>PingFangSC-Regular 14</string>
+			<string>PingFangSC-Regular 13</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Hack-Regular 14</string>
+			<string>Hack-Regular 13</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2177,7 +2177,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.2000000476837158</real>
+			<real>1.2507530120481927</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -3102,7 +3102,7 @@
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
 	<key>NoSyncLastTipTime</key>
-	<real>482074473.38063002</real>
+	<real>482521353.85137898</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -3177,6 +3177,10 @@
 		<string>0050</string>
 		<string>0051</string>
 		<string>0052</string>
+		<string>0053</string>
+		<string>0054</string>
+		<string>0055</string>
+		<string>0056</string>
 	</array>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
@@ -3250,7 +3254,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-04-10T06:14:14Z</date>
+	<date>2016-04-16T20:00:47Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
