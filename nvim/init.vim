@@ -257,8 +257,14 @@ Plug 'mhinz/vim-signify'                             " Git 状态标记
 let g:signify_disable_by_default = 1
 
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
-Plug 'Shougo/deoplete.nvim'                          " 异步自动代码补全
+" deoplete init for vim-plug
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+" 异步自动代码补全
+Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
+Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
 Plug 'SirVer/ultisnips'                              " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
@@ -280,8 +286,6 @@ vmap <CR>      <Plug>(EasyAlign)
 Plug 'benekastah/neomake'
 let g:neomake_error_sign   = {'text': '😡 '}
 let g:neomake_warning_sign = {'text': '😠 '}
-
-Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
 " XML
 Plug 'othree/xml.vim', {'for': ['html', 'html.handlebars']}
