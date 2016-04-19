@@ -352,7 +352,7 @@ augroup END
 
 augroup STYLESHEET
   autocmd!
-  autocmd BufNewFile,BufRead *.css setlocal filetype=scss
+  " autocmd BufNewFile,BufRead *.css setlocal filetype=scss
   autocmd FileType css,less,scss setlocal colorcolumn=80 iskeyword+=-
 augroup END
 
