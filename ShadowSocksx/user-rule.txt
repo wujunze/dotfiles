@@ -11,6 +11,7 @@
 ||google-analytics.com
 ||gravatar.com
 ||imgur.com
+||mozilla.net
 ||optimizely.com
 ||speakerdeck.com
 ||sstatic.net
