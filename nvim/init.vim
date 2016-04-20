@@ -306,7 +306,7 @@ Plug 'cakebaker/scss-syntax.vim', {'for': ['css', 'scss']}
 Plug 'stephenway/postcss.vim', {'for': 'css'}
 
 " JavaScript
-Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
+Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx'], 'branch': 'develop'}
 let g:javascript_enable_domhtmlcss = 1
 Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug '1995eaton/vim-better-javascript-completion', {'for': ['javascript', 'javascript.jsx']}
