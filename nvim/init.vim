@@ -253,9 +253,6 @@ Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子�
 Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
 Plug 'junegunn/limelight.vim'                        " 配合 Goyo 提供行聚焦
 
-Plug 'mhinz/vim-signify'                             " Git 状态标记
-let g:signify_disable_by_default = 1
-
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
 " deoplete init for vim-plug
 function! DoRemote(arg)
