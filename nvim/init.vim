@@ -266,10 +266,10 @@ Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
 Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
 
-Plug 'SirVer/ultisnips'                              " 智能代码片断工具
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
 let g:UltiSnipsExpandTrigger       = '<TAB>'
-let g:UltiSnipsListSnippets        = '<C-TAB>'
+let g:UltiSnipsListSnippets        = '<A-TAB>'
 let g:UltiSnipsJumpForwardTrigger  = '<TAB>'
 let g:UltiSnipsJumpBackwardTrigger = '<S-TAB>'
 let g:UltiSnipsMappingsToIgnore    = ["deoplete"]
