@@ -1,6 +1,7 @@
 ! Put user rules line by line in this file.
 ! See https://adblockplus.org/en/filter-cheatsheet
 
+||akamaihd.net
 ||amazonaws.com
 ||clountfront.net
 ||edgefonts.net
@@ -11,6 +12,7 @@
 ||google-analytics.com
 ||gravatar.com
 ||imgur.com
+||messenger.com
 ||mozilla.net
 ||optimizely.com
 ||speakerdeck.com
