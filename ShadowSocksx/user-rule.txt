@@ -12,6 +12,7 @@
 ||google-analytics.com
 ||gravatar.com
 ||imgur.com
+||medium.com
 ||messenger.com
 ||mozilla.net
 ||optimizely.com
