@@ -3,15 +3,23 @@
 
 ||akamaihd.net
 ||amazonaws.com
+||codetimecn.com
 ||clountfront.net
+||doubleclick.net
+||dropbox.com
 ||edgefonts.net
+||facebook.com
 ||facebook.net
 ||facebook.github.io
 ||fastly.net
 ||flowtype.org
+||google.cn
+||googleapis.com
 ||google-analytics.com
 ||gravatar.com
+||gstatic.com
 ||imgur.com
+||livecoding.net
 ||medium.com
 ||messenger.com
 ||mozilla.net
@@ -20,6 +28,8 @@
 ||sstatic.net
 ||twitter.com
 ||tiny.cc
+||udemy.com
 ||wistia.com
 ||wp.com
 ||whatsapp.net
+||xixiao.info
