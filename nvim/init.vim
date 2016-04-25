@@ -305,7 +305,18 @@ Plug 'stephenway/postcss.vim', {'for': 'css'}
 " JavaScript
 Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx'], 'branch': 'develop'}
-let g:javascript_enable_domhtmlcss = 1
+let g:javascript_enable_domhtmlcss    = 1
+let g:javascript_ignore_javaScriptdoc = 1
+let g:javascript_conceal_function     = "𝛌"
+let g:javascript_conceal_null         = "𝛈"
+let g:javascript_conceal_this         = "𝛎"
+let g:javascript_conceal_return       = "𝛇"
+let g:javascript_conceal_undefined    = "𝛘"
+let g:javascript_conceal_NaN          = "𝛆"
+let g:javascript_conceal_prototype    = "𝛕"
+let g:javascript_conceal_static       = "𝛓"
+let g:javascript_conceal_super        = "𝛍"
+" let g:javascript_conceal_arrow_function = "⇒"
 Plug '1995eaton/vim-better-javascript-completion', {'for': ['javascript', 'javascript.jsx']}
 let g:vimjs#chromeapis    = 1
 let g:vimjs#smartcomplete = 1
@@ -356,7 +367,7 @@ augroup END
 augroup JAVASCRIPT
   autocmd!
   autocmd BufWritePost *.js,*.jsx update | Neomake eslint
-  autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 iskeyword+=$
+  autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 conceallevel=2 iskeyword+=$
 augroup END
 
 augroup OMNIFUNCS
