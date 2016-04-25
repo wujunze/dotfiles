@@ -13,6 +13,8 @@
 ||facebook.github.io
 ||fastly.net
 ||flowtype.org
+||github.com
+||githubusercontent.com
 ||google.cn
 ||googleapis.com
 ||google-analytics.com
