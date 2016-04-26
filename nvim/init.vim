@@ -171,8 +171,12 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 nnoremap <silent> <Leader>: :below 10sp term://$SHELL<CR>A
 
 " NERDTree 映射
-nnoremap <Leader><F1> :NERDTreeFind<CR>
-nnoremap <F1>         :NERDTreeToggle<CR>
+nnoremap <silent><Leader><F1> :NERDTreeFind<CR>
+nnoremap <silent><F1>         :NERDTreeToggle<CR>
+
+" EasyAlign 映射
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 " }}}
 
 " 缩写 {{{
@@ -277,8 +281,6 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
-nmap <Leader>a <Plug>(EasyAlign)
-vmap <CR>      <Plug>(EasyAlign)
 
 Plug 'benekastah/neomake'
 let g:neomake_error_sign   = {'text': '😡 '}
@@ -384,7 +386,7 @@ augroup END
 
 augroup CUSTOM_HIGHLIGHT
   autocmd!
-  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO:\s\|NOTE:\s\|FIXME:\s|ISSUE:\s', -1)
+  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO:\s\|NOTE:\s\|FIXME:\s\|ISSUE:\s', -1)
 augroup END
 
 augroup MISC
