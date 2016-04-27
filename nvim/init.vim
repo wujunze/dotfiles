@@ -129,7 +129,7 @@ vnoremap j gj
 nnoremap k gk
 vnoremap k gk
 nnoremap * *N
-vnoremap * *N
+vnoremap * y:let @/=@"<CR>
 nnoremap # #N
 vnoremap # #N
 
@@ -305,7 +305,6 @@ Plug 'cakebaker/scss-syntax.vim', {'for': ['css', 'scss']}
 Plug 'stephenway/postcss.vim', {'for': 'css'}
 
 " JavaScript
-Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx'], 'branch': 'develop'}
 let g:javascript_enable_domhtmlcss    = 1
 let g:javascript_ignore_javaScriptdoc = 1
@@ -319,6 +318,8 @@ let g:javascript_conceal_prototype    = "𝛕"
 let g:javascript_conceal_static       = "𝛓"
 let g:javascript_conceal_super        = "𝛍"
 " let g:javascript_conceal_arrow_function = "⇒"
+Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx']}
+Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug '1995eaton/vim-better-javascript-completion', {'for': ['javascript', 'javascript.jsx']}
 let g:vimjs#chromeapis    = 1
 let g:vimjs#smartcomplete = 1
