@@ -266,6 +266,7 @@ endfunction
 Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
 Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
+Plug 'Konfekt/FastFold'                              " 削减代码折叠对性能的影响
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
@@ -285,6 +286,13 @@ Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能�
 Plug 'benekastah/neomake'
 let g:neomake_error_sign   = {'text': '😡 '}
 let g:neomake_warning_sign = {'text': '😠 '}
+
+" Markdown
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+let g:vim_markdown_toc_autofit      = 1
+let g:vim_markdown_frontmatter      = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_toml_frontmatter = 1
 
 " XML
 Plug 'othree/xml.vim', {'for': ['html', 'html.handlebars']}
@@ -330,6 +338,9 @@ Plug 'mxw/vim-jsx', {'for': 'javascript.jsx'}
 " JSON
 Plug 'elzr/vim-json', {'for': 'json'}
 
+" TOML
+Plug 'cespare/vim-toml', {'for': 'toml'}
+
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
 Plug 'awetzel/elixir.nvim', {'for': 'elixir'}        " 代码补全／编译运行
@@ -354,7 +365,7 @@ augroup MARKUP_LANGUAGE
   autocmd!
   autocmd User GoyoEnter Limelight
   autocmd User GoyoLeave Limelight!
-  autocmd FileType markdown setlocal textwidth=72 formatoptions+=a
+  autocmd FileType markdown setlocal conceallevel=2 textwidth=72 formatoptions+=aM
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
