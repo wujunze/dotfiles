@@ -15,11 +15,11 @@
 ||flowtype.org
 ||github.com
 ||githubusercontent.com
-||google.cn
 ||googleapis.com
 ||google-analytics.com
 ||gravatar.com
 ||gstatic.com
+||hex.pm
 ||imgur.com
 ||livecoding.net
 ||medium.com
