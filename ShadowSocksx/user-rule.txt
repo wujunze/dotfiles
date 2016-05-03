@@ -22,8 +22,10 @@
 ||hex.pm
 ||imgur.com
 ||livecoding.net
+||marvel.com
 ||medium.com
 ||messenger.com
+||microsofttranslator.com
 ||mozilla.net
 ||optimizely.com
 ||speakerdeck.com
