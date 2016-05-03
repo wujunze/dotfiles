@@ -4,7 +4,7 @@
 ||akamaihd.net
 ||amazonaws.com
 ||codetimecn.com
-||clountfront.net
+||cloudfront.net
 ||doubleclick.net
 ||dropbox.com
 ||edgefonts.net
