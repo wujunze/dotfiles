@@ -3,7 +3,6 @@
 
 ||akamaihd.net
 ||amazonaws.com
-||codetimecn.com
 ||cloudfront.net
 ||doubleclick.net
 ||dropbox.com
@@ -13,8 +12,6 @@
 ||facebook.github.io
 ||fastly.net
 ||flowtype.org
-||github.com
-||githubusercontent.com
 ||googleapis.com
 ||google-analytics.com
 ||gravatar.com
@@ -28,6 +25,7 @@
 ||microsofttranslator.com
 ||mozilla.net
 ||optimizely.com
+||pragprog.com
 ||speakerdeck.com
 ||sstatic.net
 ||twitter.com
@@ -36,4 +34,3 @@
 ||wistia.com
 ||wp.com
 ||whatsapp.net
-||xixiao.info
