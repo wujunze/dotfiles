@@ -293,6 +293,7 @@ let g:vim_markdown_toc_autofit      = 1
 let g:vim_markdown_frontmatter      = 1
 let g:vim_markdown_json_frontmatter = 1
 let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_folding_disabled = 1
 
 " XML
 Plug 'othree/xml.vim', {'for': ['html', 'html.handlebars']}
@@ -343,9 +344,9 @@ Plug 'cespare/vim-toml', {'for': 'toml'}
 
 " Elixir
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
-Plug 'awetzel/elixir.nvim', {'for': 'elixir'}        " 代码补全／编译运行
-let g:elixir_showerror = 1                           " 编译完成提示错误
-let g:elixir_autobuild = 0                           " 保存／失焦时自动保存
+" Plug 'thinca/vim-ref', {'for': 'elixir'}
+" Plug 'awetzel/elixir.nvim', {'do': 'yes \| ./install.sh', 'for': 'elixir'}
+" let g:elixir_showerror = 1                           " 编译完成提示错误
 call plug#end()
 " }}}
 
@@ -365,10 +366,11 @@ augroup MARKUP_LANGUAGE
   autocmd!
   autocmd User GoyoEnter Limelight
   autocmd User GoyoLeave Limelight!
-  autocmd FileType markdown setlocal conceallevel=2 textwidth=72 formatoptions+=aM
+  autocmd FileType markdown setlocal conceallevel=2 formatoptions+=aM
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
+        \                 | setlocal nolinebreak
   autocmd FileType html,html.handlebars setlocal textwidth=0
 augroup END
 
