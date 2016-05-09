@@ -88,6 +88,9 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom
 # rbenv Initialization
 eval "$(rbenv init -)"
 
+# added by travis gem
+[ -f /Users/nightire/.travis/travis.sh ] && source /Users/nightire/.travis/travis.sh
+
 # GOROOT based install location
 PATH=$PATH:/usr/local/opt/go/libexec/bin
 
