@@ -265,7 +265,12 @@ endfunction
 " 异步自动代码补全
 Plug 'Shougo/deoplete.nvim', {'do': function('DoRemote')}
 let g:deoplete#enable_at_startup = 1                 " 缺省开启自动补全
-Plug 'Shougo/context_filetype.vim'                   " 依据语境自动切换文档类型
+" <CR> 直接换行而不执行 deoplete 的默认行为
+inoremap <silent> <CR> <C-r>=<SID>return_without_deoplete()<CR>
+function! s:return_without_deoplete() abort
+  return deoplete#mappings#close_popup() . "\<CR>"
+endfunction
+Plug 'Shougo/context_filetype.vim'                   " 提供插件切换文档类型能力
 Plug 'Konfekt/FastFold'                              " 削减代码折叠对性能的影响
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
@@ -343,10 +348,10 @@ Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 
 " Elixir
+Plug 'thinca/vim-ref'
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
-" Plug 'thinca/vim-ref', {'for': 'elixir'}
-" Plug 'awetzel/elixir.nvim', {'do': 'yes \| ./install.sh', 'for': 'elixir'}
-" let g:elixir_showerror = 1                           " 编译完成提示错误
+Plug 'awetzel/elixir.nvim', {'do': 'yes \| ./install.sh'}
+let g:elixir_showerror = 1                           " 编译完成提示错误
 call plug#end()
 " }}}
 
@@ -384,6 +389,11 @@ augroup JAVASCRIPT
   autocmd!
   autocmd BufWritePost *.js,*.jsx update | Neomake eslint
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 conceallevel=2 iskeyword+=$
+augroup END
+
+augroup ELIXIR
+  autocmd!
+  autocmd FileType elixir setlocal colorcolumn=80
 augroup END
 
 augroup OMNIFUNCS
