@@ -30,6 +30,9 @@ set sidescrolloff=3
 " 设置空白字符的视觉提示（eol:¬,nbsp:˽,）
 set list listchars=extends:❯,precedes:❮,tab:▸\ ,trail:˽
 
+" 消除碍眼的文字
+set shortmess+=I
+
 " 设置行宽的视觉提示
 set colorcolumn=0
 
@@ -200,6 +203,7 @@ endif
 call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 Plug 'mkarmona/materialbox'                          " 配套浅色主题
+Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}      " 暗色伯爵主题
 
 Plug 'ctrlpvim/ctrlp.vim'                            " 多功能模糊搜索器
 Plug 'sgur/ctrlp-extensions.vim'                     " 扩展集合包
@@ -357,7 +361,25 @@ call plug#end()
 
 " 主题 {{{
 set background=dark
-colorscheme material-theme
+colorscheme dracula
+
+" TODO: 设置内置终端的颜色
+let g:terminal_color_0  = '#282a36'
+let g:terminal_color_1  = '#ff5555'
+let g:terminal_color_2  = '#50fa7b'
+let g:terminal_color_3  = '#f1fa8c'
+let g:terminal_color_4  = '#bd93f9'
+let g:terminal_color_5  = '#ff79c6'
+let g:terminal_color_6  = '#8be9fd'
+let g:terminal_color_7  = '#50fa7b'
+let g:terminal_color_8  = '#555753'
+let g:terminal_color_9  = '#ef2929'
+let g:terminal_color_10 = '#8ae234'
+let g:terminal_color_11 = '#fce94f'
+let g:terminal_color_12 = '#729fcf'
+let g:terminal_color_13 = '#ad7fa8'
+let g:terminal_color_14 = '#00f5e9'
+let g:terminal_color_15 = '#eeeeec'
 " }}}
 
 " 自动命令 {{{
@@ -410,7 +432,7 @@ augroup END
 
 augroup CUSTOM_HIGHLIGHT
   autocmd!
-  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO:\s\|NOTE:\s\|FIXME:\s\|ISSUE:\s', -1)
+  autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'TODO:\s\|NOTE:\s\|FIXME:\s\|ISSUE:\s\|REVIEW:\s', -1)
 augroup END
 
 augroup MISC
