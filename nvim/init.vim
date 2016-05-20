@@ -352,10 +352,10 @@ Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 
 " Elixir
-Plug 'thinca/vim-ref'
 Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
-Plug 'awetzel/elixir.nvim', {'do': 'yes \| ./install.sh'}
-let g:elixir_showerror = 1                           " 编译完成提示错误
+Plug 'slashmili/alchemist.vim'                       " 智能辅助工具包
+Plug 'powerman/vim-plugin-AnsiEsc'                   " 处理 ansi escape sequences
+
 call plug#end()
 " }}}
 
