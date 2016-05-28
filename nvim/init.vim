@@ -356,8 +356,8 @@ Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'cespare/vim-toml', {'for': 'toml'}
 
 " Elixir
-Plug 'elixir-lang/vim-elixir', {'for': 'elixir'}     " 语法高亮／缩进
-Plug 'slashmili/alchemist.vim'                       " 智能辅助工具包
+Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
+Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
 Plug 'powerman/vim-plugin-AnsiEsc'                   " 处理 ansi escape sequences
 
 call plug#end()
@@ -419,7 +419,7 @@ augroup END
 
 augroup ELIXIR
   autocmd!
-  autocmd FileType elixir setlocal colorcolumn=80
+  autocmd FileType elixir setlocal colorcolumn=80 foldmethod=syntax foldlevel=1 foldnestmax=2
 augroup END
 
 augroup OMNIFUNCS
