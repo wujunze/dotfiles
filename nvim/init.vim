@@ -336,7 +336,7 @@ let g:javascript_conceal_prototype    = "𝛕"
 let g:javascript_conceal_static       = "𝛓"
 let g:javascript_conceal_super        = "𝛍"
 " let g:javascript_conceal_arrow_function = "⇒"
-Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx']}
+Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx', 'typescript']}
 Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
 Plug '1995eaton/vim-better-javascript-completion', {'for': ['javascript', 'javascript.jsx']}
 let g:vimjs#chromeapis    = 1
@@ -347,6 +347,10 @@ Plug 'mxw/vim-jsx', {'for': 'javascript.jsx'}
 
 " JSON
 Plug 'elzr/vim-json', {'for': 'json'}
+
+" TypeScript
+Plug 'Quramy/tsuquyomi', {'for': 'typescript'}
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 
 " TOML
 Plug 'cespare/vim-toml', {'for': 'toml'}
