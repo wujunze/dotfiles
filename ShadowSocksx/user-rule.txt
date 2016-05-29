@@ -19,7 +19,9 @@
 ||gravatar.com
 ||gstatic.com
 ||hex.pm
+||icloud.com
 ||imgur.com
+||jsdelivr.net
 ||livecoding.net
 ||marvel.com
 ||medium.com
