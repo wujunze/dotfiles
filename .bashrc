@@ -74,10 +74,10 @@ shopt -s cdable_vars
 # export dropbox="$HOME/Dropbox"
 
 # HTTP Proxy Configurations
-export NO_PROXY=localhost,127.0.0.1
-export ALL_PROXY=http://127.0.0.1:8123
-export HTTP_PROXY=http://127.0.0.1:8123
-export HTTPS_PROXY=http://127.0.0.1:8123
+# export NO_PROXY=localhost,127.0.0.1,192.168.99.*
+# export ALL_PROXY=http://127.0.0.1:8123
+# export HTTP_PROXY=http://127.0.0.1:8123
+# export HTTPS_PROXY=http://127.0.0.1:8123
 
 # Homebrew Configurations
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
