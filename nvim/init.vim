@@ -203,7 +203,7 @@ endif
 call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 Plug 'mkarmona/materialbox'                          " 配套浅色主题
-Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}      " 暗色伯爵主题
+Plug 'dracula/vim'                                   " 暗色伯爵主题
 
 Plug 'ctrlpvim/ctrlp.vim'                            " 多功能模糊搜索器
 Plug 'sgur/ctrlp-extensions.vim'                     " 扩展集合包
@@ -359,6 +359,9 @@ Plug 'cespare/vim-toml', {'for': 'toml'}
 Plug 'elixir-lang/vim-elixir', {'for': ['elixir', 'eelixir']}
 Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
 Plug 'powerman/vim-plugin-AnsiEsc'                   " 处理 ansi escape sequences
+
+" Docker
+Plug 'ekalinin/Dockerfile.vim'
 
 call plug#end()
 " }}}
