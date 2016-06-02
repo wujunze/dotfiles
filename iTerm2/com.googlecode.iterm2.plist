@@ -547,33 +547,12 @@
 	<integer>80</integer>
 	<key>NSFontPanelAttributes</key>
 	<string>1, 4</string>
-	<key>NSFontPanelSizeList</key>
-	<array>
-		<string>9</string>
-		<string>10</string>
-		<string>11</string>
-		<string>12</string>
-		<string>13</string>
-		<string>14</string>
-		<string>18</string>
-		<string>24</string>
-		<string>36</string>
-		<string>48</string>
-		<string>64</string>
-		<string>72</string>
-		<string>96</string>
-		<string>144</string>
-		<string>288</string>
-		<string>16</string>
-	</array>
 	<key>NSFontPanelSizeSliderParams</key>
 	<string>2 0 100</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Code/dracula/iterm</string>
+	<string>~/Downloads/dracula-theme-master/iterm</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 459}</string>
-	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 521}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -605,15 +584,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>891 422 767 181 0 0 2560 1440 </string>
+	<string>1057 262 445 77 0 0 2560 1440 </string>
 	<key>NSWindow Frame Preferences</key>
-	<string>296 948 606 456 0 0 2560 1440 </string>
-	<key>NSWindow Frame SUStatusFrame</key>
-	<string>580 925 400 129 0 0 2560 1440 </string>
+	<string>882 571 606 456 0 0 2560 1440 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>970 787 620 392 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>322 209 1610 1179 0 0 2560 1440 </string>
+	<string>475 132 1610 1179 0 0 2560 1440 </string>
 	<key>NavigatePanesInReadingOrder</key>
 	<false/>
 	<key>New Bookmarks</key>
@@ -1365,7 +1342,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.2000000476837158</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -2120,7 +2097,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Vertical Spacing</key>
-			<real>1.2503012048192772</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<false/>
 			<key>Window Type</key>
@@ -2894,15 +2871,15 @@
 		</dict>
 	</array>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
-	<true/>
+	<false/>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste_selection</key>
 	<integer>0</integer>
 	<key>NoSyncInstallationId</key>
-	<string>560BA58D-4BA0-4DA8-96B6-4AD9A01E9860</string>
+	<string>C49E04B9-620F-4683-A93B-642445C333C7</string>
 	<key>NoSyncLastTipTime</key>
-	<real>486265483.80516797</real>
+	<real>483378366.10103601</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
-	<true/>
+	<false/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
 	<integer>0</integer>
 	<key>NoSyncPermissionToShowTip</key>
@@ -2910,16 +2887,20 @@
 	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>477480259.83849901</real>
-	<key>NoSyncTimeOfLastPromo</key>
-	<real>477459826.34354401</real>
-	<key>NoSyncTimeOfLastPromoDownload</key>
-	<real>477459826.34398299</real>
+	<real>474664544.92582101</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
 		<string>0000</string>
 		<string>0001</string>
+		<string>0000</string>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+		<string>0002</string>
+		<string>0003</string>
+		<string>0004</string>
+		<string>0003</string>
 		<string>0002</string>
 		<string>0003</string>
 		<string>0004</string>
@@ -3059,11 +3040,13 @@
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing3.xml?shard=31</string>
+	<string>https://iterm2.com/appcasts/testing3.xml?shard=26</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-05-30T02:05:15Z</date>
+	<date>2016-05-31T12:49:56Z</date>
+	<key>SUSendProfileInfo</key>
+	<false/>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
