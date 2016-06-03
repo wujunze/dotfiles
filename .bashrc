@@ -120,6 +120,11 @@ else
 fi
 
 # Alias Configurations
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias cd..='cd ..'
+alias hc="history -c"
 alias la="ls -AGhl"
 
 [ "$(type -t hub)" = "file" ] && alias git="hub"
