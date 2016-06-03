@@ -247,7 +247,19 @@ Plug 'rking/ag.vim'                                  " the_silver_searcher
 let g:ag_working_path_mode="r"
 
 Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
-let g:lightline = {'colorscheme': 'seoul256'}
+let g:lightline = {
+      \   'colorscheme': 'wombat',
+      \   'active': {
+      \     'left': [ ['mode', 'paste'],
+      \               ['readonly', 'filename', 'modified', 'fugitive'] ]
+      \   },
+      \   'component': {
+      \     'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \   },
+      \   'component_visible_condition': {
+      \     'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \   }
+      \ }
 
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
 Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
@@ -288,6 +300,12 @@ let g:UltiSnipsMappingsToIgnore    = ["deoplete"]
 Plug 'editorconfig/editorconfig-vim'                 " Editor Config 配置插件
 let g:EditorConfig_exec_path        = '/usr/local/bin/editorconfig'
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
+
+" Git 整合
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+
+Plug 'junegunn/vim-peekaboo'                         " 预览注册器的内容
 
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
@@ -418,6 +436,7 @@ augroup JAVASCRIPT
   autocmd!
   autocmd BufWritePost *.js,*.jsx update | Neomake eslint
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 conceallevel=2 iskeyword+=$
+  autocmd FileType javascript,javascript.jsx,json,yaml colorscheme material-theme
 augroup END
 
 augroup ELIXIR
