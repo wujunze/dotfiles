@@ -2,6 +2,7 @@
 ! See https://adblockplus.org/en/filter-cheatsheet
 
 ||akamaihd.net
+||akamaiedge.net
 ||amazonaws.com
 ||apache.org
 ||cloudfront.net
