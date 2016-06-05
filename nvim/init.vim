@@ -310,9 +310,9 @@ Plug 'junegunn/vim-peekaboo'                         " 预览注册器的内容
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
 
-Plug 'benekastah/neomake'
-let g:neomake_error_sign   = {'text': '😡 '}
-let g:neomake_warning_sign = {'text': '😠 '}
+" Plug 'benekastah/neomake'
+" let g:neomake_error_sign   = {'text': '😡 '}
+" let g:neomake_warning_sign = {'text': '😠 '}
 
 " Markdown
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
@@ -329,7 +329,7 @@ Plug 'othree/xml.vim', {'for': ['html', 'html.handlebars']}
 Plug 'othree/html5.vim', {'for': ['html', 'html.handlebars']}
 
 " Handlebars
-Plug 'mustache/vim-mustache-handlebars'
+Plug 'mustache/vim-mustache-handlebars', {'for': ['html.handlebars']}
 let g:mustache_abbreviations = 1                     " 内置缩写展开
 
 " CSS
@@ -434,9 +434,9 @@ augroup END
 
 augroup JAVASCRIPT
   autocmd!
-  autocmd BufWritePost *.js,*.jsx update | Neomake eslint
+  " autocmd BufWritePost *.js,*.jsx update | Neomake eslint
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 conceallevel=2 iskeyword+=$
-  autocmd FileType javascript,javascript.jsx,json,yaml colorscheme material-theme
+  autocmd FileType html,html.handlebars,javascript,javascript.jsx,json,yaml colorscheme material-theme
 augroup END
 
 augroup ELIXIR
