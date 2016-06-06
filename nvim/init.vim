@@ -144,20 +144,20 @@ inoremap <C-b> <Esc>i
 nnoremap <silent> <CR> :nohlsearch<CR>
 
 " 映射 Options(Alt) + h/j/k/l 在窗口之间跳转
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 
 " 映射 Control(Ctrl) + j/k x3 倍速上下移动
-nnoremap <C-j> 3j
-nnoremap <C-k> 3k
-vnoremap <C-j> 3j
-vnoremap <C-k> 3k
+nnoremap <A-j> 3j
+nnoremap <A-k> 3k
+vnoremap <A-j> 3j
+vnoremap <A-k> 3k
 
 " 映射 Option(Alt) + h/l 在标签页之间跳转
 nnoremap <A-[> gT
@@ -310,9 +310,9 @@ Plug 'junegunn/vim-peekaboo'                         " 预览注册器的内容
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
 
-" Plug 'benekastah/neomake'
-" let g:neomake_error_sign   = {'text': '😡 '}
-" let g:neomake_warning_sign = {'text': '😠 '}
+Plug 'benekastah/neomake'
+let g:neomake_error_sign   = {'text': '😡 '}
+let g:neomake_warning_sign = {'text': '😠 '}
 
 " Markdown
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
