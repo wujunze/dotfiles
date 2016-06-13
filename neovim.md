@@ -28,6 +28,8 @@ vim-plug 对于 Neovim 的支持相当好，但是初始配置项略有差异，
 
 ### Elixir
 
+> Note：我更换了 Elixir 环境下的 vim 配置和插件集合，参见 [nvim/init.vim](nvim/init.vim) 文件的相关内容。新的搭配与下文所述各有千秋，都可以试试。
+
 Vim 下有一些很不错的针对 Elixir 的插件，不过都没有专为 Neovim 开发的 [elixir.nvim](https://github.com/awetzel/elixir.nvim) 好，这货本身就是用 Elixir 开发的！所以想要开发 Vim 插件却苦于没空学习 VimL 或者 Python 的童鞋，你们的福音来了哦。
 
 安装这个插件的过程（可能）会遇到一些麻烦，详情请见 [issue #3](https://github.com/awetzel/elixir.nvim/issues/3)，我在这里详细回答了[我碰到的问题及解决方案](https://github.com/awetzel/elixir.nvim/issues/3#issuecomment-172659714)，虽然没能解决题主的问题，但希望对你有帮助。

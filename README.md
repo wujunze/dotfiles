@@ -55,6 +55,18 @@
 
 	另外，[`ShadowSocksx/user-rule.txt`](/ShadowSocksx/user-rule.txt) 是我自己使用的自定义过滤列表（出现在表内的项会在自动代理模式下也通过 ss 代理），它不一定符合你的网络状况，所以请有选择使用。如果你要直接用的话需要执行：`~ $ ln -s .config/ShadowSocksx/user-rule.txt .ShadowSocksx/user-rule.txt`。同时要注意，每次修改了这个文件都要执行 `从 GFWList 更新 Pac` 的菜单选项以便重新载入用户配置文件（在 ShadowSocksx 客户端的菜单内）。
 
+  ---
+
+  > 以下是更新内容
+
+  Polipo 固然不错，但我发现它存在很大的局限性——很难关掉！如果出于某些原因（复杂的网络状况）需要在终端禁用 Polipo 会非常繁琐，而且不利于配置文件跨终端的版本管理。
+
+  于是我现在换用了 [Proxifier](http://www.proxifier.com/)，也是一个跨平台的软件，有 GUI 界面方便进行各种设定。它的主要作用就是让任何软件都可以经由 Proxifier 享用 SOCKS／HTTPS 代理服务——哪怕软件本身不支持代理设置。
+
+  Proxifier 的好处就在于其灵活性，你可以设定任何应用程序使用代理的规则并且可以随时禁用或调整，特别适用于复杂网络环境的切换。比如说我在家里和公司就用了两套完全不同的设定。以前我不太明白用这种“代理的代理”有什么意义，现在遇到了实际的需求才算是深有体会。
+
+  唯一的问题是 Proxifier 的设置我还没找到很好的备份和同步机制，等有时间会调研一下。要注意换用了 Proxifier 的话最好把 Polipo 及相关的设定都清除掉。
+
 5. 使用 Homebrew 安装／更新 Bash(w/ Homebrew-ish completions), Python2/3, rbenv(Ruby), git, hub...
 
 	这些都是很常规的东西，不需要逐个解释了，在安装它们的过程中，绝大多数的系统依赖都会被 Homebrew 搞定。
@@ -141,7 +153,7 @@
 
 	- 第七步（可选）：每次带 GPG 签名都会问你要密码会很烦，解决的办法见之前提到的教程。
 
-12. 关于 Sourcetree 于 GPG
+12. 关于 Sourcetree 与 GPG
 
 	`brew cask install gpgtools` and then choose GPG binary from `/usr/local/MacGPG2/bin` instead of `/use/local/Cellar/gpg/bin`
 
