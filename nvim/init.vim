@@ -341,7 +341,7 @@ Plug 'cakebaker/scss-syntax.vim', {'for': ['css', 'scss']}
 Plug 'stephenway/postcss.vim', {'for': 'css'}
 
 " JavaScript
-Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx'], 'branch': 'develop'}
+Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
 let g:javascript_enable_domhtmlcss    = 1
 let g:javascript_ignore_javaScriptdoc = 1
 let g:javascript_conceal_function     = "𝛌"
@@ -379,7 +379,10 @@ Plug 'slashmili/alchemist.vim', {'for': ['elixir', 'eelixir']}
 Plug 'powerman/vim-plugin-AnsiEsc'                   " 处理 ansi escape sequences
 
 " Docker
-Plug 'ekalinin/Dockerfile.vim'
+Plug 'ekalinin/Dockerfile.vim', {'for': 'docker'}
+
+" SQL
+Plug 'shmup/vim-sql-syntax', {'for': 'sql'}
 
 call plug#end()
 " }}}
