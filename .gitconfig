@@ -24,10 +24,16 @@
   tm = tag --annotate --message
 [branch]
   autoSetupRebase = always
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [commit]
   gpgsign = true
 [core]
   autocrlf = input
+  pager = diff-so-fancy | less --tabs=4 -RFX
   safecrlf = true
 [credential]
   helper = osxkeychain
