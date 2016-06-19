@@ -472,6 +472,9 @@ augroup MISC
   " 插入模式下切换只当前文件路径以便自动路径补全
   autocmd InsertEnter * let saved_cwd = getcwd() | set autochdir
   autocmd InsertLeave * set noautochdir | execute 'cd' fnameescape(saved_cwd)
+
+  " 保存时自动创建不存在的目录
+  autocmd BufWritePre,FileWritePre * call <SID>mkdir_on_save()
 augroup END
 " }}}
 
@@ -479,5 +482,13 @@ augroup END
 " 使用新的 Tab 打开帮助文档
 function! HelpInNewTab()
   if &buftype == 'help' | execute "silent normal \<C-w>T" | endif
+endfunction
+
+" 保存时创建不存在的目录
+function <SID>mkdir_on_save()
+  let s:directory = expand('<afile>:p:h')
+  if !isdirectory(s:directory)
+    call mkdir(s:directory, 'p')
+  endif
 endfunction
 " }}}
