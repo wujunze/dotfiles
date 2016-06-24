@@ -485,7 +485,7 @@ function! HelpInNewTab()
 endfunction
 
 " 保存时创建不存在的目录
-function <SID>mkdir_on_save()
+function! <SID>mkdir_on_save()
   let s:directory = expand('<afile>:p:h')
   if !isdirectory(s:directory)
     call mkdir(s:directory, 'p')
