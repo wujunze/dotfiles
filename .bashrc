@@ -92,13 +92,10 @@ eval "$(rbenv init -)"
 [ -f /Users/nightire/.travis/travis.sh ] && source /Users/nightire/.travis/travis.sh
 
 # GOROOT based install location
-PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # Add Erlang man pages
-MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man
-
-export PATH
-export MANPATH
+export MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man
 
 # NVM Initialization
 export NVM_DIR="/Users/nightire/.nvm"
@@ -107,6 +104,9 @@ export NVM_DIR="/Users/nightire/.nvm"
 
 # Fix apm install error, see: https://github.com/atom/apm/issues/322#issuecomment-96430856
 export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
+
+# Use taobao mirrors for downloading phantomjs
+export PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs
 
 # z Initialization
 [ -f `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
