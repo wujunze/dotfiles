@@ -227,21 +227,22 @@ let g:ctrlp_open_multiple_files = '2tjr'
 " NOTE: 尽量不要依赖这种以视觉查找为主的插件，效率杀手！
 "       我一般在向别人讲解项目结构或者可视化的演示使用
 Plug 'scrooloose/nerdtree'                           " 树形文件查看插件
-let NERDTreeIgnore              = ['.sass-cache$', 'tmp$']
-let NERDTreeSortOrder           = ['\/$', '*']
-let NERDTreeWinPos              = 'left'
-let NERDTreeWinSize             = 30
-let NERDTreeChDirMode           = 2
-let NERDTreeDirArrows           = 1
-let NERDTreeMinimalUI           = 1
-let NERDTreeMouseMode           = 2
-let NERDTreeShowHidden          = 0
-let NERDTreeQuitOnOpen          = 1
-let NERDTreeHijackNetrw         = 1
-let NERDTreeSortHiddenFirst     = 1
-let NERDTreeAutoDeleteBuffer    = 1
-let NERDTreeCaseSensitiveSort   = 1
-let NERDTreeHighlightCursorline = 1
+let NERDTreeIgnore                    = ['.sass-cache$', 'tmp$']
+let NERDTreeSortOrder                 = ['\/$', '*']
+let NERDTreeWinPos                    = 'left'
+let NERDTreeWinSize                   = 30
+let NERDTreeChDirMode                 = 2
+let NERDTreeDirArrows                 = 1
+let NERDTreeMinimalUI                 = 1
+let NERDTreeMouseMode                 = 2
+let NERDTreeShowHidden                = 0
+let NERDTreeQuitOnOpen                = 0
+let NERDTreeHijackNetrw               = 1
+let NERDTreeSortHiddenFirst           = 1
+let NERDTreeAutoDeleteBuffer          = 1
+let NERDTreeCaseSensitiveSort         = 1
+let NERDTreeHighlightCursorline       = 1
+let NERDTreeCascadeOpenSingleChildDir = 1
 
 Plug 'rking/ag.vim'                                  " the_silver_searcher
 let g:ag_working_path_mode="r"
@@ -261,18 +262,6 @@ let g:lightline = {
       \   }
       \ }
 
-Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
-Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
-Plug 'tpope/vim-commentary'                          " 提供简单的快捷注释功能
-Plug 'tpope/vim-unimpaired'                          " 补充成对操作的键位映射
-
-Plug 'kana/vim-textobj-user'                         " 允许用户定义文本对象
-Plug 'reedes/vim-pencil'                             " 文本写作辅助工具
-Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号字符
-Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
-Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
-Plug 'junegunn/limelight.vim'                        " 配合 Goyo 提供行聚焦
-
 " TODO: READ DEOPLETE FOR RECOMMENDED EXTERNAL PLUGINS
 " deoplete init for vim-plug
 function! DoRemote(arg)
@@ -288,6 +277,10 @@ function! s:return_without_deoplete() abort
 endfunction
 Plug 'Shougo/context_filetype.vim'                   " 提供插件切换文档类型能力
 Plug 'Konfekt/FastFold'                              " 削减代码折叠对性能的影响
+
+Plug 'benekastah/neomake'
+let g:neomake_error_sign   = {'text': '😡 '}
+let g:neomake_warning_sign = {'text': '😠 '}
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
@@ -310,9 +303,17 @@ Plug 'junegunn/vim-peekaboo'                         " 预览注册器的内容
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
 
-Plug 'benekastah/neomake'
-let g:neomake_error_sign   = {'text': '😡 '}
-let g:neomake_warning_sign = {'text': '😠 '}
+Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
+Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
+Plug 'tpope/vim-commentary'                          " 提供简单的快捷注释功能
+Plug 'tpope/vim-unimpaired'                          " 补充成对操作的键位映射
+
+Plug 'kana/vim-textobj-user'                         " 允许用户定义文本对象
+Plug 'reedes/vim-pencil'                             " 文本写作辅助工具
+Plug 'reedes/vim-textobj-quote'                      " 支持排版格式引号字符
+Plug 'reedes/vim-textobj-sentence'                   " 支持更自然的句子对象
+Plug 'junegunn/goyo.vim'                             " 提供免干扰的写作环境
+Plug 'junegunn/limelight.vim'                        " 配合 Goyo 提供行聚焦
 
 " Markdown
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
