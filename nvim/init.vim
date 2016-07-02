@@ -221,7 +221,7 @@ let g:ctrlp_mruf_exclude        = '\.git/\*\|\.txt\|\.vimrc'
 let g:ctrlp_switch_buffer       = 'EtVH'
 let g:ctrlp_tabpage_position    = 'al'
 let g:ctrlp_working_path_mode   = 'rw'
-let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_clear_cache_on_exit = 1
 let g:ctrlp_open_multiple_files = '2tjr'
 
 " NOTE: 尽量不要依赖这种以视觉查找为主的插件，效率杀手！
