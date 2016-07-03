@@ -1,11 +1,7 @@
 ;; -*- mode: emacs-lisp -*-
-;; This file is loaded by Spacemacs at startup.
-;; It must be stored in your home directory.
+;; 本文件由 Spacemacs 在启动时加载。它必须存放在用户主目录（Home Directory）。
 
 (defun dotspacemacs/layers ()
-  "Configuration Layers declaration.
-You should not put any user code in this function besides modifying the variable
-values."
   (setq-default
    ;; Base distribution to use. This is a layer contained in the directory
    ;; `+distribution'. For now available distributions are `spacemacs-base'
@@ -18,14 +14,9 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
      (auto-completion :variables
                       auto-completion-tab-key-behavior 'complete
-                      auto-completion-return-key-behavior nil
+                      auto-completion-return-key-behavior 'complete
                       auto-completion-enable-help-tooltip t
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t)
@@ -36,17 +27,16 @@ values."
      evil-commentary
      git
      html
-     (ibuffer :variables ibuffer-group-buffers-by 'projects)
-     (javascript :variables javascript-disable-tern-port-files nil)
+     (javascript :variables
+                 javascript-disable-tern-port-files nil)
      osx
      markdown
-     ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     org
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom)
      shell-scripts
      syntax-checking
-     themes-megapack
      (version-control :variables
                       version-control-global-margin t
                       version-control-diff-tool 'diff-hl)
@@ -60,6 +50,8 @@ values."
    '(
      editorconfig
      js2-highlight-vars
+     ember-mode
+     ember-yasnippets
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
@@ -69,11 +61,6 @@ values."
    dotspacemacs-delete-orphan-packages t))
 
 (defun dotspacemacs/init ()
-  "Initialization function.
-This function is called at the very startup of Spacemacs initialization
-before layers configuration.
-You should not put any user code in there besides modifying the variable
-values."
   ;; This setq-default sexp is an exhaustive list of all the supported
   ;; spacemacs settings.
   (setq-default
@@ -81,8 +68,7 @@ values."
    ;; possible. Set it to nil if you have no way to use HTTPS in your
    ;; environment, otherwise it is strongly recommended to let it set to t.
    ;; This variable has no effect if Emacs is launched with the parameter
-   ;; `--insecure' which forces the value of this variable to nil.
-   ;; (default t)
+   ;; `--insecure' which forces the value of this variable to nil. (default t)
    dotspacemacs-elpa-https t
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
@@ -95,18 +81,18 @@ values."
    ;; unchanged. (default 'vim)
    dotspacemacs-editing-style 'vim
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
-   dotspacemacs-verbose-loading t
+   dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
    ;; the official spacemacs logo. An integer value is the index of text
    ;; banner, `random' chooses a random text banner in `core/banners'
    ;; directory. A string value must be a path to an image format supported
    ;; by your Emacs build.
    ;; If the value is nil then no banner is displayed. (default 'official)
-   dotspacemacs-startup-banner 'official
+   dotspacemacs-startup-banner nil
    ;; List of items to show in the startup buffer. If nil it is disabled.
    ;; Possible values are: `recents' `bookmarks' `projects'.
    ;; (default '(recents projects))
-   dotspacemacs-startup-lists '(bookmarks projects recents)
+   dotspacemacs-startup-lists '(recents projects bookmarks)
    ;; Number of recent files to show in the startup buffer. Ignored if
    ;; `dotspacemacs-startup-lists' doesn't include `recents'. (default 5)
    dotspacemacs-startup-recent-list-size 5
@@ -116,17 +102,16 @@ values."
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
    dotspacemacs-themes '(spacemacs-light
-                         dracula
                          spacemacs-dark)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
-   dotspacemacs-default-font '("Hack"
-                               :size 16
+   dotspacemacs-default-font '("Input"
+                               :size 14
                                :width normal
                                :weight normal
-                               :powerline-scale 1.2)
+                               :powerline-scale 1.0)
    ;; The leader key
    dotspacemacs-leader-key "SPC"
    ;; The leader key accessible in `emacs state' and `insert state'
@@ -144,7 +129,7 @@ values."
    ;; and TAB or <C-m> and RET.
    ;; In the terminal, these pairs are generally indistinguishable, so this only
    ;; works in the GUI. (default nil)
-   dotspacemacs-distinguish-gui-tab nil
+   dotspacemacs-distinguish-gui-tab t
    ;; (Not implemented) dotspacemacs-distinguish-gui-ret nil
    ;; The command key used for Evil commands (ex-commands) and
    ;; Emacs commands (M-x).
@@ -250,39 +235,46 @@ values."
    ))
 
 (defun dotspacemacs/user-init ()
-  "Initialization function for user code.
-It is called immediately after `dotspacemacs/init', before layer configuration
-executes.
-  This function is mostly useful for variables that need to be set
-before packages are loaded. If you are unsure, you should try in setting them in
-`dotspacemacs/user-config' first."
-  (setq-default git-magit-status-fullscreen nil)
   )
 
 (defun dotspacemacs/user-config ()
-  "Configuration function for user code.
-This function is called at the very end of Spacemacs initialization after
-layers configuration.
-  This is the place where most of your configurations should be done. Unless it is
-explicitly specified that a variable should be set before a package is loaded,
-you should place your code here."
   (electric-indent-mode 1)
-  (global-company-mode)
   (global-hl-line-mode -1)
 
   (setq-default
-   line-spacing 3
-   indent-tabs-mode nil
-   tab-width 2
-   tab-always-indent t
-   js-indent-level 2
-   js2-basic-offset 2
-   )
+   create-lockfiles nil
+   git-magit-status-fullscreen nil)
+
+  (setq magit-repository-directories '("~/Code/"))
 
   (setq
    tab-width 2
-   magit-repository-directories '("~/Code/"))
+   line-spacing 3
+   indent-tabs-mode nil
+   tab-always-indent 'complete
+
+   editorconfig t
+
+   css-indent-offset 2
+
+   js-indent-level 2
+   js-enabled-frameworks '(javascript)
+
+   js2-basic-offset 2
+   js2-missing-semi-one-line-override t
+   js2-mode-assume-strict t
+   js2-pretty-multiline-declarations t
+   js2-strict-missing-semi-warning nil
+   js2-strict-trailing-comma-warning nil
+
+   web-mode-indent-style 2
+   web-mode-css-indent-offset 2
+   web-mode-code-indent-offset 2
+   web-mode-markup-indent-offset 2
+   )
+
+  (evil-define-key 'insert company-quickhelp-mode-map (kbd "C-k") 'company-select-previous)
   )
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
+;; Do not write anything past this comment.
+;; This is where Emacs will auto-generate custom variable definitions.
