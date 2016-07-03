@@ -25,12 +25,14 @@
 ||imgur.com
 ||jsdelivr.net
 ||livecoding.net
+||lorempixel.com
 ||marvel.com
 ||medium.com
 ||messenger.com
 ||microsofttranslator.com
 ||mozilla.net
 ||optimizely.com
+||cdn.polyfill.io
 ||pragprog.com
 ||speakerdeck.com
 ||sstatic.net
