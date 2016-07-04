@@ -21,6 +21,9 @@
                       auto-completion-enable-sort-by-usage t
                       auto-completion-enable-snippets-in-popup t)
      better-defaults
+     (colors :variables
+             colors-enable-rainbow-identifiers nil
+             colors-enable-nyan-cat-progress-bar (display-graphic-p))
      elixir
      emacs-lisp
      emoji
