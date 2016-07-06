@@ -125,7 +125,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cd..='cd ..'
 alias hc="history -c"
-alias la="ls -AGhl"
+alias la="ls -aGhlp"
 
 [ "$(type -t hub)" = "file" ] && alias git="hub"
 
