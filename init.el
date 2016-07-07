@@ -1,60 +1,88 @@
-(require 'package)
-(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
+;; shortcut to open init.el file
+(defun user/edit-init()
+  (interactive)
+  (find-file "~/.config/init.el"))
+(global-set-key (kbd "C-c e") 'user/edit-init)
+
+;; shorten confirmation prompt from "yes/no" to "y/n"
+(fset 'yes-or-no-p 'y-or-n-p)
+
 (package-initialize)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/"))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(auto-save-default nil)
- '(column-number-mode t)
- '(current-language-environment "Chinese-GB18030")
- '(custom-safe-themes
-   (quote
-    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" default)))
- '(dired-listing-switches "-ahlp")
- '(dired-use-ls-dired nil)
- '(evil-mode t)
- '(global-evil-surround-mode t)
- '(ido-mode t nil (ido))
- '(indent-tabs-mode nil)
- '(make-backup-files nil)
- '(scroll-bar-mode nil)
- '(show-paren-mode t)
- '(show-paren-style (quote parenthesis))
- '(show-trailing-whitespace t)
- '(size-indication-mode t)
- '(standard-indent 2)
- '(tab-always-indent (quote complete))
- '(tab-width 2)
- '(tool-bar-mode nil)
- '(which-key-idle-delay 0.125)
- '(which-key-key-replacement-alist
-   (quote
-    (("ESC" . "⎋")
-     ("SPC" . "␣")
-     ("DEL" . "⌫")
-     ("RET" . "⏎")
-     ("TAB" . "⇥")
-     ("<\\([[:alnum:]-]+\\)>" . "\\1")
-     ("left" . "←")
-     ("right" . "→"))))
- '(which-key-mode t)
- '(which-key-show-remaining-keys t)
- '(which-key-side-window-location (quote (right bottom))))
+(load-theme 'spacemacs-light t)
 
-(add-to-list 'default-frame-alist '(font . "Input-14"))
-(add-to-list 'initial-frame-alist '(font . "Input-14"))
+(tool-bar-mode -1)
+(column-number-mode)
+(size-indication-mode t)
+(set-scroll-bar-mode nil)
 
-(load-theme 'spacemacs-light)
+(setq-default indent-tabs-mode nil tab-width 4)
+(setq
+ ;; just perform auto saving on the visited file instead of individual one
+ auto-save-visited-file-name 't
 
-(require 'evil)
-(require 'evil-surround)
+ ;; keep backup files organized
+ backup-directory-alist '(("." . "~/.emacs.d/backup"))
 
-(global-set-key (kbd "<f1>") 'neotree-toggle)
-(global-set-key (kbd "M-<f1>") 'neotree-find)
+ ;; frame's display configurations
+ default-frame-alist '((top . 12) (left . 12) (width . 120) (height . 48) (font . "Input-14"))
+ initial-frame-alist '((top . 2) (left . 2) (width . 157) (height . 67))
+ line-spacing 4
 
+ ;; general indentation configuration
+ standard-indent 2
+ tab-always-indent 'complete
+ )
+
+;; emoji font setting
+(set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") nil 'prepend)
+
+;; evil-leader-mode
+(global-evil-leader-mode)
+;; evil-mode
+(evil-mode)
+(evil-leader/set-leader "<SPC>")
+;; remap "Y" to "y$" as we always do in vim
+(defun evil/copy-to-end-of-line()
+  (interactive)
+  (evil-yank (point) (point-at-eol)))
+(define-key evil-normal-state-map "Y" 'evil/copy-to-end-of-line)
+;; evil-surround-mode
+(global-evil-surround-mode)
+
+;; ido-mode
+(setq ido-max-window-height 0.25
+      ido-enable-flex-matching 't
+      ido-use-virtual-buffers 'auto
+      ido-enter-matching-directory 'first)
+(ido-mode t)
+(ido-everywhere t)
+
+;; dired-mode
+(setq dired-use-ls-dired nil
+      dired-listing-switches "-ahlp")
+(dired-async-mode t)
+
+;; which-key-mode
+(setq which-key-idle-delay 0.1
+      which-key-secondary-delay 0.1
+      which-key-max-description-length 30
+      which-key-sort-order 'which-key-local-then-key-order)
+(which-key-mode)
+(which-key-setup-side-window-right-bottom)
+
+;; show-paren-mode
+(setq show-paren-delay 0.3
+      show-paren-style 'parenthesis
+      show-trailing-whitespace 't)
+(show-paren-mode t)
+
+;; neotree-mode
+(evil-leader/set-key
+  "f c" 'neotree-find
+  "f d" 'neotree-dir
+  "f f" 'neotree-toggle)
 (add-hook 'neotree-mode-hook
           (lambda ()
             (define-key evil-normal-state-local-map (kbd "A") 'neotree-stretch-toggle)
@@ -65,18 +93,26 @@
             (define-key evil-normal-state-local-map (kbd "s") 'neotree-enter-horizontal-split)
             (define-key evil-normal-state-local-map (kbd "v") 'neotree-enter-vertical-split)))
 
-(ac-config-default)
+;; company-mode
+(setq company-idle-delay 0.2
+      company-tooltip-limit 20
+      company-require-match 'never
+      company-tooltip-align-annotations 't)
+(add-hook 'after-init-hook 'global-company-mode)
+(eval-after-load 'company
+  '(progn
+     (add-to-list 'company-backends 'company-emoji)
+     (define-key company-active-map (kbd "TAB") 'company-complete-common-or-cycle)
+     (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
+     (define-key company-active-map (kbd "S-TAB") 'company-select-previous)
+     (define-key company-active-map (kbd "<backtab>") 'company-select-previous)
+     (define-key company-mode-map (kbd "C-:") 'helm-company)
+     (define-key company-active-map (kbd "C-:") 'helm-company)))
 
+;; web-mode
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.hbs?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-(add-hook 'js-mode-hook
-          (lambda ()
-            (setq-local js-indent-level 2)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; js-mode
+(add-hook 'js-mode-hook (lambda () (setq-local js-indent-level 2)))
