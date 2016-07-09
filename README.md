@@ -175,6 +175,15 @@
   - 第一次启动时，有可能会因为 HTTPS 的缘故造成某些 package 安装失效，此时先清理 `~/.emacs.d/elpa` 目录下的所有内容，然后使用 `emacs --insecure` 重新启动 emacs
 
   Now you’ve done everything before using spacemacs actually, congratulations. 🍥
+  
+1. macOS 的升级
+
+    当升级到某一个新版本的 macOS 之后可能会发生磁盘权限错误或是其他类型的问题，以下列举一些我遇见的情形以及对应的解决办法：
+    
+    - Homebrew 报错，提示需要 `/usr/local` 的访问权限
+      1. `sudo chgrp admin /usr/local`：修复所属用户组
+      1. `sudo chown [USERNAME] /usr/local`：修复所属用户，`[USERNAME]` 替换为你的用户名
+      1. 另外你需要安装最新的 Command Line Developer Tools，执行：`xcode-select --install` 即可
 
   在本仓库中 [/.spacemacs](/.spacemacs) 是 spacemacs 所使用的配置文件，安装完成后可以使用 `$ ln -s .config/.spacemacs .spacemacs` 来启用。因为我还是菜鸟级入门选手，所以用我的配置务必请小心……😹
 
