@@ -1,4 +1,1 @@
 strict-ssl=false
-proxy=http://localhost:8123/
-http-proxy=http://localhost:8123/
-https-proxy=http://localhost:8123/
