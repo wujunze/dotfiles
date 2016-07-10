@@ -1,0 +1,9 @@
+* 打造极致的开发环境
+
+这份配置文件仓库记载了一台全新的 Macbook Pro 机器的开发环境从无到有，从有到精的全过程。
+
+: 注意：本仓库的根路径实际上对应的实际路径应该是 `~/.config`，如果你要直接拿去用的话，最好使用 `ln` 路径去做对应的软链接。例如 `~ $ ln -s .config/.bashrc .bashrc`，这样的话会保证文件在正确的路径下并且编辑它们会直接改变位于 `~/.config` 路径下对应文件的内容。这其中有一些文件是不需要做软链接的，因为它们本来就应该位于 `~/.config` 下（比如 `~/.config/nvim/**`）。后面我会写一个 `~/.config/install.sh` 脚本来自动化做软链接的过程，但不是现在因为要补充的文件还有很多很多……
+
+** 安装 Command Line Developer Tools
+
+配置开发环境的第一步是安装 macOS 系统下最好的系统软件包管理器 [[http://brew.sh/index_zh-cn.html][Homebrew]], 但是首先 Homebrew 需要依赖 [[https://developer.apple.com/downloads/][Command Line Developer Tools]]. 这个软件包为命令行环境安装了进行 *nix 风格开发所必需的工具，同时包含了 macOS SDK 及相关的头文件；另外还包括了诸如 Apple LLVM 编译器等重要的工具。如果安装了 Xcode, 那么 Command Line Developer Tools 已经集成在 Xcode 的软件包里（需要在偏好设置中确认安装），然而如果不需要做 macOS/iOS 开发的话，Xcode 的体积也太大了，所以可以从苹果开发者网站上下载单独的 Command Line Developer Tools 安装包，大小只有 160MB 左右。
