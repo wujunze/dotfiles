@@ -57,7 +57,9 @@
      ember-yasnippets
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '()
+   dotspacemacs-excluded-packages
+   '(vi-tilde-fringe
+     )
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'. (default t)
@@ -82,7 +84,7 @@
    ;; variable is `emacs' then the `holy-mode' is enabled at startup. `hybrid'
    ;; uses emacs key bindings for vim's insert mode, but otherwise leaves evil
    ;; unchanged. (default 'vim)
-   dotspacemacs-editing-style 'vim
+   dotspacemacs-editing-style 'hybrid
    ;; If non nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
    ;; Specify the startup banner. Default value is `official', it displays
@@ -173,12 +175,12 @@
    dotspacemacs-enable-paste-micro-state t
    ;; Which-key delay in seconds. The which-key buffer is the popup listing
    ;; the commands bound to the current keystroke sequence. (default 0.4)
-   dotspacemacs-which-key-delay 0.4
+   dotspacemacs-which-key-delay 0.2
    ;; Which-key frame position. Possible values are `right', `bottom' and
    ;; `right-then-bottom'. right-then-bottom tries to display the frame to the
    ;; right; if there is insufficient space it displays it at the bottom.
    ;; (default 'bottom)
-   dotspacemacs-which-key-position 'bottom
+   dotspacemacs-which-key-position 'right-then-bottom
    ;; If non nil a progress bar is displayed when spacemacs is loading. This
    ;; may increase the boot time on some systems and emacs builds, set it to
    ;; nil to boost the loading time. (default t)
@@ -246,17 +248,18 @@
 
   (setq-default
    create-lockfiles nil
+   indent-tabs-mode nil
    git-magit-status-fullscreen nil)
 
   (setq magit-repository-directories '("~/Code/"))
 
   (setq
+   default-frame-alist '((top . 20) (left . 20) (width . 120) (height . 60) (font . "Input-14"))
+   initial-frame-alist '((top . 2) (left . 2) (width . 157) (height . 67))
+
    tab-width 2
    line-spacing 3
-   indent-tabs-mode nil
    tab-always-indent 'complete
-
-   editorconfig t
 
    css-indent-offset 2
 
@@ -264,9 +267,10 @@
    js-enabled-frameworks '(javascript)
 
    js2-basic-offset 2
-   js2-missing-semi-one-line-override t
    js2-mode-assume-strict t
+   js2-indent-switch-body t
    js2-pretty-multiline-declarations t
+   js2-missing-semi-one-line-override t
    js2-strict-missing-semi-warning nil
    js2-strict-trailing-comma-warning nil
 
@@ -281,3 +285,16 @@
 
 ;; Do not write anything past this comment.
 ;; This is where Emacs will auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values (quote ((create-lockfiles)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
