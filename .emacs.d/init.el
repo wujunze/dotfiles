@@ -210,12 +210,19 @@
 ;;              (funcall fn)))))
 
 ;; ido-mode
-(setq ido-max-window-height 0.2
-      ido-enable-flex-matching t
-      ido-use-virtual-buffers 'auto
-      ido-enter-matching-directory 'first)
-
-(add-hook 'after-init-hook 'ido-mode)
+(use-package ido
+  :ensure t
+  :defer t
+  :init
+  (setq ido-enable-regexp t
+        ido-enable-dot-prefix t
+        ido-max-window-height 0.2
+        ido-enable-flex-matching t
+        ido-use-virtual-buffers 'auto
+        ido-rotate-file-list-default t
+        ido-enter-matching-directory 'only)
+  (add-hook 'after-init-hook 'ido-mode)
+  (add-hook 'ido-setup-hook 'ido-everywhere))
 
 ;; until we find the limits of ido mode...
 ;; (use-package swiper
