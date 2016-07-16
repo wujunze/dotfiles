@@ -16,16 +16,15 @@
       '(tool-bar-mode
         scroll-bar-mode
         fringe-mode
-        global-linum-mode
-        global-hl-line-mode))
+        global-linum-mode))
 
 ;; 开启有用的内建模式
 (mapc (lambda (mode)
         (when (fboundp mode) (funcall mode)))
-      '(mwheel-install
-        winner-mode
+      '(winner-mode
         windmove-default-keybindings
         column-number-mode
+        global-hl-line-mode
         auto-image-file-mode
         auto-compression-mode
         global-font-lock-mode
@@ -193,6 +192,17 @@
   (call-interactively 'occur))
 (global-set-key (kbd "M-s M-o") #'occur-on-point)
 
+(defun comment-or-uncomment-region-or-line ()
+  "注释／反注释光标所在行，如果有选择范围则注释／反注释被选择范围"
+  (interactive)
+  (let (beginning end)
+    (if (region-active-p)
+        (setq beginning (region-beginning) end (region-end))
+      (setq beginning (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beginning end)
+    (next-line)))
+(global-set-key (kbd "s-/") #'comment-or-uncomment-region-or-line)
+
 ;; ==============================================================================
 
 ;; show-paren-mode
@@ -209,7 +219,6 @@
 ;;              (ignore-errors (backward-up-list))
 ;;              (funcall fn)))))
 
-;; ido-mode
 (use-package ido
   :ensure t
   :defer t
@@ -233,12 +242,13 @@
 ;;               ivy-count-format "(%d/%d) ")
 ;;   :config (add-hook 'after-init-hook 'ivy-mode))
 
-;; dired-mode
-(setq dired-use-ls-dired nil
-      dired-recursive-copies 'always
-      dired-listing-switches "-Ahlp")
-(add-hook 'dired-load-hook '(lambda () (load "dired-x")))
-(add-hook 'dired-load-hook #'dired-async-mode)
+(use-package dired
+  :defer t
+  :init
+  (setq dired-use-ls-dired nil
+        dired-recursive-copies 'always
+        dired-listing-switches "-Ahlp")
+  (add-hook 'dired-load-hook '(lambda () (load "dired-x"))))
 
 (with-eval-after-load 'dired
   (put 'dired-find-alternate-file 'disabled nil)
