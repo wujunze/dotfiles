@@ -202,8 +202,8 @@ endif
 
 call plug#begin('$HOME/.config/nvim/plugins')
 Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
-Plug 'mkarmona/materialbox'                          " 配套浅色主题
-Plug 'dracula/vim'                                   " 暗色伯爵主题
+" Plug 'mkarmona/materialbox'                          " 配套浅色主题
+" Plug 'dracula/vim'                                   " 暗色伯爵主题
 
 Plug 'ctrlpvim/ctrlp.vim'                            " 多功能模糊搜索器
 Plug 'sgur/ctrlp-extensions.vim'                     " 扩展集合包
@@ -275,12 +275,12 @@ inoremap <silent> <CR> <C-r>=<SID>return_without_deoplete()<CR>
 function! s:return_without_deoplete() abort
   return deoplete#mappings#close_popup() . "\<CR>"
 endfunction
-Plug 'Shougo/context_filetype.vim'                   " 提供插件切换文档类型能力
 Plug 'Konfekt/FastFold'                              " 削减代码折叠对性能的影响
+" Plug 'Shougo/context_filetype.vim'                   " 提供插件切换文档类型能力
 
-Plug 'benekastah/neomake'
-let g:neomake_error_sign   = {'text': '😡 '}
-let g:neomake_warning_sign = {'text': '😠 '}
+" Plug 'benekastah/neomake'
+" let g:neomake_error_sign   = {'text': '😡 '}
+" let g:neomake_warning_sign = {'text': '😠 '}
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
@@ -298,7 +298,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
-Plug 'junegunn/vim-peekaboo'                         " 预览注册器的内容
+" Plug 'junegunn/vim-peekaboo'                         " 预览注册器的内容
 
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
@@ -324,13 +324,13 @@ let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
 
 " XML
-Plug 'othree/xml.vim', {'for': ['html', 'html.handlebars']}
+Plug 'othree/xml.vim'
 
 " HTML
-Plug 'othree/html5.vim', {'for': ['html', 'html.handlebars']}
+Plug 'othree/html5.vim'
 
 " Handlebars
-Plug 'mustache/vim-mustache-handlebars', {'for': ['html.handlebars']}
+Plug 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1                     " 内置缩写展开
 
 " CSS
@@ -345,15 +345,15 @@ Plug 'stephenway/postcss.vim', {'for': 'css'}
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
 let g:javascript_enable_domhtmlcss    = 1
 let g:javascript_ignore_javaScriptdoc = 1
-let g:javascript_conceal_function     = "𝛌"
-let g:javascript_conceal_null         = "𝛈"
-let g:javascript_conceal_this         = "𝛎"
-let g:javascript_conceal_return       = "𝛇"
-let g:javascript_conceal_undefined    = "𝛘"
-let g:javascript_conceal_NaN          = "𝛆"
-let g:javascript_conceal_prototype    = "𝛕"
-let g:javascript_conceal_static       = "𝛓"
-let g:javascript_conceal_super        = "𝛍"
+" let g:javascript_conceal_function       = "𝛌"
+" let g:javascript_conceal_null           = "𝛈"
+" let g:javascript_conceal_this           = "𝛎"
+" let g:javascript_conceal_return         = "𝛇"
+" let g:javascript_conceal_undefined      = "𝛘"
+" let g:javascript_conceal_NaN            = "𝛆"
+" let g:javascript_conceal_prototype      = "𝛕"
+" let g:javascript_conceal_static         = "𝛓"
+" let g:javascript_conceal_super          = "𝛍"
 " let g:javascript_conceal_arrow_function = "⇒"
 Plug 'jason0x43/vim-js-indent', {'for': ['javascript', 'javascript.jsx', 'typescript']}
 Plug 'othree/jsdoc-syntax.vim', {'for': ['javascript', 'javascript.jsx']}
@@ -390,7 +390,7 @@ call plug#end()
 
 " 主题 {{{
 set background=dark
-colorscheme dracula
+colorscheme material-theme
 
 " TODO: 设置内置终端的颜色
 let g:terminal_color_0  = '#282a36'
@@ -432,15 +432,12 @@ augroup END
 
 augroup STYLESHEET
   autocmd!
-  " autocmd BufNewFile,BufRead *.css setlocal filetype=scss
   autocmd FileType css,less,scss setlocal colorcolumn=80 iskeyword+=-
 augroup END
 
 augroup JAVASCRIPT
   autocmd!
-  " autocmd BufWritePost *.js,*.jsx update | Neomake eslint
   autocmd FileType javascript,javascript.jsx setlocal colorcolumn=80 conceallevel=2 iskeyword+=$
-  autocmd FileType html,html.handlebars,javascript,javascript.jsx,json,yaml colorscheme material-theme
 augroup END
 
 augroup ELIXIR
