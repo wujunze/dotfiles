@@ -303,6 +303,8 @@ Plug 'junegunn/gv.vim'
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
 
+Plug 'easymotion/vim-easymotion'                     " 快速跳转
+
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
 Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
 Plug 'tpope/vim-commentary'                          " 提供简单的快捷注释功能
