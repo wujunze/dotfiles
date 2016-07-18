@@ -81,6 +81,7 @@ shopt -s cdable_vars
 
 # Homebrew Configurations
 export HOMEBREW_CASK_OPTS="--appdir=/Applications --caskroom=/usr/local/Caskroom"
+export PATH="/usr/local/sbin:$PATH"
 
 # Homebrew Completion
 [ -r "$(brew --prefix)/etc/bash_completion" ] && source $(brew --prefix)/etc/bash_completion
