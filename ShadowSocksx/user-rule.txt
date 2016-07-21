@@ -39,6 +39,7 @@
 ||twitter.com
 ||tiny.cc
 ||udemy.com
+||vimeocdn.com
 ||wistia.com
 ||wp.com
 ||whatsapp.net
