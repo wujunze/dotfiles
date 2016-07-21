@@ -244,6 +244,9 @@ let NERDTreeCaseSensitiveSort         = 1
 let NERDTreeHighlightCursorline       = 1
 let NERDTreeCascadeOpenSingleChildDir = 1
 
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
+
 Plug 'rking/ag.vim'                                  " the_silver_searcher
 let g:ag_working_path_mode="r"
 
