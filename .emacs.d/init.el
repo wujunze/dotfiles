@@ -309,8 +309,7 @@
   :ensure t
   :diminish evil-mode
   :init
-  (setq evil-default-state 'emacs
-        evil-echo-state t
+  (setq evil-echo-state t
         evil-cross-lines t
         evil-shift-width 2
         evil-want-C-u-scroll t
