@@ -428,7 +428,7 @@ augroup MARKUP_LANGUAGE
   autocmd!
   autocmd User GoyoEnter Limelight
   autocmd User GoyoLeave Limelight!
-  autocmd FileType markdown setlocal conceallevel=2 formatoptions+=aM
+  autocmd FileType markdown setlocal conceallevel=2 formatoptions+=aM spell
         \                 | call pencil#init({'wrap': 'soft', 'textwidth': 72})
         \                 | call textobj#quote#init()
         \                 | call textobj#sentence#init()
