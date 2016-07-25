@@ -38,6 +38,7 @@ set colorcolumn=0
 
 " 自定义拼写检查
 set nospell spelllang=en_us
+set spellfile=$HOME/.config/nvim/en.utf-8.add
 set spellsuggest=best,5
 
 " 在右边打开新的窗口（垂直分割）
@@ -279,11 +280,11 @@ function! s:return_without_deoplete() abort
   return deoplete#mappings#close_popup() . "\<CR>"
 endfunction
 Plug 'Konfekt/FastFold'                              " 削减代码折叠对性能的影响
-" Plug 'Shougo/context_filetype.vim'                   " 提供插件切换文档类型能力
+Plug 'Shougo/context_filetype.vim'                   " 提供插件切换文档类型能力
 
-" Plug 'benekastah/neomake'
-" let g:neomake_error_sign   = {'text': '😡 '}
-" let g:neomake_warning_sign = {'text': '😠 '}
+Plug 'benekastah/neomake'
+let g:neomake_error_sign   = {'text': '😡 '}
+let g:neomake_warning_sign = {'text': '😠 '}
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
