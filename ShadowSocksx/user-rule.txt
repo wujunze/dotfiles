@@ -43,6 +43,7 @@
 ||ponyfoo.com
 ||pragprog.com
 ||raindrop.io
+||slack-edge.com
 ||speakerdeck.com
 ||sstatic.net
 ||tiny.cc
