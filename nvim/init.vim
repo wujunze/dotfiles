@@ -144,7 +144,7 @@ inoremap <C-b> <Esc>i
 " 映射 Enter -> :nohlsearch（仅常规模式）
 nnoremap <silent> <CR> :nohlsearch<CR>
 
-" 映射 Options(Alt) + h/j/k/l 在窗口之间跳转
+" 映射 Control(Ctrl) + h/j/k/l 在窗口之间跳转
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -154,7 +154,7 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
-" 映射 Control(Ctrl) + j/k x3 倍速上下移动
+" 映射 Option(Alt) + j/k x3 倍速上下移动
 nnoremap <A-j> 3j
 nnoremap <A-k> 3k
 vnoremap <A-j> 3j
@@ -173,6 +173,7 @@ inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 " 开启内置 Terminal 模式
 nnoremap <silent> <Leader>: :below 10sp term://$SHELL<CR>A
+tnoremap <C-[> <C-\><C-n>
 
 " NERDTree 映射
 nnoremap <silent><Leader><F1> :NERDTreeFind<CR>
@@ -438,6 +439,7 @@ augroup END
 
 augroup STYLESHEET
   autocmd!
+  autocmd FileType css setlocal filetype=less
   autocmd FileType css,less,scss setlocal colorcolumn=80 iskeyword+=-
 augroup END
 
