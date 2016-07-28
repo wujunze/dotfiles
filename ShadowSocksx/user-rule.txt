@@ -2,16 +2,23 @@
 ! See https://adblockplus.org/en/filter-cheatsheet
 
 ||ableton.com
+||static.ads-twitter.com
 ||akamaihd.net
 ||akamaiedge.net
 ||amazonaws.com
 ||apache.org
+||bootstrapcdn.com
+||cloudflare.com
 ||cloudfront.net
+||discourse.org
+||disquscdn.com
 ||dockyard.com
 ||dropbox.com
 ||doubleclick.net
 ||edgefonts.net
+||emberjs.com
 ||emberobserver.com
+||ember-twiddle.com
 ||facebook.*
 ||fastly.net
 ||flowtype.org
@@ -42,27 +49,21 @@
 ||polyfill.io
 ||ponyfoo.com
 ||pragprog.com
-<<<<<<< Updated upstream
 ||raindrop.io
+||scrollmagic.io
 ||slack-edge.com
-=======
 ||sketch.*
->>>>>>> Stashed changes
 ||speakerdeck.com
 ||sstatic.net
 ||tiny.cc
 ||travis-ci.org
 ||twitter.com
 ||udemy.com
-<<<<<<< Updated upstream
 ||useronboard.com
-||vimeo.com
-||whatsapp.net
-||windows.net
-=======
 ||vimeo.*
 ||vimeocdn.com
->>>>>>> Stashed changes
+||whatsapp.net
+||windows.net
 ||wistia.com
 ||wp.com
 ||vimeocdn.com
