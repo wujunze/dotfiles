@@ -38,7 +38,7 @@ set colorcolumn=0
 
 " 自定义拼写检查
 set nospell spelllang=en_us
-set spellfile=$HOME/.config/nvim/en.utf-8.add
+set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
 set spellsuggest=best,5
 
 " 在右边打开新的窗口（垂直分割）
