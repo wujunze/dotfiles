@@ -19,7 +19,7 @@
 ||github.*
 ||githubapp.com
 ||githubusercontent.com
-||google.cn
+||google.*
 ||googleapis.com
 ||google-analytics.com
 ||gravatar.com
@@ -42,18 +42,27 @@
 ||polyfill.io
 ||ponyfoo.com
 ||pragprog.com
+<<<<<<< Updated upstream
 ||raindrop.io
 ||slack-edge.com
+=======
+||sketch.*
+>>>>>>> Stashed changes
 ||speakerdeck.com
 ||sstatic.net
 ||tiny.cc
 ||travis-ci.org
 ||twitter.com
 ||udemy.com
+<<<<<<< Updated upstream
 ||useronboard.com
 ||vimeo.com
 ||whatsapp.net
 ||windows.net
+=======
+||vimeo.*
+||vimeocdn.com
+>>>>>>> Stashed changes
 ||wistia.com
 ||wp.com
 ||vimeocdn.com
