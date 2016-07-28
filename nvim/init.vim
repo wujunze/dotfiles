@@ -331,10 +331,10 @@ let g:vim_markdown_toml_frontmatter = 1
 let g:vim_markdown_folding_disabled = 1
 
 " XML
-Plug 'othree/xml.vim'
+Plug 'othree/xml.vim', {'for': ['html', 'xml']}
 
 " HTML
-Plug 'othree/html5.vim'
+Plug 'othree/html5.vim', {'for': ['html', 'xml']}
 
 " Handlebars
 Plug 'mustache/vim-mustache-handlebars'
@@ -344,8 +344,8 @@ let g:mustache_abbreviations = 1                     " 内置缩写展开
 Plug 'JulesWang/css.vim', {'for': ['css', 'less', 'scss']}
 Plug 'hail2u/vim-css3-syntax', {'for': ['css', 'less', 'scss']}
 Plug 'othree/csscomplete.vim', {'for': ['css', 'less', 'scss']}
-Plug 'genoma/vim-less', {'for': ['css', 'less']}
-Plug 'cakebaker/scss-syntax.vim', {'for': ['css', 'scss']}
+Plug 'genoma/vim-less', {'for': 'less'}
+Plug 'cakebaker/scss-syntax.vim', {'for': 'scss'}
 Plug 'stephenway/postcss.vim', {'for': 'css'}
 
 " JavaScript
