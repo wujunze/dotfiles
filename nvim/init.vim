@@ -44,6 +44,12 @@ set spellsuggest=best,5
 " 在右边打开新的窗口（垂直分割）
 set splitright
 
+" 在下边打开新的窗口（水平分割）
+set splitbelow
+
+" 扩大预览窗口的高度
+set previewheight=24
+
 " 模式切换（在状态栏左下方）
 set noshowmode
 
@@ -182,6 +188,15 @@ nnoremap <silent><F1>         :NERDTreeToggle<CR>
 " EasyAlign 映射
 nmap ga <Plug>(EasyAlign)
 xmap ga <Plug>(EasyAlign)
+
+" Fugitive 映射
+nnoremap <silent><Leader>gb :Gblame<CR>
+nnoremap <silent><Leader>gd :Gvdiff<CR>
+nnoremap <silent><Leader>gf :Gfetch<CR>
+nnoremap <silent><Leader>gp :Gpush<CR>
+nnoremap <silent><Leader>gs :Gstatus<CR>
+nnoremap <silent><Leader>gv :GV<CR>
+nnoremap <silent><Leader>gw :Gwrite<CR>
 " }}}
 
 " 缩写 {{{
