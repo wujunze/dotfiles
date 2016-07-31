@@ -56,6 +56,7 @@
  default-frame-alist '((top . 20) (left . 20)
                        (width . 120) (height . 60)
                        (vertical-scroll-bars . nil)
+                       (alpha . (90 . 50))
                        (font . "Input-14"))
 
  ;; 初始窗体
@@ -363,10 +364,26 @@
   :config (add-hook 'css-mode-hook #'company-mode))
 
 (use-package js
-  :ensure t
   :init (setq js-indent-level 2
               js-enabled-frameworks '(javascript)
               js-switch-indent-offset 2))
+
+(use-package js2-mode
+  :ensure t
+  :init
+  (setq js2-basic-offset 2
+        js2-bounce-indent-p t
+        js2-highlight-level 3
+        js2-include-jslint-globals nil
+        js2-include-node-externs nil
+        js2-indent-switch-body nil
+        js2-missing-semi-one-line-override t
+        js2-mode-indent-ignore-first-tab t
+        js2-strict-missing-semi-warning nil
+        js2-strict-trailing-comma-warning nil)
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  (add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-jsx-mode))
+  (add-to-list 'interpreter-mode-alist '("node" . js2-jsx-mode)))
 
 (use-package json-mode
   :ensure t
