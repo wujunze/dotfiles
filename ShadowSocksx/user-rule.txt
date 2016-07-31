@@ -59,6 +59,7 @@
 ||travis-ci.org
 ||twitter.com
 ||udemy.com
+||unsplash.com
 ||useronboard.com
 ||vimeo.*
 ||vimeocdn.com
