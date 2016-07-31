@@ -56,6 +56,7 @@
 ||speakerdeck.com
 ||sstatic.net
 ||tiny.cc
+||tonicdev.*
 ||travis-ci.org
 ||twitter.com
 ||udemy.com
