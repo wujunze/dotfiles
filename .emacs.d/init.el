@@ -51,13 +51,13 @@
 
  ;; 遵从加载文件设定的本地变量
  enable-local-eval t
- 
+
  ;; 默认窗体
  default-frame-alist '((top . 20) (left . 20)
                        (width . 120) (height . 60)
                        (vertical-scroll-bars . nil)
                        (alpha . (90 . 50))
-                       (font . "Input-14"))
+                       (font . "Input-16"))
 
  ;; 初始窗体
  initial-frame-alist '((top . 2) (left . 2)
@@ -72,7 +72,7 @@
 
  ;; 即使有版本控制也备份
  vc-make-backup-files t
- 
+
  ;; 集中备份文件存放位置
  backup-directory-alist `(("." . ,(expand-file-name "backup" user-emacs-directory)))
 
@@ -117,7 +117,7 @@
  global-auto-revert-non-file-buffers t
 
  ;; 安全禁用 create-lockfiles
- safe-local-variable-values '((create-lockfiles) create-lockfiles))
+ safe-local-variable-values '((create-lockfiles)))
 
 ;; ==============================================================================
 
@@ -271,7 +271,7 @@
   :init (setq which-key-idle-delay 0.2
               which-key-secondary-delay 0.1
               which-key-max-description-length 30
-              which-key-sort-order #'which-key-local-then-key-order)  
+              which-key-sort-order #'which-key-local-then-key-order)
   :config
   (which-key-mode)
   (which-key-setup-side-window-right-bottom))
@@ -363,10 +363,17 @@
   :init (setq css-indent-offset 2)
   :config (add-hook 'css-mode-hook #'company-mode))
 
+(use-package emmet-mode
+  :ensure t
+  :diminish emmet-mode
+  :init
+  (setq emmet-self-closing-style " /")
+  (add-hook 'web-mode-hook #'emmet-mode)
+  (add-hook 'css-mode-hook #'emmet-mode))
+
 (use-package js
   :init (setq js-indent-level 2
-              js-enabled-frameworks '(javascript)
-              js-switch-indent-offset 2))
+              js-enabled-frameworks '(javascript)))
 
 (use-package js2-mode
   :ensure t
@@ -379,6 +386,7 @@
         js2-indent-switch-body nil
         js2-missing-semi-one-line-override t
         js2-mode-indent-ignore-first-tab t
+        js2-pretty-multiline-declarations nil
         js2-strict-missing-semi-warning nil
         js2-strict-trailing-comma-warning nil)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -405,5 +413,3 @@
   :ensure t
   :defer t
   :init (load-theme 'spacemacs-light t))
-
-(provide 'init)
