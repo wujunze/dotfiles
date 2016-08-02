@@ -11,4 +11,5 @@ nvim/plugins/
 ShadowSocksx/gfwlist.js
 
 gnupg/
+ranger/
 ssh/

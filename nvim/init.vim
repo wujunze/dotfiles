@@ -222,6 +222,9 @@ Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 " Plug 'mkarmona/materialbox'                          " 配套浅色主题
 " Plug 'dracula/vim'                                   " 暗色伯爵主题
 
+Plug 'rking/ag.vim'                                  " the_silver_searcher
+let g:ag_working_path_mode="r"
+
 Plug 'ctrlpvim/ctrlp.vim'                            " 多功能模糊搜索器
 Plug 'sgur/ctrlp-extensions.vim'                     " 扩展集合包
 if executable('ag')
@@ -262,10 +265,9 @@ let NERDTreeHighlightCursorline       = 1
 let NERDTreeCascadeOpenSingleChildDir = 1
 
 Plug 'rbgrouleff/bclose.vim'
-Plug 'francoiscabrol/ranger.vim'
+Plug 'francoiscabrol/ranger.vim'                     " 整合 Ranger
 
-Plug 'rking/ag.vim'                                  " the_silver_searcher
-let g:ag_working_path_mode="r"
+Plug 'AndrewRadev/splitjoin.vim'                     " 智能分行或连接行
 
 Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
 let g:lightline = {
@@ -322,8 +324,9 @@ Plug 'junegunn/gv.vim'
 
 " TODO: RTFM 😹
 Plug 'junegunn/vim-easy-align'                       " 强悍又简约的智能对齐
-
 Plug 'easymotion/vim-easymotion'                     " 快速跳转
+
+Plug 'chrisbra/unicode.vim'                          " 增强 Unicode 的使用
 
 Plug 'tpope/vim-repeat'                              " 扩展重复命令的应用范围
 Plug 'tpope/vim-surround'                            " 增强各种成对字符的操作
