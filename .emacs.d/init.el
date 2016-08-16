@@ -114,10 +114,7 @@
  auto-revert-verbose nil
 
  ;; 自动更新非文件的缓冲
- global-auto-revert-non-file-buffers t
-
- ;; 安全禁用 create-lockfiles
- safe-local-variable-values '((create-lockfiles)))
+ global-auto-revert-non-file-buffers t)
 
 ;; ==============================================================================
 
@@ -142,8 +139,7 @@
 ;; 使用 quelpa 增强 use-package
 (use-package quelpa-use-package
   :ensure t
-  :config
-  (setq quelpa-checkout-melpa-p nil))
+  :config (setq quelpa-checkout-melpa-p nil))
 
 ;; ==============================================================================
 
@@ -306,6 +302,9 @@
          ("TAB" . company-complete-common-or-cycle)
          ("<tab>" . company-complete-common-or-cycle)))
 
+(use-package magit
+  :ensure t)
+
 (use-package evil
   :ensure t
   :diminish evil-mode
@@ -407,9 +406,14 @@
 
 (use-package powerline
   :ensure t
-  :config (add-hook 'after-init-hook 'powerline-center-theme))
+  :init (add-hook 'after-init-hook 'powerline-center-theme))
 
 (use-package spacemacs-theme
   :ensure t
   :defer t
   :init (load-theme 'spacemacs-light t))
+(custom-set-variables
+ '(create-lockfiles nil)
+ '(package-selected-packages
+   (quote
+    (which-key web-mode spacemacs-theme quelpa-use-package powerline magit json-mode js2-mode expand-region exec-path-from-shell evil-surround evil-leader emmet-mode ember-mode company))))
