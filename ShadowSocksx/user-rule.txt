@@ -2,6 +2,8 @@
 ! See https://adblockplus.org/en/filter-cheatsheet
 
 ||ableton.com
+||adroll.com
+||algolia.com
 ||static.ads-twitter.com
 ||akamaihd.net
 ||akamaiedge.net
@@ -10,11 +12,12 @@
 ||bootstrapcdn.com
 ||cloudflare.com
 ||cloudfront.net
+||cs50.tv
 ||discourse.org
 ||disquscdn.com
 ||dockyard.com
-||dropbox.com
 ||doubleclick.net
+||dropbox.com
 ||edgefonts.net
 ||emberjs.com
 ||emberobserver.com
@@ -34,9 +37,11 @@
 ||hex.pm
 ||icloud.com
 ||imgur.com
-||lorempixel.com
+||jsbin.com
 ||jsdelivr.net
+||jsfiddle.net
 ||livecoding.net
+||lorempixel.com
 ||marvel.com
 ||maxcdn.com
 ||medium.com
@@ -46,10 +51,13 @@
 ||mzstatic.com
 ||npmjs.com
 ||optimizely.com
+||paypalobjects.com
 ||polyfill.io
 ||ponyfoo.com
 ||pragprog.com
+||qualtrics.com
 ||raindrop.io
+||rubiconproject.com
 ||scrollmagic.io
 ||slack-edge.com
 ||sketch.*
@@ -59,11 +67,14 @@
 ||tonicdev.*
 ||travis-ci.org
 ||twitter.com
+||twimg.com
+||tympanus.com
 ||udemy.com
 ||unsplash.com
 ||useronboard.com
 ||vimeo.*
 ||vimeocdn.com
+||webtype.com
 ||whatsapp.net
 ||windows.net
 ||wistia.com
