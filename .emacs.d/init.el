@@ -227,8 +227,8 @@
         ido-use-virtual-buffers 'auto
         ido-rotate-file-list-default t
         ido-enter-matching-directory 'only)
-  (add-hook 'after-init-hook 'ido-mode)
-  (add-hook 'ido-setup-hook 'ido-everywhere))
+  (add-hook 'after-init-hook #'ido-mode)
+  (add-hook 'ido-setup-hook #'ido-everywhere))
 
 ;; until we find the limits of ido mode...
 ;; (use-package swiper
@@ -283,6 +283,7 @@
   :init
   (setq company-idle-delay 0.1
         company-tooltip-limit 10
+        company-dabbrev-downcase nil
         company-require-match 'never
         company-minimum-prefix-length 1
         company-tooltip-align-annotations t)
@@ -346,6 +347,18 @@
             :ensure t
             :config (global-evil-surround-mode)))
 
+(use-package neotree
+  :ensure t
+  :init
+  (setq neo-smart-open t)
+  (add-hook 'neotree-mode-hook
+            '(lambda ()
+               (define-key evil-normal-state-local-map (kbd "o") 'neotree-enter)
+               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
+               (define-key evil-normal-state-local-map (kbd "R") 'neotree-refresh)
+               (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
+               (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide))))
+
 (use-package web-mode
   :ensure t
   :init
@@ -401,19 +414,32 @@
   :ensure t
   :diminish ember-mode)
 
+(use-package dockerfile-mode
+  :ensure t)
+
 ;; 和 org-mode 相关的配置，有待研究……
 (setq org-src-fontify-natively t)
 
 (use-package powerline
   :ensure t
-  :init (add-hook 'after-init-hook 'powerline-center-theme))
+  :init (add-hook 'after-init-hook #'powerline-center-theme))
 
 (use-package spacemacs-theme
   :ensure t
   :defer t
   :init (load-theme 'spacemacs-light t))
 (custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(create-lockfiles nil)
  '(package-selected-packages
    (quote
     (which-key web-mode spacemacs-theme quelpa-use-package powerline magit json-mode js2-mode expand-region exec-path-from-shell evil-surround evil-leader emmet-mode ember-mode company))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
