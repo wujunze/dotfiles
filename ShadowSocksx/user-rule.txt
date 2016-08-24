@@ -4,6 +4,7 @@
 ||ableton.com
 ||adroll.com
 ||algolia.com
+||apache.org
 ||static.ads-twitter.com
 ||akamaihd.net
 ||akamaiedge.net
@@ -12,6 +13,7 @@
 ||bootstrapcdn.com
 ||cloudflare.com
 ||cloudfront.net
+||cordova.io
 ||cs50.tv
 ||discourse.org
 ||disquscdn.com
@@ -61,6 +63,7 @@
 ||scrollmagic.io
 ||slack-edge.com
 ||sketch.*
+||sourceforge.net
 ||speakerdeck.com
 ||sstatic.net
 ||tiny.cc
