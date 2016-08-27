@@ -17,6 +17,7 @@
 ||cs50.tv
 ||discourse.org
 ||disquscdn.com
+||docker.com
 ||dockyard.com
 ||doubleclick.net
 ||dropbox.com
