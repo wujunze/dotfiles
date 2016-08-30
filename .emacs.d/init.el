@@ -414,6 +414,9 @@
   :ensure t
   :diminish ember-mode)
 
+(use-package yaml-mode
+  :ensure t)
+
 (use-package dockerfile-mode
   :ensure t)
 
