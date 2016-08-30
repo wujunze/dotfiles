@@ -218,9 +218,9 @@ if empty(glob('$HOME/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.config/nvim/plugins')
-Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
+Plug 'dracula/vim'                                   " 暗色伯爵主题
+" Plug 'jdkanani/vim-material-theme'                   " Google Material 主题
 " Plug 'mkarmona/materialbox'                          " 配套浅色主题
-" Plug 'dracula/vim'                                   " 暗色伯爵主题
 
 Plug 'rking/ag.vim'                                  " the_silver_searcher
 let g:ag_working_path_mode="r"
@@ -415,7 +415,7 @@ call plug#end()
 
 " 主题 {{{
 set background=dark
-colorscheme material-theme
+colorscheme dracula
 
 " TODO: 设置内置终端的颜色
 let g:terminal_color_0  = '#282a36'
