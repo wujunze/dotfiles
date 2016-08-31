@@ -113,8 +113,8 @@
  ;; 静默自动更新缓冲
  auto-revert-verbose nil
 
- ;; 自动更新非文件的缓冲
- global-auto-revert-non-file-buffers t)
+ ;; 自动更新变更文件
+ global-auto-revert-mode t)
 
 ;; ==============================================================================
 
@@ -329,7 +329,9 @@
     (evil-leader/set-leader "<SPC>")
     (evil-leader/set-key
       "f d" #'ido-dired
-      "f f" #'ido-find-file
+      "f f" #'neotree-toggle
+      "g s" #'magit-status
+      "g l" #'magit-log
       )
     (evil-mode))
   ;; 下面的几个全局按键绑定不是一定要写在这里——
@@ -347,17 +349,30 @@
             :ensure t
             :config (global-evil-surround-mode)))
 
+(use-package projectile
+  :ensure t
+  :defer t
+  :config (projectile-global-mode))
+
 (use-package neotree
   :ensure t
   :init
-  (setq neo-smart-open t)
+  (setq neo-smart-open t
+        projectile-switch-project-action #'neotree-projectile-action)
   (add-hook 'neotree-mode-hook
             '(lambda ()
-               (define-key evil-normal-state-local-map (kbd "o") 'neotree-enter)
-               (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)
-               (define-key evil-normal-state-local-map (kbd "R") 'neotree-refresh)
-               (define-key evil-normal-state-local-map (kbd "H") 'neotree-hidden-file-toggle)
-               (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide))))
+               (define-key evil-normal-state-local-map (kbd "o") #'neotree-enter)
+               (define-key evil-normal-state-local-map (kbd "RET") #'neotree-enter)
+               (define-key evil-normal-state-local-map (kbd "A") #'neotree-stretch-toggle)
+               (define-key evil-normal-state-local-map (kbd "s") #'neotree-enter-horizontal-split)
+               (define-key evil-normal-state-local-map (kbd "v") #'neotree-enter-vertical-split)
+               (define-key evil-normal-state-local-map (kbd "R") #'neotree-refresh)
+               (define-key evil-normal-state-local-map (kbd "H") #'neotree-hidden-file-toggle)
+               (define-key evil-normal-state-local-map (kbd "C") #'neotree-create-node)
+               (define-key evil-normal-state-local-map (kbd "D") #'neotree-delete-node)
+               (define-key evil-normal-state-local-map (kbd "M") #'neotree-rename-node)
+               (define-key evil-normal-state-local-map (kbd "P") #'neotree-copy-node)
+               (define-key evil-normal-state-local-map (kbd "q") #'neotree-hide))))
 
 (use-package web-mode
   :ensure t
@@ -399,6 +414,7 @@
         js2-missing-semi-one-line-override t
         js2-mode-indent-ignore-first-tab t
         js2-pretty-multiline-declarations nil
+        js2-strict-inconsistent-return-warning nil
         js2-strict-missing-semi-warning nil
         js2-strict-trailing-comma-warning nil)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -439,10 +455,21 @@
  '(create-lockfiles nil)
  '(package-selected-packages
    (quote
-    (which-key web-mode spacemacs-theme quelpa-use-package powerline magit json-mode js2-mode expand-region exec-path-from-shell evil-surround evil-leader emmet-mode ember-mode company))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+    (yaml-mode
+     which-key
+     web-mode
+     spacemacs-theme
+     quelpa-use-package
+     projectile
+     powerline
+     neotree
+     magit
+     json-mode
+     js2-mode
+     expand-region
+     exec-path-from-shell
+     evil-surround
+     evil-leader
+     emmet-mode
+     ember-mode
+     company))))
