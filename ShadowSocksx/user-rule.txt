@@ -15,16 +15,15 @@
 ||cloudfront.net
 ||cordova.io
 ||cs50.tv
+||d3noob.org
 ||discourse.org
 ||disquscdn.com
-||docker.com
+||docker.*
 ||dockyard.com
 ||doubleclick.net
 ||dropbox.com
 ||edgefonts.net
-||emberjs.com
-||emberobserver.com
-||ember-twiddle.com
+||ember*.com
 ||facebook.*
 ||fastly.net
 ||flowtype.org
@@ -59,6 +58,7 @@
 ||ponyfoo.com
 ||pragprog.com
 ||qualtrics.com
+||quoracdn.net
 ||raindrop.io
 ||rubiconproject.com
 ||scrollmagic.io
