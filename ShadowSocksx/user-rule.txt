@@ -28,9 +28,7 @@
 ||fastly.net
 ||flowtype.org
 ||fury.io
-||github.*
-||githubapp.com
-||githubusercontent.com
+||github*.*
 ||google.*
 ||googleapis.com
 ||google-analytics.com
@@ -42,6 +40,7 @@
 ||jsbin.com
 ||jsdelivr.net
 ||jsfiddle.net
+||keybase.*
 ||livecoding.net
 ||lorempixel.com
 ||marvel.com
