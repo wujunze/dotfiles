@@ -355,7 +355,7 @@ Plug 'othree/xml.vim', {'for': ['html', 'xml']}
 Plug 'othree/html5.vim', {'for': ['html', 'xml']}
 
 " Handlebars
-Plug 'mustache/vim-mustache-handlebars', {'for': ['html.handlebars']}
+Plug 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1                     " 内置缩写展开
 
 " CSS
