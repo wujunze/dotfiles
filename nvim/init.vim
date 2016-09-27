@@ -262,6 +262,9 @@ let NERDTreeSortHiddenFirst           = 1
 let NERDTreeAutoDeleteBuffer          = 1
 let NERDTreeCaseSensitiveSort         = 1
 let NERDTreeHighlightCursorline       = 1
+let NERDTreeDirArrowExpandable        = '▸'
+let NERDTreeDirArrowCollapsible       = '▾'
+let NERDTreeCascadeSingleChildDir     = 0
 let NERDTreeCascadeOpenSingleChildDir = 1
 
 Plug 'rbgrouleff/bclose.vim'
