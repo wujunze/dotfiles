@@ -11,8 +11,10 @@
 ||amazonaws.com
 ||apache.org
 ||bootstrapcdn.com
+||ch9.ms
 ||cloudflare.com
 ||cloudfront.net
+||confreaks.tv
 ||cordova.io
 ||cs50.tv
 ||d3noob.org
@@ -27,6 +29,7 @@
 ||facebook.*
 ||fastly.net
 ||flowtype.org
+||football-data.org
 ||fury.io
 ||github*.*
 ||google.*
@@ -40,8 +43,9 @@
 ||jsbin.com
 ||jsdelivr.net
 ||jsfiddle.net
+||jsonapi.org
 ||keybase.*
-||livecoding.net
+||livecoding.*
 ||lorempixel.com
 ||marvel.com
 ||maxcdn.com
@@ -51,6 +55,7 @@
 ||mozilla.net
 ||mzstatic.com
 ||npmjs.com
+||onesignal.com
 ||optimizely.com
 ||paypalobjects.com
 ||polyfill.io
@@ -59,6 +64,7 @@
 ||qualtrics.com
 ||quoracdn.net
 ||raindrop.io
+||rawgit.com
 ||rubiconproject.com
 ||scrollmagic.io
 ||slack-edge.com
