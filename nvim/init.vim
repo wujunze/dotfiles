@@ -235,7 +235,7 @@ endif
 let g:ctrlp_cmd = 'exe "CtrlP".get(["", "Buffer", "BookmarkDir", "Cmdline", "Menu", "Yankring"], v:count)'
 let g:ctrlp_extensions = ['bookmarkdir', 'changes', 'cmdline', 'menu', 'mixed', 'rtscript', 'yankring']
 let g:ctrlp_arg_map             = 1
-let g:ctrlp_line_prefix         = ' 🎐 '
+" let g:ctrlp_line_prefix         = ' 🎐 '
 let g:ctrlp_match_window        = 'bottom,order:btt,min:1,max:30'
 let g:ctrlp_mruf_exclude        = '\.git/\*\|\.txt\|\.vimrc'
 let g:ctrlp_switch_buffer       = 'EtVH'
@@ -307,7 +307,8 @@ Plug 'benekastah/neomake'
 let g:neomake_error_sign   = {'text': '😡 '}
 let g:neomake_warning_sign = {'text': '😠 '}
 
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
+Plug 'SirVer/ultisnips'                              " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
 let g:UltiSnipsExpandTrigger       = '<TAB>'
 let g:UltiSnipsListSnippets        = '<A-TAB>'
