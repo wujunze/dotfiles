@@ -19,11 +19,11 @@
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      (auto-completion :variables
-                      auto-completion-enable-help-tooltip t
-                      auto-completion-enable-sort-by-usage t
+                      auto-completion-enable-help-tooltip nil
                       auto-completion-enable-snippets-in-popup t
-                      auto-completion-tab-key-behavior 'cycle
-                      auto-completion-return-key-behavior 'complete)
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-return-key-behavior 'complete
+                      auto-completion-tab-key-behavior 'cycle)
      better-defaults
      chinese
      (colors :variables
@@ -37,6 +37,7 @@
      emoji
      evil-cleverparens
      evil-commentary
+     eyebrowse
      git
      github
      html
@@ -128,7 +129,7 @@ values."
    ;; Default font. `powerline-scale' allows to quickly tweak the mode-line
    ;; size to make separators look not too crappy.
    dotspacemacs-default-font '("Input"
-                               :size 15
+                               :size 12
                                :weight normal
                                :width normal
                                :powerline-scale 1.0)
@@ -270,20 +271,29 @@ before packages are loaded. If you are unsure, you should try in setting them in
 
   (fringe-mode '(4 . 4))
 
-  (spacemacs/toggle-transparency)
-  (spacemacs/toggle-evil-cleverparens-on)
+  ;; (spacemacs/toggle-evil-cleverparens-on)
+
+  (define-key evil-normal-state-map (kbd "j") 'evil-next-visual-line)
+  (define-key evil-normal-state-map (kbd "k") 'evil-previous-visual-line)
 
   (setq evil-cross-lines t
         evil-echo-state t
         evil-shift-width 2
 
+        which-key-frame-max-width 90
+        which-key-max-description-length 54
+        which-key-min-display-lines 2
+
+        neo-show-hidden-files nil
+
         magit-repository-directories '("~/Code/")
+        git-gutter-fr+-side 'right-fringe
+
+        company-minimum-prefix-length 1
+
+        uniquify-min-dir-content 1
 
         css-indent-offset 2
-
-        emmet-self-closing-style " /"
-
-        git-gutter-fr+-side 'right-fringe
 
         js-indent-level 2
         js-enabled-frameworks '(javascript)
@@ -303,12 +313,15 @@ before packages are loaded. If you are unsure, you should try in setting them in
         json-reformat:indent-width 2
         json-reformat:pretty-string? t
 
+        emmet-self-closing-style " /"
+
         web-mode-jsx-depth-faces t
         web-mode-css-indent-offset 2
         web-mode-code-indent-offset 2
         web-mode-markup-indent-offset 2
         web-mode-enable-element-tag-fontification t)
   )
+
 
 ;; Do not write anything past this comment.
 (custom-set-variables
@@ -318,7 +331,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (undo-tree macrostep s flycheck-pos-tip flycheck ws-butler web-mode spaceline persp-mode open-junk-file neotree leuven-theme js2-refactor indent-guide help-fns+ helm-themes helm-descbinds helm-ag google-translate git-link evil-surround evil-search-highlight-persist alchemist ace-link ace-jump-helm-line iedit smartparens projectile helm helm-core ht markdown-mode magit git-commit hydra which-key yaml-mode xterm-color with-editor window-numbering web-beautify volatile-highlights vimrc-mode use-package tss tagedit stickyfunc-enhance srefactor spacemacs-theme smooth-scrolling smex smeargle slime slim-mode shell-pop selectric-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters quelpa powerline popwin pbcopy paradox pangu-spacing page-break-lines osx-trash orgit multiple-cursors multi-term move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls lorem-ipsum linum-relative less-css-mode launchctl js2-mode js-doc jade-mode info+ ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-css-scss helm-company helm-c-yasnippet golden-ratio github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-gutter-fringe git-gutter-fringe+ gist gh-md flx-ido find-by-pinyin-dired fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-numbers evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-commentary evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-prompt-extras esh-help erlang emoji-cheat-sheet-plus emmet-mode ember-yasnippets ember-mode elixir-mode elisp-slime-nav editorconfig dockerfile-mode diff-hl define-word dactyl-mode company-web company-tern company-statistics company-quickhelp company-emoji coffee-mode clean-aindent-mode chruby chinese-pyim bundler buffer-move bracketed-paste auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-pinyin ac-ispell))))
+    (eyebrowse smartparens magit vi-tilde-fringe evil-nerd-commenter yaml-mode xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vimrc-mode use-package tss tagedit stickyfunc-enhance srefactor spacemacs-theme spaceline solarized-theme smooth-scrolling smex smeargle slime slim-mode shell-pop selectric-mode scss-mode sass-mode rvm ruby-tools ruby-test-mode ruby-end rubocop rspec-mode robe reveal-in-osx-finder restart-emacs rbenv rainbow-mode rainbow-identifiers rainbow-delimiters quelpa popwin persp-mode pbcopy paradox pangu-spacing page-break-lines osx-trash orgit open-junk-file neotree multi-term move-text mmm-mode markdown-toc magit-gitflow magit-gh-pulls lorem-ipsum linum-relative leuven-theme less-css-mode launchctl js2-refactor js-doc jade-mode info+ indent-guide ido-vertical-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gist gh-md flycheck-pos-tip flx-ido find-by-pinyin-dired fill-column-indicator fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-commentary evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-prompt-extras esh-help erlang emoji-cheat-sheet-plus emmet-mode ember-yasnippets ember-mode elisp-slime-nav editorconfig dockerfile-mode diff-hl define-word dactyl-mode company-web company-tern company-statistics company-quickhelp company-emoji coffee-mode clean-aindent-mode chruby chinese-pyim bundler buffer-move bracketed-paste auto-yasnippet auto-highlight-symbol auto-compile alchemist aggressive-indent adaptive-wrap ace-window ace-pinyin ace-link ace-jump-helm-line ac-ispell))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
