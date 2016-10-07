@@ -14,6 +14,7 @@
 ||ch9.ms
 ||cloudflare.com
 ||cloudfront.net
+||codepen.io
 ||confreaks.tv
 ||cordova.io
 ||cs50.tv
@@ -35,11 +36,14 @@
 ||google.*
 ||googleapis.com
 ||google-analytics.com
+||googleusercontent.com
 ||gravatar.com
 ||gstatic.com
+||heroku.com
 ||hex.pm
 ||icloud.com
 ||imgur.com
+||iwanttouse.com
 ||jsbin.com
 ||jsdelivr.net
 ||jsfiddle.net
@@ -72,6 +76,7 @@
 ||sourceforge.net
 ||speakerdeck.com
 ||sstatic.net
+||surge.sh
 ||tiny.cc
 ||tonicdev.*
 ||travis-ci.org
