@@ -352,7 +352,7 @@ you should place your code here."
    ;; web-mode-block-padding 2
    ;; web-mode-css-indent-offset 2
    ;; web-mode-code-indent-offset 2
-   ;; web-mode-enable-auto-quoting nil
+   web-mode-enable-auto-quoting nil
    ;; web-mode-enable-element-tag-fontification t
    ;; web-mode-enable-current-element-highlight t
    ;; web-mode-enable-html-entities-fontification t
