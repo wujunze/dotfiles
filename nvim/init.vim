@@ -271,7 +271,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'francoiscabrol/ranger.vim'                     " 整合 Ranger
 
 Plug 'AndrewRadev/splitjoin.vim'                     " 智能分行或连接行
-
+Plug 'HeroicEric/vim-tabline'                        " 显示更友好的文件名
 Plug 'itchyny/lightline.vim'                         " 轻量级状态栏优化插件
 let g:lightline = {
       \   'colorscheme': 'wombat',
@@ -307,7 +307,7 @@ Plug 'benekastah/neomake'
 let g:neomake_error_sign   = {'text': '😡 '}
 let g:neomake_warning_sign = {'text': '😠 '}
 
-" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'  " 智能代码片断工具
 Plug 'SirVer/ultisnips'                              " 智能代码片断工具
 let g:UltiSnipsSnippetsDir         = $HOME.'/.config/nvim/UltiSnips'
 let g:UltiSnipsExpandTrigger       = '<TAB>'
