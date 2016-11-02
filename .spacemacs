@@ -330,6 +330,7 @@ you should place your code here."
    helm-ff-auto-update-initial-value t
 
    magit-repository-directories '("~/Code/")
+   magit-commit-arguments '("--gpg-sign=18E04E4A7A2A50BA")
 
    neo-show-hidden-files nil
    neo-theme 'nerd
