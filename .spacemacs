@@ -44,7 +44,7 @@ values."
                       auto-completion-tab-key-behavior 'cycle)
      (colors :variables
              colors-colorize-identifiers nil
-             colors-enable-nyan-cat-progress-bar t)
+             colors-enable-nyan-cat-progress-bar nil)
      emacs-lisp
      git
      helm
@@ -322,11 +322,13 @@ you should place your code here."
   (setq
    frame-resize-pixelwise t
    default-frame-alist '((top . 0) (left . 0) (width . 126) (height . 58)
-                         (alpha . (90 . 80)) (vertical-scroll-bars . nil))
+                         (alpha . (100 . 90)) (vertical-scroll-bars . nil))
    initial-frame-alist '((top . 0) (left . 0) (width . 126) (height . 58))
    )
 
   (setq
+   helm-ff-auto-update-initial-value t
+
    magit-repository-directories '("~/Code/")
 
    neo-show-hidden-files nil
