@@ -5,7 +5,8 @@ scriptencoding utf-8
 " 开启 NVIM 专用选项
 if has('nvim')
   " 允许真彩显示
-  let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+  " let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+  set termguicolors
   " 允许光标变化
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 endif
@@ -235,7 +236,7 @@ endif
 let g:ctrlp_cmd = 'exe "CtrlP".get(["", "Buffer", "BookmarkDir", "Cmdline", "Menu", "Yankring"], v:count)'
 let g:ctrlp_extensions = ['bookmarkdir', 'changes', 'cmdline', 'menu', 'mixed', 'rtscript', 'yankring']
 let g:ctrlp_arg_map             = 1
-" let g:ctrlp_line_prefix         = ' 🎐 '
+let g:ctrlp_line_prefix         = ' 🎐 '
 let g:ctrlp_match_window        = 'bottom,order:btt,min:1,max:30'
 let g:ctrlp_mruf_exclude        = '\.git/\*\|\.txt\|\.vimrc'
 let g:ctrlp_switch_buffer       = 'EtVH'
