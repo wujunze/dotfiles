@@ -31,6 +31,7 @@
 ||fastly.net
 ||flowtype.org
 ||football-data.org
+||frontendmasters.com
 ||fury.io
 ||github*.*
 ||google.*
@@ -43,6 +44,8 @@
 ||hex.pm
 ||icloud.com
 ||imgur.com
+||leanpub.com
+||lorempixel.*
 ||iwanttouse.com
 ||jsbin.com
 ||jsdelivr.net
@@ -62,12 +65,14 @@
 ||onesignal.com
 ||optimizely.com
 ||paypalobjects.com
+||plnkr.co
 ||polyfill.io
 ||ponyfoo.com
 ||pragprog.com
 ||qualtrics.com
 ||quoracdn.net
 ||raindrop.io
+||cdn.ravenjs.com
 ||rawgit.com
 ||rubiconproject.com
 ||scrollmagic.io
@@ -94,3 +99,4 @@
 ||wistia.com
 ||wp.com
 ||vimeocdn.com
+||zingchart.*
