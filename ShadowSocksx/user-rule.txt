@@ -52,6 +52,7 @@
 ||jsfiddle.net
 ||jsonapi.org
 ||keybase.*
+||kyusuf.com
 ||livecoding.*
 ||lorempixel.com
 ||marvel.com
@@ -62,6 +63,7 @@
 ||mozilla.net
 ||mzstatic.com
 ||npmjs.com
+||bl.ocks.org
 ||onesignal.com
 ||optimizely.com
 ||paypalobjects.com
@@ -76,12 +78,14 @@
 ||rawgit.com
 ||rubiconproject.com
 ||scrollmagic.io
+||sitepoint.com
 ||slack-edge.com
 ||sketch.*
 ||sourceforge.net
 ||speakerdeck.com
 ||sstatic.net
 ||surge.sh
+||tadeuzagallo.com
 ||tiny.cc
 ||tonicdev.*
 ||travis-ci.org
