@@ -350,6 +350,7 @@ you should place your code here."
    css-indent-offset 2
 
    js-indent-level 2
+   js-switch-indent-offset 2
    js2-basic-offset 2
    js2-missing-semi-one-line-override t
    js2-mode-assume-strict t
