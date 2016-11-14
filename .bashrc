@@ -109,6 +109,9 @@ export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dis
 # Use taobao mirrors for downloading phantomjs
 export PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs
 
+# Add yarn support
+export PATH=$HOME/.yarn-config/global/node_modules/.bin:$PATH
+
 # z Initialization
 [ -f `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
 
