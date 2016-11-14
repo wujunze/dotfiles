@@ -10,6 +10,7 @@
 ||akamaiedge.net
 ||amazonaws.com
 ||apache.org
+||caniuse.bitsofco.de
 ||bootstrapcdn.com
 ||caniuse.com
 ||ch9.ms
@@ -20,6 +21,7 @@
 ||confreaks.tv
 ||cordova.io
 ||cs50.tv
+||cssnext.io
 ||d3noob.org
 ||discourse.org
 ||disquscdn.com
