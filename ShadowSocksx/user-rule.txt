@@ -10,6 +10,7 @@
 ||akamaiedge.net
 ||amazonaws.com
 ||apache.org
+||balinterdi.com
 ||caniuse.bitsofco.de
 ||bootstrapcdn.com
 ||caniuse.com
@@ -22,7 +23,9 @@
 ||cordova.io
 ||cs50.tv
 ||cssnext.io
+||d3js.org
 ||d3noob.org
+||david-dm.org
 ||discourse.org
 ||disquscdn.com
 ||docker.*
@@ -38,13 +41,17 @@
 ||football-data.org
 ||frontendmasters.com
 ||fury.io
-||github*.*
+||gitbook.com
+||gitbooks.io
+||github.*
+||camo.githubusercontent.com
 ||google.*
-||*.googleapis.*
+||fonts.googleapis.*
 ||google-analytics.*
 ||googleusercontent.*
 ||gravatar.com
-||gstatic.com
+||fonts.gstatic.com/s/*
+||gumroad.com
 ||heroku.com
 ||hex.pm
 ||icloud.com
@@ -66,6 +73,7 @@
 ||medium.com
 ||messenger.com
 ||microsofttranslator.com
+||modeanalytics.com
 ||mozilla.*
 ||mzl.*
 ||mzstatic.com
@@ -76,6 +84,7 @@
 ||optimizely.com
 ||paypalobjects.com
 ||plnkr.co
+||plataformatec.com.br
 ||polyfill.io
 ||ponyfoo.com
 ||postlight.com
