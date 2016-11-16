@@ -109,6 +109,9 @@ export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dis
 # Use taobao mirrors for downloading phantomjs
 export PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs
 
+# Use taobao mirros for electron
+export ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron
+
 # Add yarn support
 export PATH=$HOME/.yarn-config/global/node_modules/.bin:$PATH
 
