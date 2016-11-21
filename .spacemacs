@@ -307,6 +307,11 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq-default
+   configuration-layer--elpa-archives
+   '(("melpa-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+     ("gnu-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
+     ("org-cn" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/org/"))
+
    git-magit-status-fullscreen t
    mac-right-option-modifier nil
    )
