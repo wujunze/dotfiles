@@ -112,9 +112,6 @@ export PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs
 # Use taobao mirros for electron
 export ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron
 
-# Add yarn support
-export PATH=$HOME/.yarn-config/global/node_modules/.bin:$PATH
-
 # z Initialization
 [ -f `brew --prefix`/etc/profile.d/z.sh ] && source `brew --prefix`/etc/profile.d/z.sh
 
@@ -125,6 +122,9 @@ if test -f ~/.gnupg/.gpg-agent-info -a -n "$(pgrep gpg-agent)"; then
 else
   eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
+
+# Use GnuUtils
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Alias Configurations
 alias ..='cd ..'
