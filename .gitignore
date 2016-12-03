@@ -8,6 +8,8 @@ nvim/.init.vim-rplugin~
 nvim/autoload/
 nvim/plugins/
 
+yarn/
+
 ShadowSocksx/gfwlist.js
 
 gnupg/
