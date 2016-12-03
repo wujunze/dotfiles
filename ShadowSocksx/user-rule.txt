@@ -1,12 +1,23 @@
-||*ember*
-||*github*
+||ember*.*^
+||google.*^
+||github.*^
+||gitlab.*^
+||jquery.com^
+||leanpub.*^
+||pragprog.*^
 
 ! CDN or Services
-||*typekit*
-||*list-manage*
-||*vox-cdn*
+||bootstrapcdn.com^
+||fastly.*^
+||fontawesome.*^
+||gravatar.*^
+||list-manage*.*^
+||surge.sh^
+||typekit.*^
+||vox-cdn.*^
 
 ! Exceptions
-@@||*cform*
-@@||*localhost*
-@@||192.168.*.*
+@@||localhost^
+@@||192.168.*.*^
+@@||*.cform.io^
+@@||*.csvfx.com^
