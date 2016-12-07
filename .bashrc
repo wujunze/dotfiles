@@ -124,7 +124,7 @@ else
 fi
 
 # Use GnuUtils
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 # Alias Configurations
 alias ..='cd ..'
