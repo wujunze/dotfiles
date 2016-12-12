@@ -1,12 +1,17 @@
+||codewars.com^
+||changelog.com^
 ||ember*.*^
 ||google.*^
+||gitbooks.io^
 ||github.*^
+||githubusercontent.com^
 ||gitlab.*^
 ||jquery.com^
 ||leanpub.*^
 ||pragprog.*^
 
 ! CDN or Services
+||airbrake.io^
 ||amazonaws.com^
 ||bootstrapcdn.com^
 ||cloudflare.com^
@@ -14,7 +19,9 @@
 ||fontawesome.*^
 ||gravatar.*^
 ||list-manage*.*^
+||sentry.io^
 ||surge.sh^
+||travis-ci.*^
 ||typekit.*^
 ||vox-cdn.*^
 
