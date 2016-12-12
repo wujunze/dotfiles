@@ -93,7 +93,7 @@ eval "$(rbenv init -)"
 [ -f /Users/nightire/.travis/travis.sh ] && source /Users/nightire/.travis/travis.sh
 
 # GOROOT based install location
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH="$PATH:/usr/local/opt/go/libexec/bin"
 
 # Add Erlang man pages
 export MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man
@@ -102,6 +102,8 @@ export MANPATH=$MANPATH:/usr/local/opt/erlang/lib/erlang/man
 export NVM_DIR="/Users/nightire/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -r "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
+export PATH="/Users/nightire/.config/yarn/global/node_modules/.bin:$PATH"
 
 # Fix apm install error, see: https://github.com/atom/apm/issues/322#issuecomment-96430856
 export ATOM_NODE_URL=http://gh-contractor-zcbenz.s3.amazonaws.com/atom-shell/dist
