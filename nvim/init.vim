@@ -362,6 +362,8 @@ Plug 'othree/html5.vim', {'for': ['html', 'xml']}
 " Handlebars
 Plug 'mustache/vim-mustache-handlebars'
 let g:mustache_abbreviations = 1                     " 内置缩写展开
+Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'dustinfarris/vim-htmlbars-inline-syntax'       " 行内 Handlebars 语法
 
 " CSS
 Plug 'JulesWang/css.vim', {'for': ['css', 'less', 'scss']}
