@@ -1,3 +1,4 @@
+||babeljs.io^
 ||codewars.com^
 ||changelog.com^
 ||ember*.*^
@@ -9,6 +10,7 @@
 ||jquery.com^
 ||leanpub.*^
 ||pragprog.*^
+||rawgit.com^
 
 ! CDN or Services
 ||airbrake.io^
@@ -23,6 +25,7 @@
 ||surge.sh^
 ||travis-ci.*^
 ||typekit.*^
+||unpkg.com^
 ||vox-cdn.*^
 
 ! Exceptions
