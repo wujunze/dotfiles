@@ -1,31 +1,49 @@
+||annihil.us^
 ||babeljs.io^
+||bl.ocks.org^
 ||codewars.com^
 ||changelog.com^
+||d3indepth.com^
+||d3js.org^
+||dribbble.com^
+||egghead.io^
 ||ember*.*^
 ||google.*^
 ||gitbooks.io^
 ||github.*^
 ||githubusercontent.com^
 ||gitlab.*^
+||herokuapp.com^
 ||jquery.com^
 ||leanpub.*^
+||marvel.com^
 ||pragprog.*^
 ||rawgit.com^
+||unicode.org^
+||usecanvas.com^
 
 ! CDN or Services
 ||airbrake.io^
 ||amazonaws.com^
 ||bootstrapcdn.com^
 ||cloudflare.com^
+||cloudfront.net^
 ||fastly.*^
 ||fontawesome.*^
 ||gravatar.*^
+||intercom*.*^
+||jsbin.com^
 ||list-manage*.*^
+||mailchimp.com^
+||mixpanel.com^
+||segment.*^
 ||sentry.io^
 ||surge.sh^
 ||travis-ci.*^
 ||typekit.*^
 ||unpkg.com^
+||unsplash.it^
+||vimeocdn.com^
 ||vox-cdn.*^
 
 ! Exceptions
