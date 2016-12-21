@@ -5,6 +5,7 @@
 ||changelog.com^
 ||d3indepth.com^
 ||d3js.org^
+||discourse.org^
 ||dribbble.com^
 ||egghead.io^
 ||ember*.*^
