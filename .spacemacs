@@ -372,7 +372,9 @@ you should place your code here."
    js2-strict-missing-semi-warning nil
    js2-strict-trailing-comma-warning nil
 
-   web-mode-auto-quote-style nil
+   web-mode-attr-indent-offset 2
+   web-mode-attr-value-indent-offset 2
+   web-mode-enable-auto-quoting nil
    web-mode-script-padding 2
    web-mode-style-padding 2
    )
