@@ -1,6 +1,7 @@
 ||annihil.us^
 ||babeljs.io^
 ||bl.ocks.org^
+||caniuse.com^
 ||codewars.com^
 ||changelog.com^
 ||d3indepth.com^
@@ -8,7 +9,7 @@
 ||discourse.org^
 ||dribbble.com^
 ||egghead.io^
-||ember*.*^
+||*ember*.*^
 ||google.*^
 ||gitbooks.io^
 ||github.*^
@@ -16,20 +17,26 @@
 ||gitlab.*^
 ||herokuapp.com^
 ||jquery.com^
+||*.js.org^
 ||leanpub.*^
 ||marvel.com^
+||masteringemacs.org^
 ||pragprog.*^
 ||rawgit.com^
 ||unicode.org^
 ||usecanvas.com^
+||*weekly.com^
+||whatwg.org^
 
 ! CDN or Services
 ||airbrake.io^
+||akamaihd.net^
 ||amazonaws.com^
 ||bootstrapcdn.com^
 ||cloudflare.com^
 ||cloudfront.net^
-||fastly.*^
+||doubleclick.net^
+||fastly*.*^
 ||fontawesome.*^
 ||gravatar.*^
 ||intercom*.*^
@@ -37,8 +44,12 @@
 ||list-manage*.*^
 ||mailchimp.com^
 ||mixpanel.com^
+||netlify.com^
+||quoracdn.net^
 ||segment.*^
 ||sentry.io^
+||sstatic.net^
+||stripe.com^
 ||surge.sh^
 ||travis-ci.*^
 ||typekit.*^
@@ -46,6 +57,7 @@
 ||unsplash.it^
 ||vimeocdn.com^
 ||vox-cdn.*^
+||wistia.com^
 
 ! Exceptions
 @@||localhost^
