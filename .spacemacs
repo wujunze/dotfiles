@@ -382,7 +382,7 @@ you should place your code here."
   (define-key evil-normal-state-map (kbd "j") #'evil-next-visual-line)
   (define-key evil-normal-state-map (kbd "k") #'evil-previous-visual-line)
 
-  (add-hook 'js2-mode-hook #'spacemacs/toggle-auto-fill-mode-on)
+  (add-hook 'prog-mode-hook #'spacemacs/toggle-centered-point)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
