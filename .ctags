@@ -1,0 +1,20 @@
+--langmap=javascript:.js
+--regex-javascript=/^[ \t]*[\(]function[ \t]*([A-Za-z0-9._$]+)/\1/f,function,functions/
+--regex-javascript=/([A-Za-z0-9._$]+)[ \t]*[:=][ \t]*[\(]function[ \t]*\(/\1/f,function,functions/
+--regex-javascript=/^[ \t]*(let|const)[ \t]*([A-Za-z0-9._$]+)[ \t]*=[ \t]*[\d"'`\[\{]/\2/v,variable,variables/
+--regex-javascript=/^[ \t]*([A-Za-z0-9._$]+)[ \t]*[:][ \t]*[^\{]/\1/p,property,properties/
+
+--exclude=.git
+--exclude=tags
+--exclude=\*.min.\*
+--exclude=\*.map
+--exclude=\*.swp
+--exclude=.eslintrc.js
+--exclude=testem.js
+--exclude=ember-cli-build.js
+--exclude=tmp
+--exclude=dist
+--exclude=docs
+--exclude=tests
+--exclude=node_modules
+--exclude=bower_components
